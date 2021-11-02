@@ -1,0 +1,56 @@
+.loader-box {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:5px;
+  background-color: #fff;
+  box-shadow:$soft-ml-box-shadow;
+  width: 70px;
+  height: 70px;
+  z-index:10;
+  &.small {
+    width: 35px;
+    height: 35px;
+  }
+  &.no-shadow {
+    box-shadow:none;
+  }
+  svg {
+    .rotate-speed-360 {
+      animation: 1s rotate-speed-360 linear infinite;
+    }
+    .rotate-slow-360 {
+      animation: 4s rotate-slow-360 linear infinite;
+    }
+  }
+}
+
+@keyframes rotate-speed-360 {
+  0% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: center;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-slow-360 {
+  0% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: center;
+    transform: rotate(360deg);
+  }
+}
+
+
+// --------------------------------------
+// 👇👇     HTML LOADER EXAMPLE     👇👇
+// --------------------------------------
+
+// <div class="loader-box">
+//   <%= svg('ubisoft_time_black') %>
+// </div>

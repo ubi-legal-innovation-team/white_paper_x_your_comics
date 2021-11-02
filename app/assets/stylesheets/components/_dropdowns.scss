@@ -1,0 +1,197 @@
+// Ajax call clicked dropdowns
+.dropdown-ajaxified {
+  position: absolute;
+  right:10px;
+  top:70px;
+  max-height:500px;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-radius: 5px;
+  height:max-content;
+  transition: all .1s ease-out;
+  z-index:1;
+  padding: 0px 40px 0px 20px;
+  #user_nav, #menu_responsive {
+    width:200px;
+  }
+  #user_notifications {
+    width:400px;
+  }
+  ul {
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  li {
+    margin:.35rem 0;
+    display:flex;
+    width:100%;
+    font-size:.9rem;
+    span.svg {
+      margin-right:.75rem;
+    }
+  }
+  a {
+    color: $strong-grey;
+    width:100%;
+    border-radius:3px;
+    padding:6px;
+    transition: all .2s ease-out;
+    &:hover {
+      background-color:$smooth-grey;
+    }
+  }
+}
+
+// --------------------------------------
+// 👇👇    HTML DROPDOWN EXAMPLE    👇👇
+// --------------------------------------
+
+// ==> Trigger element
+
+// <%= form_tag path, method: :get, id: "YOUR_ID_call", class: "dropdown-call" do %>
+//   <%= button_tag :submit %>
+// <% end %>
+
+// ==> Triggered element (inside html partial)
+
+// div id="YOUR_ID">something to display</div>
+
+
+// Clicked dropdowns
+.dropdown-element {
+    margin-bottom:50px;
+    margin-top:30px;
+  &.dropdownable {
+    height:0;
+    padding: 0;
+    margin:0;
+    overflow-y: hidden;
+    transition: all .1s ease-out;
+  }
+}
+.dropdownable-svg {
+  svg {
+    cursor:pointer;
+    transform: rotateZ(180deg);
+    &.active {
+      transform: rotateZ(0deg);
+    }
+  }
+}
+
+// --------------------------------------
+// 👇👇    HTML DROPDOWN EXAMPLE    👇👇
+// --------------------------------------
+
+// <div class="flex-col border-bottom light-grey">
+//
+//   <strong class="dropdownable-svg">
+//     Title (xx)
+//     <%= svg('dropdown_arrow_grey') %>
+//   </strong>
+//
+//   <div class="dropdown-element">
+//
+//     <div class="m-auto">
+//       <p class="mt-10">nothing to display yet ...</p>
+//     </div>
+//
+//   </div>
+//
+// </div>
+
+
+// Hovered dropdowns
+.show-hovered-dropdown {
+  cursor:pointer;
+  width:max-content;
+  position:relative;
+  &:hover .show-hovered-dropdown-toggled {
+    visibility: visible;
+    opacity: 1;
+    top: 25px;
+  }
+}
+.show-hovered-dropdown-toggled {
+  position: absolute;
+  top: 20px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition-duration: .1s;
+  transition-property: all;
+  transition-timing-function: linear;
+  width: max-content;
+  height: max-content;
+  padding: 5px 10px;
+  p {
+    margin:0;
+  }
+  &.blue {
+    background-image: $background-blue;
+  }
+  &.radius-05 {
+    border-radius:5px;
+  }
+}
+
+// --------------------------------------
+// 👇👇    HTML DROPDOWN EXAMPLE    👇👇
+// --------------------------------------
+
+// <div class="show-hovered-dropdown">
+//
+//   <%= svg('ubisoft_hint_blue_20') %>
+//
+//   <div class="show-hovered-dropdown-toggled">
+//     <p class="text-cent text-white p-small">Ubisoft is a French video game development, publishing and distribution company</p>
+//   </div>
+//
+// </div>
+
+.slide-hovered-dropdown {
+  cursor:pointer;
+  width:max-content;
+  position: relative;
+  &:hover .slide-hovered-dropdown-toggled {
+    height: 60px; // set the height you want
+    transition-property: all;
+    transition-duration: 0;
+    transition-timing-function: none;
+  }
+}
+.slide-hovered-dropdown-toggled {
+  position: absolute;
+  top:25px;
+  width: max-content;
+  height: 0;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(1,0,0,1);
+  z-index:10;
+  p {
+    margin:10px;
+  }
+  &.electric-blue {
+    background-image: $background-electric-blue;
+  }
+  &.radius-05 {
+    border-radius:5px;
+  }
+}
+
+// --------------------------------------
+// 👇👇    HTML DROPDOWN EXAMPLE    👇👇
+// --------------------------------------
+
+// <div class="slide-hovered-dropdown">
+//
+//   <%= svg('ubisoft_hint_electric_blue_20') %>
+//
+//   <div class="slide-hovered-dropdown-toggled">
+//     <p class="text-cent text-white p-small">Ubisoft is a French video game development, publishing and distribution company</p>
+//   </div>
+//
+// </div>

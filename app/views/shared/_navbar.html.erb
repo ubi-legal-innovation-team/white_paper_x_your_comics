@@ -1,0 +1,53 @@
+<% if params["controller"].include?('sessions') || params['action'] == 'welcome' %>
+
+  <nav id="legallab-navbar">
+    
+    <div id="legallab-logo">
+      <strong>[Company]</strong>
+      <span>[Platform name]</span>
+    </div>
+
+  </nav>
+
+<% else %>
+
+  <!-- Uncomment by replacing true with user_signed_in? helper when devise is installed -->
+
+  <% if true #user_signed_in? %>
+
+      <nav id="legallab-navbar" class="flex-bet-cent relative">
+
+        <%= link_to home_path do %>
+          <div id="legallab-logo">
+            <strong>[Company]</strong>
+            <span>[Platform name]</span>
+          </div>
+        <% end %>
+
+        <%#= render "shared/navbar_components/menu" %>
+
+        <div class="flex-cent">
+          <!-- Generate ActionCable to use the notifications system -->
+          <%#= render "shared/navbar_components/notifications" %>
+          <%#= render "shared/navbar_components/responsive/menu" %>
+          <%= render "shared/navbar_components/user_nav" %>
+        </div>
+
+        <div id="dropdown_ajaxified" class="scrollable"><!-- AJAX DROPDOWN CALL --></div>
+
+      </nav>
+
+  <% else %>
+
+    <nav id="legallab-navbar">
+      
+      <div id="legallab-logo">
+        <strong>[Company]</strong>
+        <span>[Platform name]</span>
+      </div>
+
+    </nav>
+
+  <% end %>
+
+<% end %>

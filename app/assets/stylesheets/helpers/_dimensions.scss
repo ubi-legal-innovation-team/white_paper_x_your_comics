@@ -1,0 +1,55 @@
+// HEIGHT
+.h-max {
+  height: 100% !important;
+}
+.h-vh {
+  height: 100vh;
+}
+.h-content {
+  height:max-content;
+}
+.h-med {
+  height: 50% !important;
+}
+.h-auto {
+  height:auto;
+}
+.h-vh-rp-max {
+  height: 100vh;
+}
+.h-500 {
+  height: 500px;
+}
+
+// WIDTH
+.w-min {
+  width:min-content !important;
+}
+.w-content {
+  width :max-content !important;
+}
+.w-fit {
+  width :fit-content !important;
+}
+.w-max {
+  width: 100% !important;
+}
+.w-med {
+  width: 50% !important;
+}
+.w-quart,
+.w-quart-rp-max {
+  width: 25% !important;
+}
+.w-120 {
+  width:120px;
+}
+.max-w-600 {
+  max-width:600px;
+}
+
+// SIZE
+.s-500-rp-300 {
+  width:500px;
+  height:500px;
+}

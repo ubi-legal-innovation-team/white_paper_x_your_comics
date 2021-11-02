@@ -1,0 +1,157 @@
+.border-bottom {
+  border-bottom:1px solid;
+  &.light-grey {
+    border-color:$light-grey;
+  }
+  &.grey {
+    border-color:$grey;
+  }
+  &.black {
+    border-color:$black;
+  }
+  &.blue {
+    border-color:$blue;
+  }
+  &.white {
+    border-color:white;
+  }
+  &.w3 {
+    border-width: 3px;
+  }
+  &.w2 {
+    border-width:2px;
+  }
+}
+.border-left {
+  border-left:1px solid;
+  &.light-grey {
+    border-color:$light-grey;
+  }
+  &.grey {
+    border-color:$grey;
+  }
+  &.black {
+    border-color:$black;
+  }
+  &.blue {
+    border-color:$blue;
+  }
+  &.white {
+    border-color:white;
+  }
+  &.w3 {
+    border-width: 3px;
+  }
+  &.w2 {
+    border-width:2px;
+  }
+}
+.border-right {
+  border-right:1px solid;
+  &.light-grey {
+    border-color:$light-grey;
+  }
+  &.grey {
+    border-color:$grey;
+  }
+  &.black {
+    border-color:$black;
+  }
+  &.blue {
+    border-color:$blue;
+  }
+  &.white {
+    border-color:white;
+  }
+  &.w3 {
+    border-width: 3px;
+  }
+  &.w2 {
+    border-width:2px;
+  }
+}
+.border-top {
+  border-top:1px solid;
+  &.light-grey {
+    border-color:$light-grey;
+  }
+  &.grey {
+    border-color:$grey;
+  }
+  &.black {
+    border-color:$black;
+  }
+  &.blue {
+    border-color:$blue;
+  }
+  &.white {
+    border-color:white;
+  }
+  &.w3 {
+    border-width: 3px;
+  }
+  &.w2 {
+    border-width:2px;
+  }
+}
+.border-grey {
+  border:1px solid $grey;
+}
+.border-light-grey {
+  border:1px solid $light-grey;
+}
+.border-magic-grey {
+  border:1px solid $magic-grey;
+}
+.border-black {
+  border:1px solid $black;
+}
+.border-red {
+  border:1px solid $red;
+}
+.border-yellow {
+  border:1px solid $yellow;
+}
+.border-green {
+  border:1px solid $green;
+}
+.border-blue {
+  border:1px solid $blue;
+}
+.border-electric-blue {
+  border:1px solid $electric-blue;
+}
+.border-light-purple {
+  border:1px solid $light-purple;
+}
+.border-white {
+  border: 1px solid #fff;
+}
+.radius-02 {
+  border-radius: 2px;
+}
+.radius-03 {
+  border-radius: 3px;
+}
+.radius-05 {
+  border-radius: 5px;
+}
+.radius-10 {
+  border-radius: 10px;
+}
+.radius-15 {
+  border-radius: 15px;
+}
+.radius-20 {
+  border-radius: 20px;
+}
+.radius-25 {
+  border-radius: 25px;
+}
+.radius-50 {
+  border-radius: 50px;
+}
+.radius-100 {
+  border-radius: 100%;
+}
+

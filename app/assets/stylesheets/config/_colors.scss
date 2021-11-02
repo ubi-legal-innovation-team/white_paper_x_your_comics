@@ -1,0 +1,76 @@
+
+////////// COLORS //////////
+$yellow: #FFD252;
+$yellow-hover:#ffc933;
+$smooth-yellow: rgba(255, 210, 82, .1);
+$smooth-yellow-hover: rgba(255, 210, 82, .2);
+$orange: #FF8B20;
+$green:#B9E800;
+$green-hover:#ACD702;
+$smooth-green:rgba(56, 201, 60,.1);
+$smooth-green-hover:rgba(56, 201, 60,.2);
+$blue: #4386fc;
+$blue-hover: #0072FF;
+$strong-blue: #0F5AB8;
+$light-blue: #89BDFF;
+$smooth-blue: rgba(0, 114, 255, .1);
+$smooth-blue-hover: rgba(0, 114, 255, .2);
+$electric-blue: #173AF1;
+$electric-blue-hover:  #0d2fd9;
+$smooth-electric-blue: rgba(23, 58, 241, .1);
+$queeny-red:#FF4F6E;
+$red: #FF594F;
+$red-hover:   #ff3d33;
+$smooth-red: rgba(255, 89, 79,.1);
+$smooth-red-hover: rgba(255, 89, 79,.2);
+$grey: #C4C4C4;
+$light-grey: #E5E5E5;
+$strong-grey: #666666;
+$mid-grey: #808080;
+$grey-hover: #b3b3b3;
+$smooth-grey: rgba(196, 196, 196, .2);
+$magic-grey: #F4F4F4;
+$black: #3C3C3B;
+$strong-black: #222222;
+$smooth-black: rgba(34, 34, 34,.1);
+$smooth-black-hover: rgba(34, 34, 34,.2);
+$modal-black: rgba(34, 34, 34,.4);
+$light-purple: #4B68FF;
+$light-purple-hover: #415df1;
+$smooth-light-purple: rgba(75,104,255, .1);
+
+//////////  BORDER COLORS //////////
+$border-white: 2px solid #F6F6F6;
+
+//////////  BACKGROUND COLORS //////////
+$ml-background-blue: linear-gradient(180deg, #4B68FF 0.01%, #0A077D 100%);
+$background-green: linear-gradient(to right, #38c93c, #36c83a, #34c638, #31c536, #2fc334);
+$background-electric-blue: linear-gradient(to right, #2648f2, #2142ec, #1b3ce5, #1535df, #0d2fd9);
+$background-blue: linear-gradient(to right, #4386fc, #3881fd, #2c7cfe, #1d77fe, #0072ff);
+$background-strong-blue: linear-gradient(to right, #0072ff, #006ced, #0066db, #0760ca, #0f5ab8);
+$background-light-purple: linear-gradient(to right, #4b68ff, #4965fb, #4662f8, #4460f4, #415df1);
+$background-black: linear-gradient(to right, #3c3c3b, #363535, #2f2f2f, #282828, #222222);
+$background-grey: linear-gradient(to right, #e5e5e5, #dddddd, #d4d4d4, #cccccc, #c4c4c4);
+$background-red: linear-gradient(to right, #ff4f6e, #ff4969, #ff4263, #ff3b5e, #ff3358);
+$strong-white: #f2f6fa;
+
+//////////  BOX SHADOW COLORS //////////
+$ml-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+$soft-ml-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+$box-shadow-electric-blue: 4px 4px 10px rgba(23, 58, 241, .5);
+$box-shadow-blue: 4px 4px 10px rgba(0, 114, 255, .5);
+$box-shadow-blue-inset: inset 4px 4px 10px rgba(0, 114, 255, .5);
+$box-shadow-light-blue: 4px 4px 10px rgba(137, 189, 255, .5);
+$box-shadow-strong-blue: 4px 4px 10px rgba(15, 90, 184, .5);
+$box-shadow-light-blue-inset: inset 4px 4px 5px rgba(137, 189, 255, .1), inset -4px -4px 5px #fff;
+$box-shadow-purple: 4px 4px 10px rgba(98, 72, 255, .5);
+$box-shadow-red: 4px 4px 10px rgba(237, 33, 58, .5);
+$box-shadow-black: 4px 4px 10px rgba(60, 60, 59, .5);
+$box-shadow-grey: inset 4px 4px 10px rgba(196, 196, 196, .5);
+$box-shadow-white: 4px 4px 5px rgba(0, 0, 0, 0.1), -4px -4px 5px #fff;
+$box-shadow-white-inset: inset 4px 4px 5px rgba(0, 0, 0, 0.1), inset -4px -4px 5px #fff;
+$box-shadow-hovered-white: 1px 1px 5px rgba(0, 0, 0, 0.1), -3px -3px 5px #fff;
+
+//////////  TEXT SHADOW COLORS //////////
+$text-shadow-white-ux: 4px 4px 5px rgba(0, 0, 0, 0.1), -4px -4px 5px #fff;
+$text-shadow-classic: 0 2px 3px rgba(0,0,0,.2);

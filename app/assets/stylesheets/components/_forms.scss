@@ -1,0 +1,62 @@
+input[type="email"]:hover, input[type="email"]:active, input[type="email"]:focus,
+input[type="password"]:hover, input[type="password"]:active, input[type="password"]:focus,
+input[type="text"]:hover, input[type="text"]:active, input[type="text"]:focus,
+input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
+textarea:hover, textarea:active, textarea:focus,
+select
+ {
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+
+.error-message {
+  color:$red !important;
+  font-size:.8rem !important;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  display:none;
+}
+
+// circle (radio) and square (checkbox) ux inputs
+input[type="radio"].circle-ux-radio + label,
+input[type="checkbox"].square-ux-checkbox + label {
+  width: max-content;
+  font-size: 1rem;
+  color: $strong-grey;
+  cursor: pointer;
+  background-color:transparent;
+  padding:0;
+}
+input[type="checkbox"].square-ux-checkbox + label:before {
+  font-family: "Font Awesome 5 Free";
+  content:"\f0c8";
+  margin-right:10px;
+}
+input[type="radio"].circle-ux-radio + label:before {
+  font-family: "Font Awesome 5 Free";
+  content:"\f111";
+  margin-right:10px;
+}
+input[type="radio"].circle-ux-radio:checked + label,
+input[type="checkbox"].square-ux-checkbox:checked + label {
+  color: $strong-grey;
+  transition: all .2s ease-out;
+}
+input[type="checkbox"].square-ux-checkbox:checked + label:before {
+  content: "\f14a";
+  font-weight: 900;
+  color: $strong-grey;
+}
+input[type="radio"].circle-ux-radio:checked + label:before{
+  content: "\f192";
+  font-weight: 900;
+  color: $strong-grey;
+}
+input[type="radio"].circle-ux-radio + label::before,
+input[type="checkbox"].square-ux-checkbox + label::before {
+  position:relative;
+  top:0;
+  left:0;
+}

@@ -1,0 +1,16 @@
+.scrollable-x::-webkit-scrollbar{
+  height: .25em;
+}
+.dropdown-toggled::-webkit-scrollbar,
+.scrollable::-webkit-scrollbar,
+ul.slides::-webkit-scrollbar {
+  width: .25em;
+}
+.dropdown-toggled::-webkit-scrollbar-thumb,
+.scrollable-x::-webkit-scrollbar-thumb,
+.scrollable::-webkit-scrollbar-thumb,
+ul.slides::-webkit-scrollbar-thumb {
+  background-color: $grey;
+  outline: 1px solid $light-grey;
+  border-radius: 25px;
+}

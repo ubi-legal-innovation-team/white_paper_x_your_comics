@@ -1,0 +1,48 @@
+@media(max-width:640px){
+  .flex-start-rp-col-cent {
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .flex-rp-cent {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .flex-bet-start-rp-col {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .flex-cent-rp-bet {
+    display:flex;
+    justify-content: space-between;
+  }
+  .flex-cent-rp-col-start {
+    display:flex;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .flex-start-rp-col {
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+@media(max-width:1024px){
+  .flex-row-wrap-cent-start-rp-cent,
+  .flex-row-wrap-end-bet-rp-cent {
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:center;
+  }
+  .flex-col-end-rp-start {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}

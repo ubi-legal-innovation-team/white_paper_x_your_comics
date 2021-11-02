@@ -1,0 +1,80 @@
+.modal-toggled-ajaxified {
+  z-index:100;
+  width:100%;
+  height: 100%;
+  background-color: $modal-black;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.modal-container-ajaxified {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.5);
+  transition-property: all;
+  transition-duration:.2s;
+  transition-timing-function: ease-in;
+  &.active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  &.black {
+    background-color: #000;
+    color:#fff;
+    .modal-links-ajaxified {
+      color:#fff;
+    }
+  }
+  &.white {
+    background-color: #fff;
+    color:#000;
+    .modal-links-ajaxified {
+      color:#000;
+    }
+  }
+}
+.modal-headers-ajaxified {
+  &.box-shadow {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+.modal-content-ajaxified {
+  h1, h3 {
+    margin: 50px 0 1.2rem 0;
+  }
+  h5, p.label-header {
+    margin: 40px 0 .5rem 0;
+  }
+}
+.modal-links-ajaxified {
+  color:$strong-black;
+  font-size:1.2rem;
+}
+
+// --------------------------------------
+// 👇👇     HTML MODAL EXAMPLE     👇👇
+// --------------------------------------
+
+// <div id="YOUR_ID" class="modal-toggled-ajaxified fixed centered flex-cent">
+//   <div class="modal-container-ajaxified flex-col-bet-cent white s-500-rp-300 p-10 radius-10">
+//     <div class="modal-headers-ajaxified">
+//       <h1>Hello Ubisoft</h1>
+//     </div>
+
+//     <div class="modal-content-ajaxified scrollable pr-10 h-max w-max flex-col-start">
+//       <p>Ubisoft is a French video game development, publishing and distribution company</p>
+//     </div>
+
+//     <div class="modal-links-ajaxified flex-cent w-max mt-20">
+//       <span class="close-modal YOUR_ID">click to close the modal</span>
+//     </div>
+//   </div>
+// </div>

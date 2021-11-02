@@ -1,0 +1,39 @@
+.overlay-shown {
+  visibility:hidden;
+  opacity:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $modal-black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1;
+}
+.overlay-triggered {
+  &:hover .overlay-shown {
+    visibility:visible;
+    opacity:1;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+  }
+}
+
+// --------------------------------------
+// 👇👇     HTML OVERLAY EXAMPLE     👇👇
+// --------------------------------------
+
+// <div class="relative overlay-triggered">
+
+//  <div class="flex">
+//    YOUR CONTENT HERE
+//  </div>
+
+//  <div class="overlay-shown">
+//    <%= svg('ubisoft_pen_black') %>
+//  </div>
+
+// </div>

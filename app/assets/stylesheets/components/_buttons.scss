@@ -1,0 +1,11 @@
+button {
+  border: none;
+  cursor:pointer;
+  &:active, &:focus {
+    outline:none;
+  }
+}
+input[type="submit"] {
+  cursor:pointer;
+  border:none;
+}

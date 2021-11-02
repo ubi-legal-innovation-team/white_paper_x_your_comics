@@ -1,0 +1,41 @@
+<section id="welcome">
+  <div class="soft-ml-box-shadow flex-col-cent radius-05 w-max pb-25 text-cent">
+
+    <div class="w-max background-magic-grey p-10">
+      <%= image_tag 'partners/Ruby_on_Rails-logo.png', width: "40px" %>
+      <h1 class="m-0">Welcome on Rails <%#= current_user.first_name %></h1>
+    </div>
+
+    <div class="flex-col-cent mt-50 p-10">
+
+      <div class="max-w-600 mb-50">
+        <%= svg('ubisoft_gear_30') %>
+        <h3 class="mt-05">Configuration files</h3>
+
+        <p class="p-rp-small">
+          This Rails app was generated with <%= link_to "ubi-legal-innovation-team/templates", "https://github.com/ubi-legal-innovation-team/templates/blob/master/default.rb", target: "_blank", class: "text-underline" %>, created by the <%= link_to "Legal Innovation team", "https://www.legallab.ubisoft.org/crew", target:"_blank", class: "text-underline" %> and server-side administrated by <%= link_to "Steven Pojer", "https://profile.ubisoft.org/#/u/spojer?autocompletion=true", target:"_blank", class: "text-underline" %>.
+        </p>
+      </div>
+
+      <div class="max-w-600 mb-50">
+        <%= svg('ubisoft_rocket_30') %>
+        <h3 class="mt-05">Versions management (v.1.0.0)</h3>
+
+        <ul class="no-padding unstyle-list p-rp-small text-left">
+          <li class="mb-05"><u>v1.0.0</u> : first launch and deployment on Heroku <span class="text-grey">(MM, YYYY)</span></li>
+        </ul>
+      </div>
+
+      <div class="max-w-600 mb-100">
+        <%= svg('ubisoft_home_30') %>
+        <h3 class="mt-05">Current application</h3>
+        <p class="p-rp-small">The current version of <span class="text-red">ruby</span> is <%= RUBY_VERSION %>.</p>
+        <p class="p-rp-small">The current version of <span class="text-red">Rails</span> is <%= Rails.version %></p>
+      </div>
+
+      <%= link_to "E N T E R", home_path %>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,55 @@
+// Ajax call clicked popups
+.popup_ajaxified {
+  position: absolute;
+  left:40px;
+  top:-20px;
+  background-color: #fff;
+  height:max-content;
+  transition: all .1s ease-out;
+  z-index:1;
+  #YOUR_ID {
+    width:400px;
+    padding:15px;
+  }
+  p.nth-child a:nth-child(even) {color: $electric-blue}
+  p.nth-child a:nth-child(odd) {color: #000}
+}
+
+// --------------------------------------
+// 👇👇     HTML MODAL EXAMPLE     👇👇
+// --------------------------------------
+
+// ==> Triggered element
+
+// <div id="YOUR_ID" class="flex-col relative">
+//   <span id="close_popup" class="absolute top-right pointer"><%= svg('filled_cross_black_20') %></span>
+
+//   <p class="m-0 p-small strong">
+//     SOME TEXT
+//     <strong class="p-tall">some text</strong>
+//   </p>
+//   <p class="p-small nth-child">
+//    <a href="link"></a>
+//    <a href="link"></a>
+//   </p>
+
+//   <p class="m-0 p-small strong">
+//     SOME TEXT
+//     <strong class="p-tall">some text</strong>
+//   </p>
+// </div>
+
+// ==> Trigger element
+
+// <%= form_tag path, method: :get, id: "YOUR_ID_call", class: "popup-call relative" do %>
+//   <%= button_tag :submit, class: "no-background" %>
+
+//   <div class="popup_ajaxified radius-15"><!-- AJAX POPUP CALL --></div>
+// <% end %>
+
+// ==> Application controller
+
+// def METHOD_NAME
+//   CODE HERE
+//   render partial: "YOUR_PATH"
+// end

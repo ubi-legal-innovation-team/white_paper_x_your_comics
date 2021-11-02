@@ -1,0 +1,13 @@
+<%= form_tag notifications_call_path, method: :get, id: "user_notifications_call", class: "dropdown-call relative" do %>
+
+  <%= button_tag :submit, class: "no-background p-0" do %>
+    <%= svg('bell_white') %>
+  <% end %>
+
+<!--   <%# if Notification.user(current_user.id).recent.unview.count != 0 %>
+    <span id="notifications_count" class="red">
+      <%#= Notification.user(current_user.id).recent.unview.count %>
+    </span>
+  <%# end %> -->
+
+<% end %>

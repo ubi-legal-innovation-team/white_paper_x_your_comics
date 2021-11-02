@@ -1,0 +1,33 @@
+table {
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    padding:8px;
+  }
+  td {
+    padding: 16px 8px;
+  }
+}
+
+ // --------------------------------------
+// 👇👇     HTML TABLE EXAMPLE     👇👇
+// --------------------------------------
+
+  // <div class="scrollable">
+  //   <table class="text-cent">
+  //     <thead class="background-strong-grey">
+  //       <tr class="text-white">
+  //         <th>Header</th>
+  //         <th class="text-strong-grey">Actions</th>
+  //       </tr>
+  //     </thead>
+
+  //     <tbody>
+  //       <tr>
+  //         <td>content</td>
+  //         <td>actions</td>
+  //       </tr>
+  //     </tbody>
+  //   </table>
+  // </div>
