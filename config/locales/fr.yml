@@ -5,3 +5,5 @@ fr:
     resources: "RESSOURCES"
     join: "REJOINDRE L'INITIATIVE"
     about: "QUI SOMMES NOUS ?"
+  footer:
+    legal_notices: "MENTIONS LÉGALES"

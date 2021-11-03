@@ -20,6 +20,9 @@
 .h-500 {
   height: 500px;
 }
+.h-vh-calc-footer {
+  height:calc(100vh - 78px)
+}
 
 // WIDTH
 .w-min {

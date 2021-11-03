@@ -1,17 +1,10 @@
-<footer id="legallab-footer">
+<footer id="legallab-footer" class="flex-bet-cent">
 
-  <%= link_to root_path, class: "absolute" do %>
-    <%= svg('ubisoft_white') %>
-  <% end %>
-
-  <div class="w-max flex-cent">
-
-    <%= form_tag example_modal_call_path, method: :get, id: "contact_innovation_call", class: "modal-call" do %>
-
-      <%= button_tag "modal example", class: "no-background p-0" %>
-
-    <% end %>
-
+  <div class="flex-start-cent flex-1 p-rp-small">
+    <span class="mr-20">CONTACT</span>
+    <span class="text-cent"><%= t('footer.legal_notices') %></span>
   </div>
+
+  <div class="flex-end flex-1"><%= svg('ubi_x_comics_logo') %></div>
 
 </footer>

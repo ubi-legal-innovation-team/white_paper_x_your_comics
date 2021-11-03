@@ -78,3 +78,7 @@
 //     </div>
 //   </div>
 // </div>
+
+// <%= form_tag example_modal_call_path, method: :get, id: "YOUR_ID_call", class: "modal-call" do %>
+//   <%= button_tag "modal example", class: "no-background p-0" %>
+// <% end %>
