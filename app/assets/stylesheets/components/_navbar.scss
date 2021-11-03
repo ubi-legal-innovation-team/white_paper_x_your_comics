@@ -15,11 +15,13 @@ nav#legallab-navbar {
     li {
       cursor: pointer;
       display: inline;
-      border-radius:50px;
-      padding:12px;
+      a {      
+        border-radius:50px;
+        padding:12px;
+      }
       &:hover {
-        background-color:$orange;
         & a {
+          background-color:$orange;
           color:#000 !important;
         }
       }

@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   get '/menu-responsive/call', to: 'application#menu_responsive_call', as: 'menu_responsive_call'
   
   root to: 'pages#home'
-  get '/perspectives', to: 'admin#perspectives'
-  get '/resources',    to: 'admin#resources'
-  get '/join',         to: 'admin#join'
-  get '/about',        to: 'admin#about'
+  get '/definition',   to: 'pages#definition'
+  get '/perspectives', to: 'pages#perspectives'
+  get '/resources',    to: 'pages#resources'
+  get '/join',         to: 'pages#join'
+  get '/about',        to: 'pages#about'
 
   get '/welcome', to: 'admin#welcome'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

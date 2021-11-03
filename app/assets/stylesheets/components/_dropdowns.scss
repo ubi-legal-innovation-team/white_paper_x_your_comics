@@ -20,10 +20,15 @@
     font-size:.9rem;
     cursor: pointer;
     display: inline;
-    border-radius:50px;
-    padding:12px;
+    margin: .35rem 0;
+    a {
+      border-radius:50px;
+      padding:12px;
+    }
     &:hover {
-      background-color:$orange;
+      & a {
+        background-color:$orange;
+      }
     }
   }
 }

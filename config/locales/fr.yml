@@ -1,9 +1,13 @@
 fr:
   navbar:
-    issue: "DÉFINITION & ENJEUX"
+    definition: "DÉFINITION & ENJEUX"
     perspectives: "PERSPECTIVES"
     resources: "RESSOURCES"
     join: "REJOINDRE L'INITIATIVE"
     about: "QUI SOMMES NOUS ?"
   footer:
     legal_notices: "MENTIONS LÉGALES"
+  home:
+    vision_header: "_Notre vision & notre définition du legal design"
+    vision_para: "Notre intention de contribuer à quelque chose de collectif, mettre en avant des initiatives, pousser une communauté d’échange de pratiques et pas de définir « LE » legal design ou « LES » projets, pour éviter l’effet de pré carré ou de compétition."
+    project_header: "_Projets"

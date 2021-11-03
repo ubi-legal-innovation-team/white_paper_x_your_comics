@@ -1,25 +1,24 @@
-@font-face {
-   font-family: 'Ubisoft bold';
-   src: font-url('UbisoftSans-Bold.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&family=Roboto:wght@400;900&display=swap');
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: 'Kodchasan', sans-serif;
 }
 
-@font-face {
-   font-family: 'Ubisoft regular';
-   src: font-url('UbisoftSans-Regular.ttf');
-}
-
-
-h1, h2, h3, h4, h5, h6, button, strong, .strong {
-  font-family: 'Ubisoft bold';
-}
-
-span, label, p, a, ul, li, tbody, u, thead, div,
+span, p, a, ul, li, tbody, u, thead, div,
 input[type="text"],
 input[type="radio"],
 input[type="checkbox"],
 input[type="submit"],
 textarea,
-select,
+select {
+  font-family: 'Roboto', sans-serif;
+  line-height:30px;
+}
+
+.strong {
+  font-weight:900;
+}
+
 .regular {
-  font-family: 'Ubisoft regular';
+  font-weight:400;
 }
