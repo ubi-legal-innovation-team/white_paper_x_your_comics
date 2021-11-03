@@ -2,7 +2,7 @@
 #dropdown_ajaxified {
   position: absolute;
   right:10px;
-  top:70px;
+  top:110px;
   max-height:500px;
   overflow-y: scroll;
   background-color: #fff;
@@ -11,37 +11,23 @@
   transition: all .1s ease-out;
   z-index:1;
   padding: 0px 40px 0px 20px;
-  #user_nav, #menu_responsive {
-    width:200px;
-  }
-  #user_notifications {
-    width:400px;
-  }
   ul {
     display:flex;
     flex-direction: column;
     align-items:flex-start;
   }
   li {
-    margin:.35rem 0;
-    display:flex;
-    width:100%;
     font-size:.9rem;
-    span.svg {
-      margin-right:.75rem;
-    }
-  }
-  a {
-    color: $strong-grey;
-    width:100%;
-    border-radius:3px;
-    padding:6px;
-    transition: all .2s ease-out;
+    cursor: pointer;
+    display: inline;
+    border-radius:50px;
+    padding:12px;
     &:hover {
-      background-color:$smooth-grey;
+      background-color:$orange;
     }
   }
 }
+
 
 // --------------------------------------
 // 👇👇    HTML DROPDOWN EXAMPLE    👇👇

@@ -30,4 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navbar:
+    issue: "DEFINITIONS"
+    perspectives: "PERSPECTIVES"
+    resources: "RESOURCES"
+    join: "JOIN US"
+    about: "ABOUT US"
