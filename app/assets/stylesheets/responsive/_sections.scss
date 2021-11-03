@@ -1,11 +1,17 @@
 @media(max-width:640px){
   section {
-    padding:100px 15px 15px 15px;
+    padding:120px 15px 15px 15px;
+    &.padding-y {
+      padding:0px 15px;
+    }
   }
 }
 
 @media(min-width:1460px) {
   section {
-    padding:120px 150px 50px 150px;
+    padding:150px 150px 50px 150px;
+    &.padding-y {
+      padding:0px 150px;
+    }
   }
 }

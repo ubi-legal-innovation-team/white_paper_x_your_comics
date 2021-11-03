@@ -57,6 +57,9 @@
 .background-white {
   background-color: #fff;
 }
+.background-black {
+  background-color: $black;
+}
 .background-strong-black {
   background-color: $strong-black;
 }
@@ -80,4 +83,7 @@
 }
 .no-background {
   background:none !important;
+}
+.main-background {
+  background:$main-background;
 }

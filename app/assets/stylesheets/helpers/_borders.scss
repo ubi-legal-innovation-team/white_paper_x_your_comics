@@ -126,6 +126,9 @@
 }
 .border-white {
   border: 1px solid #fff;
+  &.w-2 {
+    border-width:2px;
+  }
 }
 .radius-02 {
   border-radius: 2px;

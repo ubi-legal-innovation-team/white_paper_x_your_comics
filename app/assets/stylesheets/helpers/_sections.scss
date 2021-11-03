@@ -1,4 +1,6 @@
 section {
-  padding:110px 100px 50px 100px;
-  background: linear-gradient(270deg, #7AC7C1 0.01%, #A55536 100%);
+  padding:150px 100px 50px 100px;
+  &.padding-y {
+    padding:0px 100px;
+  }
 }

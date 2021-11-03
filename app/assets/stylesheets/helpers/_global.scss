@@ -85,3 +85,10 @@ a.underline {
 .index-1 {
   z-index:1;
 }
+
+@media(max-width:640px) {
+  .rp-hidden {
+    display:none;
+  }
+}
+
