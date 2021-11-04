@@ -40,6 +40,10 @@ const triggerAnimation = (event,items) => {
 			paragrahps[i].classList.remove('hidden');
 		};
 
+		const yOffset = -100; 
+		const y       = clicked_element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
 		clicked_element.classList.add('active');
+		window.scrollTo({top: y, behavior: 'smooth'});
 	};
 };
