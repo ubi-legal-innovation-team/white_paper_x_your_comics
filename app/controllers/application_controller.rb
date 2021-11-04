@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-    I18n.locale = params[:lang] || locale_from_header || I18n.default_locale
+    I18n.locale = params[:lang] == "en" || params[:lang] == "fr" ? params[:lang] || locale_from_header : I18n.default_locale
   end
 
   def locale_from_header

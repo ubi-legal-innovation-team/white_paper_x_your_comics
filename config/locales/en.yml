@@ -5,6 +5,7 @@ en:
     resources: "RESOURCES"
     join: "JOIN US"
     about: "ABOUT US"
+    logo: "logo_t_en"
   footer:
     legal_notices: "LEGAL NOTICES"
   home:
@@ -49,3 +50,11 @@ en:
       ninth: "2017"
       tenth: "2019"
       eleventh: "2021"
+  about:
+    image_1: "comics/Ubisoft-YC-02.png"
+    image_2: "comics/Ubisoft-YC-03.png"
+    image_3: "comics/Ubisoft-YC-04.png"
+    image_4: "comics/Ubisoft-YC-05.png"
+    image_5: "comics/Ubisoft-YC-06.png"
+    image_6: "comics/Ubisoft-YC-07.png"
+    image_7: "comics/Ubisoft-YC-08.png"
