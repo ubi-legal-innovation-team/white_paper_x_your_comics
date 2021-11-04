@@ -46,6 +46,9 @@ if (trigger_slideup) {
 // flashes.js
 displayFlashes();
 
+// grid_animations.js
+handleGridAnimation();
+
 // prevent_default.js
 preventDefault();
 
