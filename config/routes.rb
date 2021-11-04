@@ -10,6 +10,5 @@ Rails.application.routes.draw do
   get '/join',         to: 'pages#join'
   get '/about',        to: 'pages#about'
 
-  get '/welcome', to: 'admin#welcome'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'admin/welcome', to: 'admin#welcome', as: :admin_welcome_path
 end
