@@ -50,6 +50,42 @@ fr:
       ninth: "2017"
       tenth: "2019"
       eleventh: "2021"
+    jp_article:
+      first_block:
+        para_1: "Ce livre blanc prend une photo de l'actuel et du passé. Mais qu'en est-il du futur ?"
+        para_2: "A défaut de prévoir exactement comment le marché du Legal design va se développer nous pouvons explorer différents scénarios et hypothèses avec l'appui des données et tendances d'aujourd'hui."
+        header: "_Le Legal et le designer"
+        para_3: "Le Legal Design comme discipline s'est considérablement développé, dans le monde de l'entreprise comme dans la vie. La figure de se développement est celle du Legal designer."
+        para_4: "Vous n’avez pas besoin d’un examen d’État pour être un Legal Designer. Des anciens juristes sont Legal Designer, des entreprises recrutent des Legal designers diplômé d'école de design."
+        para_5: "La réconciliation de s'est deux chemins s'est fait par la formation et comme souvent dans le design, par le projet."
+      second_block:
+        header: "_La formation"
+        para_1: "Où se former ? Le Legal Design Lab de Lieke Beelen a fait des émules. A la TU Delft | Industrial Design Engineering, où les principaux professionnels néerlandais de la conception juridique dans l'enseignement et dans la pratique se sont réunis."
+        para_2: "Le Dutch Legal Design Lab a mené toutes sortes de projets (de recherche) pour une société plus juste et a mis en relation des étudiants en design, des étudiants en droit, des établissements d'enseignement/universitaires et des organisations publiques et commerciales pour s'attaquer aux problèmes lors de la création de projet d'accès à la justice. Cela a permis une collaboration étroite entre recherche et projet concret, entre public et privé qui va directement affecter les vies sociales et des affaires hollandaises mais aussi internationale."
+        para_3: "Le <a href='https://www.globalinstitute.legal/' target='_blanck' class='text-blue'>Global Institute for Law & Innovation</a> est une jeune startup montpelliéraine créée en 2019, spécialisée dans la production innovante de contenus scientifiques (Certificats, DU, Projets de recherche, Publications, Colloques) qui portent sur les technologies de rupture (LegalTech, Blockchain, IA, DataScience etc.) et dont la proposition de valeur est la suivante : repenser, former et innover."
+        para_4: "Réunissant des talents publics et privés des technologies innovantes il forme (DU LegalTech, DU Scientific Data Management en 2021. 1er DU Legal Design d'Europe en 2022) les étudiants du monde entier et relie la recherche et l’entreprise pour inventer les métiers de demain."
+        para_5: "Une université de design industriel, une start up française de formation, des DU, ces formations prédisent une variété des institutions pouvant accueillir l'enseignement du legal et du design. Cette variété va-t-elle s'étendre ? Allons-nous voir des facultés de droit proposer des modules, des écoles de management, des facultés en économie ? L'avenir le dira mais c'est le succès des premiers qui motivera les seconds."
+      third_block:
+        header: "_Qui va former"
+        list_1: "Des communicants"
+        list_2: "Des juristes"
+        list_3: "Des designers"
+        list_4: "Des acteurs de l'Etat"
+        para_1: "L'effet sur l'accès à la justice sera immédiat. Des projets comme <a href='https://www.justice.fr/' target='_blanck' class='text-blue'>JUSTICE.FR</a> sont les pionniers d'une longue liste pour remettre l'accessibilité aux droits aux cœurs de la justice."
+        para_2: "Plateforme digitale, machine à vote connecté, document récapitulatif crée par avocats et juges. La banalisation des initiatives va supporter la demande pour ce type d'actions qui ne fera qu'augmenter."
+      fourth_block:
+        header: "_L’effet sur le milieu du droit"
+        list_1: "Le juriste stratège "
+        list_2: "Gestion de projet par le design dans la justice"
+      fifth_block:
+        header: "_Les effets négatifs"
+        list_1: "Le Legal designer s'est-il perdu ?"
+        list_2: "Les opérations et les chiffres ont pris le dessus sur la stratégie"
+        list_3: "Certains métiers devraient plus aller vers une approche systémique"
+      sixth_block:
+        header: "_Legal Design Journal. Le business legal design"
+        name: "Jean-Philippe DOHO"
+        occupation: "Legal Innovation Manager"
   about:
     image_1: "comics/Ubisoft-YC-02.png"
     image_2: "comics/Ubisoft-YC-03.png"
