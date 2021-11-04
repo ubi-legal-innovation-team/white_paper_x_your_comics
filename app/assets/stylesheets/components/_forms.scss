@@ -60,3 +60,21 @@ input[type="checkbox"].square-ux-checkbox + label::before {
   top:0;
   left:0;
 }
+
+// DEVISE
+form#new_user {
+  .input input {
+    border: none;
+    color: $strong-black;
+    width: 400px;
+    height: 50px;
+    background-color: $smooth-grey;
+    border-radius: 5px;
+    border: $border-white;
+    padding:6px 8px;
+    &::placeholder {
+      font-size: .8rem;
+      color: $grey;
+    }
+  }
+}

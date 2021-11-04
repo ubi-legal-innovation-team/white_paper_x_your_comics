@@ -9,3 +9,13 @@ input[type="submit"] {
   cursor:pointer;
   border:none;
 }
+
+.main-btn {
+  background-color:$orange;
+  color:#000;
+  border-radius:5px;
+  padding:6px 12px;
+  &:hover {
+    box-shadow:$soft-ml-box-shadow;
+  }
+}
