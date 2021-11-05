@@ -117,6 +117,13 @@ fr:
         header: "_Legal Design Journal. Le business legal design"
         name: "Jean-Philippe DOHO"
         occupation: "Legal Innovation Manager"
+  join:
+    first_name: "_Prénom"
+    last_name: "_Nom"
+    email: "_Email"
+    country: "_Pays"
+    job_title: "_Profession"
+    message: "_Message"
   about:
     image_1: "comics/Ubisoft-YC-02.png"
     image_2: "comics/Ubisoft-YC-03.png"

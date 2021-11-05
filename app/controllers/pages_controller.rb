@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def join
+    @requester = Requester.new
     render :join
   end
 

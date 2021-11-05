@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get '/about',        to: 'pages#about'
 
   get 'admin/welcome', to: 'admin#welcome', as: :admin_welcome
+
+  post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 end
 

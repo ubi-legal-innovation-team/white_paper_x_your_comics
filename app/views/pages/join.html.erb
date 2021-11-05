@@ -1,5 +1,43 @@
 <section class="h-vh-calc-footer-rp-max text-white main-background">
   
-  <p>[ --> JOIN US IN PROGRESS <-- ]</p>
+  <%= form_for @requester, url: new_requester_path, method: :post, html: { class:"flex-col-cent w-800-rp-300 m-auto" } do |f| %>
+
+    <div class="flex-bet-cent w-max">
+      <div class="flex-col-start w-max pr-50">
+        <%= f.label :last_name, t('join.last_name') %>
+        <%= f.text_field :last_name, class:"w-max" %>
+      </div>
+
+      <div class="flex-col-start w-max pl-50">
+        <%= f.label :first_name, t('join.first_name') %>
+        <%= f.text_field :first_name, class:"w-max" %>
+      </div>
+    </div>
+
+    <div class="flex-col-start w-max">
+      <%= f.label :email, t('join.email') %>
+      <%= f.text_field :email, class:"w-max" %>
+    </div>
+
+    <div class="flex-bet-cent w-max">
+      <div class="flex-col-start w-max pr-50">
+        <%= f.label :country, t('join.country') %>
+        <%= f.text_field :country, class:"w-max" %>
+      </div>
+
+      <div class="flex-col-start w-max pl-50">
+        <%= f.label :job_title, t('join.job_title') %>
+        <%= f.text_field :job_title, class:"w-max" %>
+      </div>
+    </div>
+
+    <div class="flex-col-start w-max">
+      <%= f.label :message, t('join.message') %>
+      <%= f.text_area :message, class:"w-max" %>
+    </div>
+
+    <%= f.submit "SEND", class: "white-btn small radius-05 ml-10" %>
+
+  <% end %>
 
 </section>

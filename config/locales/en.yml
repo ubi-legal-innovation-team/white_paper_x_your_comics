@@ -81,6 +81,13 @@ en:
       ninth: "2017"
       tenth: "2019"
       eleventh: "2021"
+  join:
+    first_name: "_First name"
+    last_name: "_Last name"
+    email: "_Email"
+    country: "_Country"
+    job_title: "_Job title"
+    message: "_Message"
   about:
     image_1: ""
     image_2: ""
