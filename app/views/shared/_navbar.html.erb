@@ -13,9 +13,9 @@
   <div id="dropdown_ajaxified" class="scrollable"> <!-- AJAX DROPDOWN CALL --> </div>
 
   <div class="flex-cent p-rp-small">
-    <%= link_to "FR", { lang:"fr" }, class: "text-white #{params["lang"] == 'fr' || params["lang"].nil?  ? 'strong' : ''}" %>
+    <%= link_to "FR", { lang:"fr" }, class: "text-white #{params["lang"] == 'fr' ? 'strong' : ''}" %>
     <span class="mr-05 ml-05"> - </span>
-    <%= link_to "EN", { lang:"en" }, class: "text-white #{params["lang"] == 'en' ? 'strong' : ''}" %>
+    <%= link_to "EN", { lang:"en" }, class: "text-white #{params["lang"] == 'en' || params["lang"].nil? ? 'strong' : ''}" %>
 
     <%= render "shared/navbar_components/responsive/menu" %>
   </div>

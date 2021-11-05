@@ -15,7 +15,13 @@ input[type="submit"] {
   color:#000;
   border-radius:5px;
   padding:6px 12px;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
   &:hover {
-    box-shadow:$soft-ml-box-shadow;
+    background-color:$orange-hover;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
   }
 }

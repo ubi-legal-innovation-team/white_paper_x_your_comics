@@ -6,6 +6,9 @@ nav#legallab-navbar {
   position: fixed;
   top: 0;
   z-index: 10;
+  &.bg-white {
+    background-color: #fff;
+  }
   #legallab-logo {
     display:flex;
     justify-content:flex-start;

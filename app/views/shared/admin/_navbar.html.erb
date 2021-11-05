@@ -1,4 +1,4 @@
-<nav id="legallab-navbar" class="flex-bet-cent relative text-white">
+<nav id="legallab-navbar" class="flex-bet-cent bg-white bottom-ml-box-shadow relative">
 
   <%= link_to root_path(lang:params[:lang]) do %>
     <div id="legallab-logo">
@@ -8,6 +8,17 @@
     </div>
   <% end %>
 
-  <span class="main-btn p-tall-rp-p">ADMIN</span>
+  <div id="dropdown_ajaxified" class="scrollable"> <!-- AJAX DROPDOWN CALL --> </div>
+
+  <%= form_tag admin_nav_call_path, method: :get, id: "admin_nav_call", class: "dropdown-call" do %>
+    <%= hidden_field_tag :lang, params[:lang] || I18n.default_locale %>
+    <%= hidden_field_tag :location, params[:action] %>
+
+    <%= button_tag :submit, class: "pad-e-blue p-auto" do %>
+      <span>ADMIN</span>
+    <% end %>
+
+  <% end %>
 
 </nav>
+
