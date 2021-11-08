@@ -22,9 +22,8 @@ input[type="radio"], input[type="checkbox"] {
 // circle (radio) and square (checkbox) ux inputs
 input[type="radio"].circle-ux-radio + label,
 input[type="checkbox"].square-ux-checkbox + label {
-  width: max-content;
   font-size: 1rem;
-  color: $strong-grey;
+  color: #fff;
   cursor: pointer;
   background-color:transparent;
   padding:0;
@@ -41,18 +40,18 @@ input[type="radio"].circle-ux-radio + label:before {
 }
 input[type="radio"].circle-ux-radio:checked + label,
 input[type="checkbox"].square-ux-checkbox:checked + label {
-  color: $strong-grey;
+  color: #fff;
   transition: all .2s ease-out;
 }
 input[type="checkbox"].square-ux-checkbox:checked + label:before {
   content: "\f14a";
   font-weight: 900;
-  color: $strong-grey;
+  color: #fff;
 }
 input[type="radio"].circle-ux-radio:checked + label:before{
   content: "\f192";
   font-weight: 900;
-  color: $strong-grey;
+  color: #fff;
 }
 input[type="radio"].circle-ux-radio + label::before,
 input[type="checkbox"].square-ux-checkbox + label::before {
@@ -72,6 +71,17 @@ form#new_user {
     border-radius: 5px;
     border: $border-white;
     padding:6px 8px;
+    &::placeholder {
+      font-size: .8rem;
+      color: $grey;
+    }
+  }
+}
+
+form#new_requester {
+  input[type="text"], textarea {
+    border: $border-white;
+    padding:4px 8px;
     &::placeholder {
       font-size: .8rem;
       color: $grey;

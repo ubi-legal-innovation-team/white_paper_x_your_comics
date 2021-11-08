@@ -1,42 +1,76 @@
-<section class="h-vh-calc-footer-rp-max text-white main-background">
+<section class="h-max text-white main-background">
   
-  <%= form_for @requester, url: new_requester_path, method: :post, html: { class:"flex-col-cent w-800-rp-300 m-auto" } do |f| %>
+  <%= form_for @requester, url: new_requester_path, method: :post, html: { class:"flex-col-cent wmax-800-rp-300 m-auto" } do |f| %>
+    <%= hidden_field_tag :lang, params[:lang] %>
 
-    <div class="flex-bet-cent w-max">
-      <div class="flex-col-start w-max pr-50">
-        <%= f.label :last_name, t('join.last_name') %>
-        <%= f.text_field :last_name, class:"w-max" %>
+    <div class="flex-bet-cent-rp-col w-max mb-30">
+      <div class="flex-col-start w-max pr-50-rp-0">
+        <%= f.label :last_name, t('join.last_name'), class:"strong p-tall-rp-p mb-05" %>
+        <%= f.text_field :last_name, class:"w-max radius-05", placeholder:"Jane" %>
+        
+        <span class="text-red p-small">
+          <%= flash["errors_messages"]["first_name"].join(', ') if flash["errors_messages"] && flash["errors_messages"]["first_name"] %>
+        </span>
       </div>
 
-      <div class="flex-col-start w-max pl-50">
-        <%= f.label :first_name, t('join.first_name') %>
-        <%= f.text_field :first_name, class:"w-max" %>
-      </div>
-    </div>
-
-    <div class="flex-col-start w-max">
-      <%= f.label :email, t('join.email') %>
-      <%= f.text_field :email, class:"w-max" %>
-    </div>
-
-    <div class="flex-bet-cent w-max">
-      <div class="flex-col-start w-max pr-50">
-        <%= f.label :country, t('join.country') %>
-        <%= f.text_field :country, class:"w-max" %>
-      </div>
-
-      <div class="flex-col-start w-max pl-50">
-        <%= f.label :job_title, t('join.job_title') %>
-        <%= f.text_field :job_title, class:"w-max" %>
+      <div class="flex-col-start w-max pl-50-rp-0">
+        <%= f.label :first_name, t('join.first_name'), class:"strong p-tall-rp-p mb-05" %>
+        <%= f.text_field :first_name, class:"w-max radius-05", placeholder:"Doe" %>
+        
+        <span class="text-red p-small">
+          <%= flash["errors_messages"]["last_name"].join(', ') if flash["errors_messages"] && flash["errors_messages"]["last_name"] %>
+        </span>
       </div>
     </div>
 
-    <div class="flex-col-start w-max">
-      <%= f.label :message, t('join.message') %>
-      <%= f.text_area :message, class:"w-max" %>
+    <div class="flex-col-start w-max mb-30">
+      <%= f.label :email, t('join.email'), class:"strong p-tall-rp-p mb-05" %>
+      <%= f.text_field :email, class:"w-max radius-05", placeholder:"jane.doe@legaldesign.com" %>
+      
+      <span class="text-red p-small">
+        <%= flash["errors_messages"]["email"].join(', ') if flash["errors_messages"] && flash["errors_messages"]["email"] %>
+      </span>
     </div>
 
-    <%= f.submit "SEND", class: "white-btn small radius-05 ml-10" %>
+    <div class="flex-bet-cent-rp-col w-max mb-30">
+      <div class="flex-col-start w-max pr-50-rp-0">
+        <%= f.label :country, t('join.country'), class:"strong p-tall-rp-p mb-05" %>
+        <%= f.text_field :country, class:"w-max radius-05" %>
+      </div>
+
+      <div class="flex-col-start w-max pl-50-rp-0">
+        <%= f.label :job_title, t('join.job_title'), class:"strong p-tall-rp-p mb-05" %>
+        <%= f.text_field :job_title, class:"w-max radius-05" %>
+      </div>
+    </div>
+
+    <div class="flex-col-start w-max mb-30">
+      <h2 class="m-0 mb-15 rp-auto"><%= t('join.how_join') %></h2>
+
+      <%= f.radio_button :reason, t('join.reason_1'), id: "reason_1", class:"circle-ux-radio" %>
+      <%= f.label :reason, t('join.reason_1'), for: "reason_1", class:"p-rp-small" %>
+
+      <%= f.radio_button :reason, t('join.reason_2'), id: "reason_2", class:"circle-ux-radio" %>
+      <%= f.label :reason, t('join.reason_2'), for: "reason_2", class:"p-rp-small" %>
+
+      <%= f.radio_button :reason, t('join.reason_3'), id: "reason_3", class:"circle-ux-radio" %>
+      <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small" %>
+
+      <span class="text-red p-small">
+        <%= flash["errors_messages"]["reason"].join(', ') if flash["errors_messages"] && flash["errors_messages"]["reason"] %>
+      </span>
+    </div>
+
+    <div class="flex-col-start w-max mb-30">
+      <%= f.label :message, t('join.message'), class:"strong p-tall-rp-p mb-05" %>
+      <%= f.text_area :message, class:"w-max radius-05", rows:"8", placeholder:". . ." %>
+
+      <span class="text-red p-small">
+        <%= flash["errors_messages"]["message"].join(', ') if flash["errors_messages"] && flash["errors_messages"]["message"] %>
+      </span>
+    </div>
+
+    <%= f.submit t('join.send'), class: "main-btn w-max radius-05 strong p-auto" %>
 
   <% end %>
 
