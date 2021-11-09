@@ -1,0 +1,23 @@
+nav.custom-pagination {
+  background-color:$magic-grey;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:6px;
+  font-size:.8rem;
+  .page {
+    padding:3px 6px;
+  }
+  .page.active {
+    background-color:#fff;
+  }
+  select {
+    padding:3px 30px 3px 6px;
+    border:none;
+  }
+  i {
+    position: absolute;
+    right:6px;
+    top:3px;
+  }
+}

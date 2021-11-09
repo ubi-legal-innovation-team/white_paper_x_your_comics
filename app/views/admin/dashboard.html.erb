@@ -1,3 +1,64 @@
 <section class="h-max">
-	<h1>Dashboard</h1>
+
+	<h1><%= "Requester".pluralize(@requesters_count) %> (<%= @requesters_count %>)</h1>
+
+	 <div class="scrollable">
+	     <table class="text-cent">
+	        <thead class="background-strong-grey">
+	        	<tr class="text-white">
+	        		<th>Created at</th>
+	           		<th>Name</th>
+	           		<th>Email</th>
+	           		<th>Country</th>
+	           		<th>Job title</th>
+	           		<th>Reason</th>
+	           		<th>Message</th>
+	         	</tr>
+	       </thead>
+
+	       <tbody>
+	       		<% @requesters.each do |requester| %>
+		         	<tr class="p-small border-top light-grey">
+		         		<td><%= requester.created_at.strftime("%d") %> - <%= requester.created_at.strftime("%b") %> - <%= requester.created_at.strftime("%Y") %></td>
+		           		<td><%= requester.first_name %> <%= requester.last_name %></td>
+		           		<td><%= requester.email %></td>
+		           		<td><%= requester.country %></td>
+		           		<td><%= requester.job_title %></td>
+		           		<td><%= requester.reason %></td>
+		           		<td><%= requester.message %></td>
+		         	</tr>
+	       		<% end %>
+	       </tbody>
+	    </table>
+
+      	<% if !@requesters.empty? %>
+        	<nav class="custom-pagination">
+          		<%== pagy_nav(@pagy_requesters) %>
+
+          		<div class="relative">
+            		<i class="fas fa-sort-down text-strong-grey index-1"></i>
+
+		            <select name="pagy_items" id="items_requesters" class="ml-10 radius-03 relative">
+		              <option value="<%= admin_dashboard_path(items_requesters:10) %>" <%= params[:items_requesters] == '10' ? 'selected' : ''%>>10</option>
+		              <option value="<%= admin_dashboard_path(items_requesters:20) %>" <%= params[:items_requesters] == '20' ? 'selected' : ''%>>20</option>
+		              <option value="<%= admin_dashboard_path(items_requesters:30) %>" <%= params[:items_requesters] == '30' ? 'selected' : ''%>>30</option>
+		              <option value="<%= admin_dashboard_path(items_requesters:40) %>" <%= params[:items_requesters] == '40' ? 'selected' : ''%>>40</option>
+		              <option value="<%= admin_dashboard_path(items_requesters:50) %>" <%= params[:items_requesters] == '50' ? 'selected' : ''%>>50</option>
+		            </select>
+          		</div>
+
+          		<span class="ml-05 text-strong-grey">items per page</span>
+        	</nav>
+      <% end %>
+
+      <% if @requesters.empty? %>
+
+        <div class="flex-col-cent m-auto mt-50">
+          <%= svg('ubisoft_box') %>
+          <p class="mt-10">nothing to display. . .</p>
+        </div>
+
+      <% end %>
+	</div>
+
 </section>

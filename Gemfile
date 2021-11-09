@@ -35,6 +35,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem "strip_attributes"
+gem 'pagy'
 # Use Redis adapter to run Action Cable in production
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'

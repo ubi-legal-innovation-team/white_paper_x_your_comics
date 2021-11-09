@@ -53,6 +53,13 @@ const main = () => {
   // grid_animations.js
   handleGridAnimation();
 
+  // pagy_items.js
+  var select = document.getElementById('items_requesters');
+
+  if(select){
+    select.addEventListener('change',selectItemsPerPage);
+  };
+
   // prevent_default.js
   preventDefault();
 
