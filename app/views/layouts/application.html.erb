@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WhitePaperXYourComics</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEW605NMVF"></script>
+    <%= javascript_include_tag 'analytics', async: true %>
+
+    <title>Legal Design Community</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,9 +21,5 @@
 
     <%= yield %>
     <%= render 'shared/footer' %>
-
-  
-    <%#= javascript_pack_tag 'application' %>
-    <%#= javascript_include_tag 'application' %>
-</body>
+  </body>
 </html>
