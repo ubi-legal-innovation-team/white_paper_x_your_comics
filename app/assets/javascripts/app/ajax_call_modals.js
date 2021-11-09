@@ -16,7 +16,6 @@ function call_modal() {
         // add loader
       },
       success: function(data) {
-        $('body').css('overflow','hidden');
         $("body").append(data);
 
         var modal           = $(`#${$(form).attr('id').replace('_call','')}`),
@@ -52,7 +51,6 @@ function call_modal() {
 // ----- Remove modal content to DOM -----
 function closeModal(modal,modal_container){
   $(".close-modal").click(function(){
-    $('body').css('overflow','auto');
     $(modal_container).removeClass('active');
     setTimeout(function(){$(modal_container).remove();}, 200);
     setTimeout(function(){$(modal).remove();}, 200);

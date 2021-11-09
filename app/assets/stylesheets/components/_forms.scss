@@ -81,7 +81,8 @@ form#new_user {
 form#new_requester {
   input[type="text"], textarea {
     border: $border-white;
-    padding:4px 8px;
+    padding:4px 16px;
+    font-size:1rem;
     &::placeholder {
       font-size: .8rem;
       color: $grey;
