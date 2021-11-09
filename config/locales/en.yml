@@ -81,6 +81,42 @@ en:
       ninth: "2017"
       tenth: "2019"
       eleventh: "2021"
+    jp_article:
+      first_block:
+        para_1: "This white paper deals with the present and the past. But what about the future ?"
+        para_2: "Failing to predict exactly how the legal design will be, we can explore different scenarios and hypothesis with the support of today's data and trends."
+        header: "_Legal and the designer"
+        para_3: "Legal Design as a discipline has developed considerably, in the corporate world as in life. The development figure is that of the Legal designer."
+        para_4: "You don't need a state exam to be a Legal Designer. Former lawyers are Legal Designer, companies are recruiting Legal designers graduated from design school."
+        para_5: "The reconciliation of these two paths was achieved through training and as often in design, through the project."
+      second_block:
+        header: "_Training"
+        para_1: "Where to train? Lieke Beelen's Legal Design Lab has followed suit. At TU Delft | Industrial Design Engineering, where the leading Dutch legal design professionals in education and practice came together."
+        para_2: "The Dutch Legal Design Lab has carried out all kinds of (research) projects for a fairer society and has brought together design students, law students, educational / academic institutions and public and commercial organizations to s '' tackle the problems when creating an access to justice project. This allowed a close collaboration between research and concrete project, between public and private which will directly affect social lives and Dutch but also international business."
+        para_3: "The <a href='https://www.globalinstitute.legal/' target='_blanck' class='text-blue'>Global Institute for Law & Innovation</a> is a young Montpellier startup created in 2019, specializing in the innovative production of scientific content (Certificates, DU, Research projects, Publications, Colloquia) which focus on disruptive technologies (LegalTech, Blockchain, IA , DataScience etc.) and whose value proposition is as follows: rethink, train and innovate."
+        para_4: "Bringing together public and private talents in innovative technologies, it trains (DU LegalTech, DU Scientific Data Management in 2021. 1st DU Legal Design in Europe in 2022) students from all over the world and connects research and business to invent the professions of tomorrow."
+        para_5: "A university of industrial design, a French training start-up, DU, these training programs predict a variety of institutions that can accommodate the teaching of legal and design. Will this variety spread? Are we going to see law schools offering modules, management schools, economics faculties? The future will tell, but it is the success of the former that will motivate the latter."
+      third_block:
+        header: "_Who will train"
+        list_1: "Communicators"
+        list_2: "Jurists"
+        list_3: "Designers"
+        list_4: "State actors"
+        para_1: "The effect on access to justice will be immediate. Projects like <a href='https://www.justice.fr/' target='_blanck' class='text-blue'>JUSTICE.FR</a> are the pioneers of a long list to restore accessibility to rights to the hearts of justice."
+        para_2: "Digital platform, connected voting machine, summary document created by lawyers and judges. The trivialization of initiatives will support the demand for this type of action which will only increase."
+      fourth_block:
+        header: "_The effect on the legal community"
+        list_1: "The lawyer strategist"
+        list_2: "Project management by design in justice"
+      fifth_block:
+        header: "_The negative effects"
+        list_1: "Did the Legal designer get lost ?"
+        list_2: "Operations and numbers took precedence over strategy and user centric approach"
+        list_3: "Some professions should go more towards a systemic approach"
+      sixth_block:
+        header: "_Legal Design Journal. Business of the Legal Design"
+        name: "Jean-Philippe DOHO"
+        occupation: "Legal Innovation Manager"
   join:
     first_name: "_First name *"
     last_name: "_Last name *"
