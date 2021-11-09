@@ -10,13 +10,6 @@ const trackGoogleAnalytics = (event) => {
     page_path: event.srcElement.location.pathname,
     page_title: event.srcElement.title
   });
-
-  // set body custom loaded data to 'T' to prevent code loading twice
-  $('body').attr('data-loaded','T');
 };
 
-if ($('body').attr('data-loaded') == 'T') {
-  document.addEventListener('turbolinks:load', trackGoogleAnalytics); // load turbolinks if data-loaded is set to 'T'
-} else {
-  $(document).ready(trackGoogleAnalytics); // call trackGoogleAnalytics function whe user refresh the page
-}
+document.addEventListener('turbolinks:load', trackGoogleAnalytics);

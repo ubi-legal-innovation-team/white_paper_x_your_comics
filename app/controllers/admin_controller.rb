@@ -6,4 +6,8 @@ class AdminController < ApplicationController
   def welcome
     render :welcome
   end
+
+  def dashboard
+    render :dashboard
+  end
 end

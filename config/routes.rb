@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get '/join',         to: 'pages#join'
   get '/about',        to: 'pages#about'
 
-  get 'admin/welcome', to: 'admin#welcome', as: :admin_welcome
+  get 'admin/welcome',   to: 'admin#welcome',   as: :admin_welcome
+  get 'admin/dashboard', to: 'admin#dashboard', as: :admin_dashboard
 
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 end
