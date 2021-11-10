@@ -8,6 +8,7 @@ class CreateRequesters < ActiveRecord::Migration[6.1]
       t.string :job_title
       t.string :reason
       t.string :message
+      t.boolean :get_in_touch, default:false
 
       t.timestamps
     end

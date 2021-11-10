@@ -275,6 +275,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   listen (~> 3.3)
+  mail
   pagy
   pg (~> 1.1)
   pry-byebug

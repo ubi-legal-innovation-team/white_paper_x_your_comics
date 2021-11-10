@@ -6,7 +6,6 @@ class RequestersController < ApplicationController
   		flash[:notice]   = t('join.valid_message')
   		redirect_to join_path(lang:params[:lang])
   	else
-      binding.pry
   		flash[:alert]  = t('join.error_message.flash')
       flash[:errors] = @requester.errors.messages
       redirect_to join_path(

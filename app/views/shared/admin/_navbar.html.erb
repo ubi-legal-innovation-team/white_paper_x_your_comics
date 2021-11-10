@@ -15,7 +15,7 @@
     <%= hidden_field_tag :location, params[:action] %>
 
     <%= button_tag :submit, class: "pad-e-blue p-auto" do %>
-      <span>ADMIN</span>
+      <span>ADMIN (<%= current_user.email %>)</span>
     <% end %>
 
   <% end %>

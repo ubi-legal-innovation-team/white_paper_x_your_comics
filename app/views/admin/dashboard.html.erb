@@ -1,5 +1,7 @@
 <section class="h-max">
 
+	<h1 class="flex-cent m-auto mb-50">Admin Dashboard</h1>
+
 	<h1><%= "Requester".pluralize(@requesters_count) %> (<%= @requesters_count %>)</h1>
 
 	 <div class="scrollable">
@@ -13,6 +15,7 @@
 	           		<th>Job title</th>
 	           		<th>Reason</th>
 	           		<th>Message</th>
+	           		<th>Get in touch</th>
 	         	</tr>
 	       </thead>
 
@@ -25,7 +28,14 @@
 		           		<td><%= requester.country %></td>
 		           		<td><%= requester.job_title %></td>
 		           		<td><%= requester.reason %></td>
-		           		<td><%= requester.message %></td>
+		           		<td class="max-w-300"><%= requester.message %></td>
+		           		<td>
+		           			<% if requester.get_in_touch %>
+		           				<span class="pad-green">YES</span>
+		           			<% else %>
+		           			<span class="pad-red">NO</span>
+		           			<% end %>
+		           		</td>
 		         	</tr>
 	       		<% end %>
 	       </tbody>

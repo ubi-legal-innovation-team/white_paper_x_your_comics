@@ -63,13 +63,8 @@ const main = () => {
   // prevent_default.js
   preventDefault();
 
-  // set body custom loaded data to 'T' to prevent code loading twice
-  $('body').attr('data-loaded','T');
-    
 };
 
-if ($('body').attr('data-loaded') == 'T') {
-  document.addEventListener('turbolinks:load', main); // load turbolinks if data-loaded is set to 'T'
-} else {
-  $(document).ready(main); // call main function whe user refresh the page
-}
+Turbolinks.visit(location);
+Turbolinks.setProgressBarDelay(10);
+document.addEventListener('turbolinks:load', main);
