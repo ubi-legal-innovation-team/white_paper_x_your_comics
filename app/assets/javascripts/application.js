@@ -65,6 +65,10 @@ const main = () => {
 
 };
 
-Turbolinks.visit(location);
 Turbolinks.setProgressBarDelay(10);
 document.addEventListener('turbolinks:load', main);
+
+// prevent turbolinks unload when user refresh or reload the page
+if (performance.navigation.type == 1 || performance.navigation.type == 0) {
+  $(document).ready(main);
+};
