@@ -3,12 +3,16 @@
 	<h1 class="flex-cent m-auto mb-50">Admin Dashboard</h1>
 
 	<h1><%= "Requester".pluralize(@requesters_count) %> (<%= @requesters_count %>)</h1>
+	
+	<div class="flex-end">
+    <%= link_to 'Download as Excel', admin_requesters_index_path(format: :xlsx), class: "p-0-10 mb-05 p-small text-white radius-03 background-excel" %>
+   </div>
 
-	 <div class="scrollable">
+	 <div class="scrollable-x">
 	     <table class="text-cent">
 	        <thead class="background-strong-grey">
 	        	<tr class="text-white">
-	        		<th>Created at</th>
+	        			<th>Date</th>
 	           		<th>Name</th>
 	           		<th>Email</th>
 	           		<th>Country</th>

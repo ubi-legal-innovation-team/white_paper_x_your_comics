@@ -13,4 +13,17 @@ class AdminController < ApplicationController
 
     render :dashboard
   end
+
+  def requesters_index
+    @requesters = Requester.all
+
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=requesters.xlsx"
+      }
+      format.html { render :requesters_index }
+    end
+  end
 end
