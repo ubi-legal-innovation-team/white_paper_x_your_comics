@@ -34,12 +34,9 @@
 		           		<td><%= requester.reason %></td>
 		           		<td class="max-w-300"><%= requester.message %></td>
 		           		<td>
-		           			<% if requester.get_in_touch %>
-		           				<span class="pad-green">YES</span>
-		           			<% else %>
-		           			<span class="pad-red">NO</span>
-		           			<% end %>
-		           		</td>
+		           			<%= check_box_tag "get_in_touch[]", true, false, id:requester.id %>
+      							<%#= label_tag :get_in_touch, nil, for:requester.id %>
+      						</td>
 		         	</tr>
 	       		<% end %>
 	       </tbody>
