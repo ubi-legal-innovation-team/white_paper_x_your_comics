@@ -4,7 +4,7 @@
 
 	<h1><%= "Requester".pluralize(@requesters_count) %> (<%= @requesters_count %>)</h1>
 
-	<%= form_tag admin_update_requesters_path, method: :patch do %>
+	<%= form_tag admin_update_requesters_path, method: :patch, class:"scrollable-x" do %>
 	  <table class="text-cent">
 	    <thead class="background-strong-grey">
 	     	<tr class="text-white">
