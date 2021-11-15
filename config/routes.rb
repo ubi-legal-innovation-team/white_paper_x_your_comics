@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   get '/join',         to: 'pages#join'
   get '/about',        to: 'pages#about'
 
-  get 'admin/welcome',          to: 'admin#welcome',          as: :admin_welcome
-  get 'admin/dashboard',        to: 'admin#dashboard',        as: :admin_dashboard
-  get 'admin/requesters_index', to: 'admin#requesters_index', as: :admin_requesters_index
+  get   'admin/welcome',                     to: 'admin#welcome',           as: :admin_welcome
+  get   'admin/dashboard',                   to: 'admin#dashboard',         as: :admin_dashboard
+  get   'admin/requesters_index',            to: 'admin#requesters_index',  as: :admin_requesters_index
+  patch 'admin/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
 
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 end

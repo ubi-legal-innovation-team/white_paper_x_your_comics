@@ -8,10 +8,18 @@ class AdminController < ApplicationController
   end
 
   def dashboard
-    @pagy_requesters, @requesters = pagy(Requester.all, page_param: :page_requesters, items_param: :items_requesters)
+    @pagy_requesters, @requesters = pagy(Requester.all.order(:created_at), page_param: :page_requesters, items_param: :items_requesters)
     @requesters_count             = Requester.count
 
     render :dashboard
+  end
+
+  def update_requesters
+    @requesters = Requester.find(params[:contacted])
+    @requesters.each {|requester| requester.update(contacted:true)}
+    
+    flash[:notice] = "The selection was successfully updated."
+    redirect_to admin_dashboard_path
   end
 
   def requesters_index
@@ -21,7 +29,7 @@ class AdminController < ApplicationController
       format.xlsx {
         response.headers[
           'Content-Disposition'
-        ] = "attachment; filename=requesters.xlsx"
+        ] = "attachment; filename=LDC_requesters.xlsx"
       }
       format.html { render :requesters_index }
     end

@@ -23,10 +23,15 @@ input[type="radio"], input[type="checkbox"] {
 input[type="radio"].circle-ux-radio + label,
 input[type="checkbox"].square-ux-checkbox + label {
   font-size: 1rem;
-  color: #fff;
   cursor: pointer;
   background-color:transparent;
   padding:0;
+  &.white {
+    color:#fff;
+  }
+  &.orange {
+    color:$orange;
+  }
 }
 input[type="checkbox"].square-ux-checkbox + label:before {
   font-family: "Font Awesome 5 Free";
@@ -42,16 +47,34 @@ input[type="radio"].circle-ux-radio:checked + label,
 input[type="checkbox"].square-ux-checkbox:checked + label {
   color: #fff;
   transition: all .2s ease-out;
+  &.white {
+    color:#fff;
+  }
+  &.orange {
+    color:$orange;
+  }
 }
 input[type="checkbox"].square-ux-checkbox:checked + label:before {
   content: "\f14a";
   font-weight: 900;
   color: #fff;
+  &.white {
+    color:#fff;
+  }
+  &.orange {
+    color:$orange;
+  }
 }
 input[type="radio"].circle-ux-radio:checked + label:before{
   content: "\f192";
   font-weight: 900;
   color: #fff;
+  &.white {
+    color:#fff;
+  }
+  &.orange {
+    color:$orange;
+  }
 }
 input[type="radio"].circle-ux-radio + label::before,
 input[type="checkbox"].square-ux-checkbox + label::before {

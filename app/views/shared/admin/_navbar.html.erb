@@ -14,8 +14,8 @@
     <%= hidden_field_tag :lang, params[:lang] || I18n.default_locale %>
     <%= hidden_field_tag :location, params[:action] %>
 
-    <%= button_tag :submit, class: "pad-orange p-auto" do %>
-      <span>ADMIN (<%= current_user.email %>)</span>
+    <%= button_tag :submit, class: "pad-orange p-small" do %>
+      <span>ADMIN (<%= current_user.email.split('@').first %>)</span>
     <% end %>
 
   <% end %>

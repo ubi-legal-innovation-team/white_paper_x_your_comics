@@ -5,14 +5,14 @@ wb.styles do |style|
   bold    = style.add_style(b: true, sz: 12)
   size    = style.add_style(sz: 12)
 
-	wb.add_worksheet(name: "Requesters") do |sheet|
+	wb.add_worksheet(name: "LDC - Requesters") do |sheet|
 	  sheet.add_row ["Requesters"], style: heading
 	  sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")], style: size
 	  sheet.add_row []
-	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Get in touch"], style: bold
+	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Contacted"], style: bold
 
 	  @requesters.each do |requester|
-	    sheet.add_row [requester.created_at, requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.get_in_touch ], style: size
+	    sheet.add_row [requester.created_at, requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.contacted ], style: size
 	  end
 	end
 

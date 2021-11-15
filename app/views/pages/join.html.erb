@@ -49,15 +49,15 @@
 
       <%= f.radio_button :reason, t('join.reason_1'), id: "reason_1", class:"circle-ux-radio", 
         checked: params[:reason] == t('join.reason_1') ? true : false %>
-      <%= f.label :reason, t('join.reason_1'), for: "reason_1", class:"p-rp-small" %>
+      <%= f.label :reason, t('join.reason_1'), for: "reason_1", class:"p-rp-small white" %>
 
       <%= f.radio_button :reason, t('join.reason_2'), id: "reason_2", class:"circle-ux-radio", 
         checked: params[:reason] == t('join.reason_2') ? true : false %>
-      <%= f.label :reason, t('join.reason_2'), for: "reason_2", class:"p-rp-small" %>
+      <%= f.label :reason, t('join.reason_2'), for: "reason_2", class:"p-rp-small white" %>
 
       <%= f.radio_button :reason, t('join.reason_3'), id: "reason_3", class:"circle-ux-radio", 
         checked: params[:reason] == t('join.reason_3') ? true : false %>
-      <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small" %>
+      <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small white" %>
 
       <span class="text-red p-small">
         <%= flash["errors"]["reason"].join(', ') if flash["errors"] && flash["errors"]["reason"] %>

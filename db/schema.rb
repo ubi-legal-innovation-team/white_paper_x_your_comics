@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_11_05_164551) do
     t.string "job_title"
     t.string "reason"
     t.string "message"
-    t.boolean "get_in_touch", default: false
+    t.boolean "contacted", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
