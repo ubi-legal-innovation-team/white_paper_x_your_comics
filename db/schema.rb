@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 2021_11_15_122409) do
     t.string "questions", default: [], array: true
     t.string "answers", default: [], array: true
     t.string "imagery"
+    t.string "short_description"
+    t.string "language"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_versions_on_project_id"

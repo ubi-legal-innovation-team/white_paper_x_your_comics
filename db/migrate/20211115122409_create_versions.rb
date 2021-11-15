@@ -8,6 +8,8 @@ class CreateVersions < ActiveRecord::Migration[6.1]
       t.string :questions, array:true, default:[]
       t.string :answers, array:true, default:[]
       t.string :imagery
+      t.string :short_description
+      t.string :language
 
       t.timestamps
     end
