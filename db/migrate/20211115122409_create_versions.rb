@@ -4,11 +4,12 @@ class CreateVersions < ActiveRecord::Migration[6.1]
       t.references :project, null: false, foreign_key: true
       t.string :stakes, array:true, default:[]
       t.string :media
-      t.string :country
-      t.string :questions, array:true, default:[]
-      t.string :answers, array:true, default:[]
+      t.string :countries, array:true, default:[]
+      t.json :questions, default:{}
+      t.json :answers, default:{}
       t.string :imagery
       t.string :short_description
+      t.string :description
       t.string :language
 
       t.timestamps

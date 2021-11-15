@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_11_15_122409) do
     t.string "title"
     t.string "company"
     t.string "actor"
+    t.string "contact"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -53,11 +54,12 @@ ActiveRecord::Schema.define(version: 2021_11_15_122409) do
     t.bigint "project_id", null: false
     t.string "stakes", default: [], array: true
     t.string "media"
-    t.string "country"
-    t.string "questions", default: [], array: true
-    t.string "answers", default: [], array: true
+    t.string "countries", default: [], array: true
+    t.json "questions", default: {}
+    t.json "answers", default: {}
     t.string "imagery"
     t.string "short_description"
+    t.string "description"
     t.string "language"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
