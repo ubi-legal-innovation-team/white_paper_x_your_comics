@@ -32,8 +32,8 @@
 						<td><%= requester.reason %></td>
 		        <td class="max-w-300"><%= requester.message %></td>
 		        <td>
-		          <%= check_box_tag "contacted[]", requester.contacted ? true : requester.id, false, id:requester.id, class:"square-ux-checkbox", disabled:requester.contacted ? true : false, checked:requester.contacted ? true : false %>
-      				<%= label_tag nil, nil, for:requester.id, class:"orange" %>
+		          <%= check_box_tag "contacted[]", requester.contacted ? '' : requester.id, false, id:requester.id, class:"square-ux-checkbox", disabled:requester.contacted ? true : false, checked:requester.contacted ? true : false %>
+      				<%= label_tag nil, nil, for:requester.id, class:"orange #{requester.contacted ? 'disabled' : ''}" %>
       			</td>
 		      </tr>
 	      <% end %>

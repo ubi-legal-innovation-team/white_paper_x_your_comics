@@ -15,10 +15,15 @@ class AdminController < ApplicationController
   end
 
   def update_requesters
-    @requesters = Requester.find(params[:contacted])
-    @requesters.each {|requester| requester.update(contacted:true)}
-    
-    flash[:notice] = "The selection was successfully updated."
+    if params[:contacted]
+      @requesters = Requester.find(params[:contacted])
+      @requesters.each {|requester| requester.update(contacted:true)}
+      
+      flash[:notice] = "The selection was successfully updated."
+    else
+      flash[:alert] = "Nothing to update."
+    end
+
     redirect_to admin_dashboard_path
   end
 
