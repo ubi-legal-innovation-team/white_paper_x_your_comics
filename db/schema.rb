@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_122409) do
+ActiveRecord::Schema.define(version: 2021_11_15_120532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2021_11_15_122409) do
     t.string "company"
     t.string "actor"
     t.string "contact"
+    t.string "stakes", default: [], array: true
+    t.string "countries", default: [], array: true
+    t.string "short_description"
+    t.string "media"
+    t.string "imagery"
+    t.string "language"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,21 +56,4 @@ ActiveRecord::Schema.define(version: 2021_11_15_122409) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "versions", force: :cascade do |t|
-    t.bigint "project_id", null: false
-    t.string "stakes", default: [], array: true
-    t.string "media"
-    t.string "countries", default: [], array: true
-    t.json "questions", default: {}
-    t.json "answers", default: {}
-    t.string "imagery"
-    t.string "short_description"
-    t.string "description"
-    t.string "language"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_versions_on_project_id"
-  end
-
-  add_foreign_key "versions", "projects"
 end
