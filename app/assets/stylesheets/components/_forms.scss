@@ -29,6 +29,9 @@ input[type="checkbox"].square-ux-checkbox + label {
   &.white {
     color:#fff;
   }
+  &.black {
+    color:#000;
+  }
   &.orange {
     color:$orange;
   }
@@ -50,6 +53,9 @@ input[type="checkbox"].square-ux-checkbox:checked + label {
   &.white {
     color:#fff;
   }
+  &.black {
+    color:#000;
+  }
   &.orange {
     color:$orange;
   }
@@ -61,6 +67,9 @@ input[type="checkbox"].square-ux-checkbox:checked + label:before {
   &.white {
     color:#fff;
   }
+  &.black {
+    color:#000;
+  }
   &.orange {
     color:$orange;
   }
@@ -71,6 +80,9 @@ input[type="radio"].circle-ux-radio:checked + label:before{
   color: #fff;
   &.white {
     color:#fff;
+  }
+  &.black {
+    color:#000;
   }
   &.orange {
     color:$orange;
@@ -101,7 +113,8 @@ form#new_user {
   }
 }
 
-form#new_requester {
+form#new_requester,
+form#edit_project {
   input[type="text"], textarea {
     border: $border-white;
     padding:4px 16px;

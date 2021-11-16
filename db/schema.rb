@@ -70,10 +70,8 @@ ActiveRecord::Schema.define(version: 2021_11_16_131936) do
     t.string "contact"
     t.string "stakes", default: [], array: true
     t.string "countries", default: [], array: true
-    t.string "short_description"
     t.string "media"
     t.string "imagery"
-    t.string "language"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

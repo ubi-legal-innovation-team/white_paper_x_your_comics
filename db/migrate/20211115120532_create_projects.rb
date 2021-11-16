@@ -7,10 +7,8 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :contact
       t.string :stakes, array:true, default:[]
       t.string :countries, array:true, default:[]
-      t.string :short_description
       t.string :media
       t.string :imagery
-      t.string :language
 
       t.timestamps
     end

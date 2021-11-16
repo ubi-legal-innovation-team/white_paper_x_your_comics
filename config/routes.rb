@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get   'admin/dashboard/projects/:id',      to: 'admin#project_show',      as: :admin_project_show
   patch 'admin/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
 
+  patch 'admin/dashboard/projects/:id/update', to: 'projects#update',       as: :admin_update_project
+
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 end
 

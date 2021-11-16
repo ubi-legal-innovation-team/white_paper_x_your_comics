@@ -5,5 +5,7 @@ class Project < ApplicationRecord
 	
 	has_many :bodies, inverse_of: :project, dependent: :destroy
 
+	accepts_nested_attributes_for :bodies
+
 	has_one_attached :imagery
 end

@@ -1,5 +1,95 @@
 <section class="h-max">
 
-	<h1 class="flex-cent m-auto mb-50"><%= @project.title %></h1>
+	<div class="flex-col-cent m-auto">
+		<h1><%= @project.title %></h1>
+		<p class="text-cent m-0"><%= @project.company %></p>
+		<p class="text-cent p-small m-0 text-strong-grey"><%= @project.actor %></p>
+	</div>
 
-</section>
+	<div class="flex-col-start mt-50">
+		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%= @project.contact %></span></p>
+		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%= @project.stakes.join(', ') %></span></p>
+		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%= @project.countries.join(', ') %></span></p>
+		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%= @project.media %></span></p>
+	</div>
+
+	<%= form_for @project, url: admin_update_project_path(@project), method: :patch, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"edit_project" } do |f| %>
+
+		<div class="flex-col-start">
+	      <%= f.label :title, "_Title *", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.text_field :title, class:"w-max radius-05", placeholder:". . ." %>
+	      
+	      <% if flash["errors"] && flash["errors"]["title"] %>
+	        <span class="text-red p-small"><%= flash["errors"]["title"].join(', ')  %></span>
+	      <% end -%>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+	      <%= f.label :company, "_Company *", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.text_field :company, class:"w-max radius-05", placeholder:". . ." %>
+	      
+	      <% if flash["errors"] && flash["errors"]["company"] %>
+	        <span class="text-red p-small"><%= flash["errors"]["company"].join(', ')  %></span>
+	      <% end -%>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+	      <%= f.label :actor, "_Actor(s) *", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.text_field :actor, class:"w-max radius-05", placeholder:". . ." %>
+	      
+	      <% if flash["errors"] && flash["errors"]["actor"] %>
+	        <span class="text-red p-small"><%= flash["errors"]["actor"].join(', ')  %></span>
+	      <% end -%>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+	      <%= f.label :contact, "_Contact *", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.text_field :contact, class:"w-max radius-05", placeholder:". . ." %>
+	      
+	      <% if flash["errors"] && flash["errors"]["contact"] %>
+	        <span class="text-red p-small"><%= flash["errors"]["contact"].join(', ')  %></span>
+	      <% end -%>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+	      <%= f.label :media, "_Media *", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.text_field :media, class:"w-max radius-05", placeholder:". . ." %>
+	      
+	      <% if flash["errors"] && flash["errors"]["media"] %>
+	        <span class="text-red p-small"><%= flash["errors"]["media"].join(', ')  %></span>
+	      <% end -%>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+		  <h2 class="m-0">_Stakes</h2>
+	      <%= f.check_box :stakes,{ multiple:true, id:"1", checked: @project.stakes.include?("Informational design") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Informational design" %>
+	      <%= f.label "Informational design", for:"1", class:"black" %>
+	      <%= f.check_box :stakes,{ multiple:true, id:"2", checked: @project.stakes.include?("Access to justice") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Access to justice" %>
+	      <%= f.label "Access to justice", for:"2", class:"black" %>
+	      <%= f.check_box :stakes,{ multiple:true, id:"3", checked: @project.stakes.include?("Innovate sustainably") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Innovate sustainably" %>
+	      <%= f.label "Innovate sustainably", for:"3", class:"black" %>
+	      <%= f.check_box :stakes,{ multiple:true, id:"4", checked: @project.stakes.include?("Implement legal design") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Implement legal design" %>
+	      <%= f.label "Implement legal designn", for:"4", class:"black" %>
+	      <%= f.check_box :stakes,{ multiple:true, id:"5", checked: @project.stakes.include?("Perception of law professionals") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Perception of law professionals" %>
+	      <%= f.label "Perception of law professionals", for:"5", class:"black" %>
+	      <%= f.check_box :stakes,{ multiple:true, id:"6", checked: @project.stakes.include?("Deal with multiplicity of outcomes") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Deal with multiplicity of outcomes" %>
+	      <%= f.label "Deal with multiplicity of outcomes", for:"6", class:"black" %>
+	    </div>
+
+		<div class="flex-col-start mt-30">
+	      <%= f.label :imagery, "_Imagery", class:"strong p-tall-rp-p mb-05" %>
+	      <%= f.file_field :imagery %>
+	    </div>
+
+	    <%= f.fields_for :bodies, @project.bodies.build do |ff| %>
+
+	    	<div class="flex-col-start mt-30">
+		    	<%= ff.label :short_description, "_short_description *", class:"strong p-tall-rp-p mb-05" %>
+		      	<%= ff.text_field :short_description, class:"w-max radius-05", placeholder:". . ." %>
+	    	</div>
+
+	    <% end -%>
+
+	<% end -%>
+
+</section> 
