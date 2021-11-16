@@ -14,7 +14,10 @@ Rails.application.routes.draw do
 
   get   'admin/welcome',                     to: 'admin#welcome',           as: :admin_welcome
   get   'admin/dashboard',                   to: 'admin#dashboard',         as: :admin_dashboard
-  get   'admin/requesters_index',            to: 'admin#requesters_index',  as: :admin_requesters_index
+  get   'admin/dashboard/requesters/index',  to: 'admin#requesters',        as: :admin_requesters
+  get   'admin/dashboard/requesters/excel',  to: 'admin#requesters_excel',  as: :admin_requesters_excel
+  get   'admin/dashboard/projects/index',    to: 'admin#projects',          as: :admin_projects
+  get   'admin/dashboard/projects/:id',      to: 'admin#project_show',      as: :admin_project_show
   patch 'admin/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
 
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester

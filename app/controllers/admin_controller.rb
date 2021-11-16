@@ -8,10 +8,27 @@ class AdminController < ApplicationController
   end
 
   def dashboard
+    render :dashboard
+  end
+
+  def requesters
     @pagy_requesters, @requesters = pagy(Requester.all.order(:created_at), page_param: :page_requesters, items_param: :items_requesters)
     @requesters_count             = Requester.count
 
-    render :dashboard
+    render :requesters
+  end
+
+  def projects
+    @pagy_projects, @projects = pagy(Project.all.order(:title), page_param: :page_projects, items_param: :items_projects)
+    @projects_count           = Project.count
+
+    render :projects
+  end
+
+  def project_show
+    @project = Project.find(params[:id])
+    
+    render :project_show
   end
 
   def update_requesters
@@ -27,7 +44,7 @@ class AdminController < ApplicationController
     redirect_to admin_dashboard_path
   end
 
-  def requesters_index
+  def requesters_excel
     @requesters = Requester.all
 
     respond_to do |format|
@@ -36,7 +53,7 @@ class AdminController < ApplicationController
           'Content-Disposition'
         ] = "attachment; filename=LDC_requesters.xlsx"
       }
-      format.html { render :requesters_index }
+      format.html { render :requesters_excel }
     end
   end
 end

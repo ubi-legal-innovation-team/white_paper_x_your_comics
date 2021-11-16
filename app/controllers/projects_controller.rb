@@ -1,14 +1,16 @@
 class ProjectsController < ApplicationController
+  layout "admin"
+  before_action :authenticate_user!
+  
+  def create
+  end
+
   def update
-  	if Project.first.update(strong_params)
-  		flash[:notice] == "GOOD"
-  		redirect_to sandbox_path
-  	end
   end
 
   private
 
   def strong_params
-  	params.require(:project).permit(:imagery)
+  	params.require(:project).permit()
   end
 end

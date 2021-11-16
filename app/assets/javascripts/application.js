@@ -54,7 +54,7 @@ const main = () => {
   handleGridAnimation();
 
   // pagy_items.js
-  var select = document.getElementById('items_requesters');
+  var select = document.getElementById('items_requesters') || document.getElementById('items_projects');
 
   if(select){
     select.addEventListener('change',selectItemsPerPage);

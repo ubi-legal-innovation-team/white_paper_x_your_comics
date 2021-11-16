@@ -24,3 +24,6 @@
 //   // Call your functions here, e.g:
 //   // yourMethod();
 // });
+
+require("trix")
+require("@rails/actiontext")

@@ -1,0 +1,67 @@
+<section class="h-max">
+
+	<h1 class="flex-cent m-auto mb-50">Admin Dashboard</h1>
+
+	<h1><%= "Project".pluralize(@projects_count) %> (<%= @projects_count %>)</h1>
+
+	<div class="scrollable-x" >
+	  <table class="text-cent">
+	    <thead class="background-strong-grey">
+	     	<tr class="text-white">
+	     		<th>Date</th>
+	     		<th>Title</th>
+	     		<th>Actor</th>
+	     		<th>Company</th>
+	     		<th>Media</th>
+	     		<th>Show</th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+	      <% @projects.each do |project| %>
+		      <tr class="p-small border-top light-grey">
+		        <td><%= project.created_at.strftime("%d") %> - <%= project.created_at.strftime("%b") %> - <%= project.created_at.strftime("%Y") %></td>
+		        <td class="max-w-300"><%= project.title %></td>
+		        <td class="max-w-300"><%= project.actor %></td>
+		        <td><%= project.company %></td>
+		        <td><%= project.media %></td>
+		        <td>
+		        	<%= link_to admin_project_show_path(project) do %>
+		        		<%= svg('ubisoft_viewers_40') %>
+		        	<% end -%>
+						</td>
+		      </tr>
+	      <% end %>
+	    </tbody>
+	  </table>
+
+    <% if !@projects.empty? %>
+      <nav class="custom-pagination">
+        <%== pagy_nav(@pagy_projects) %>
+
+        <div class="relative">
+          <i class="fas fa-sort-down text-strong-grey index-1"></i>
+
+		      <select name="pagy_items" id="items_projects" class="ml-10 radius-03 relative">
+		        <option value="<%= admin_projects_path(items_projects:10) %>" <%= params[:items_projects] == '10' ? 'selected' : ''%>>10</option>
+		        <option value="<%= admin_projects_path(items_projects:20) %>" <%= params[:items_projects] == '20' ? 'selected' : ''%>>20</option>
+		        <option value="<%= admin_projects_path(items_projects:30) %>" <%= params[:items_projects] == '30' ? 'selected' : ''%>>30</option>
+		        <option value="<%= admin_projects_path(items_projects:40) %>" <%= params[:items_projects] == '40' ? 'selected' : ''%>>40</option>
+		        <option value="<%= admin_projects_path(items_projects:50) %>" <%= params[:items_projects] == '50' ? 'selected' : ''%>>50</option>
+		      </select>
+        </div>
+
+        <span class="ml-05 text-strong-grey">items per page</span>
+      </nav>
+    <% end %>
+
+    <% if @projects.empty? %>
+
+      <div class="flex-cent m-auto mt-50">
+        <p class="mt-10">nothing to display. . .</p>
+      </div>
+
+    <% end %>
+	</div>
+
+</section>
