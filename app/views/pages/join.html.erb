@@ -8,18 +8,18 @@
         <%= f.label :last_name, t('join.last_name'), class:"strong p-tall-rp-p mb-05" %>
         <%= f.text_field :last_name, class:"w-max radius-05", placeholder:"Jane", value:params[:last_name] %>
         
-        <span class="text-red p-small">
-          <%= flash["errors"]["first_name"].join(', ') if flash["errors"] && flash["errors"]["first_name"] %>
-        </span>
+        <% if flash["errors"] && flash["errors"]["last_name"] %>
+          <span class="text-red p-small"><%= flash["errors"]["last_name"].join(', ')  %></span>
+        <% end -%>
       </div>
 
       <div class="flex-col-start w-max pl-50-rp-0">
         <%= f.label :first_name, t('join.first_name'), class:"strong p-tall-rp-p mb-05" %>
         <%= f.text_field :first_name, class:"w-max radius-05", placeholder:"Doe", value:params[:first_name] %>
         
-        <span class="text-red p-small">
-          <%= flash["errors"]["first_name"].join(', ') if flash["errors"] && flash["errors"]["first_name"] %>
-        </span>
+        <% if flash["errors"] && flash["errors"]["first_name"] %>
+          <span class="text-red p-small"><%= flash["errors"]["first_name"].join(', ')  %></span>
+        <% end -%>
       </div>
     </div>
 
@@ -27,9 +27,9 @@
       <%= f.label :email, t('join.email'), class:"strong p-tall-rp-p mb-05" %>
       <%= f.text_field :email, class:"w-max radius-05", placeholder:"jane.doe@legaldesign.com", value:params[:email] %>
       
-      <span class="text-red p-small">
-        <%= flash["errors"]["email"].join(', ') if flash["errors"] && flash["errors"]["email"] %>
-      </span>
+      <% if flash["errors"] && flash["errors"]["email"] %>
+        <span class="text-red p-small"><%= flash["errors"]["email"].join(', ')  %></span>
+      <% end -%>
     </div>
 
     <div class="flex-bet-cent-rp-col w-max mb-30">
@@ -59,18 +59,18 @@
         checked: params[:reason] == t('join.reason_3') ? true : false %>
       <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small white" %>
 
-      <span class="text-red p-small">
-        <%= flash["errors"]["reason"].join(', ') if flash["errors"] && flash["errors"]["reason"] %>
-      </span>
+      <% if flash["errors"] && flash["errors"]["reason"] %>
+        <span class="text-red p-small"><%= flash["errors"]["reason"].join(', ')  %></span>
+      <% end -%>
     </div>
 
     <div class="flex-col-start w-max mb-30">
       <%= f.label :message, t('join.message'), class:"strong p-tall-rp-p mb-05" %>
       <%= f.text_area :message, class:"w-max radius-05", rows:"8", placeholder:". . .", value:params[:message] %>
 
-      <span class="text-red p-small">
-        <%= flash["errors"]["message"].join(', ') if flash["errors"] && flash["errors"]["message"] %>
-      </span>
+      <% if flash["errors"] && flash["errors"]["message"] %>
+        <span class="text-red p-small"><%= flash["errors"]["message"].join(', ')  %></span>
+      <% end -%>
     </div>
 
     <%= f.submit t('join.send'), class: "main-btn w-max radius-05 strong p-auto" %>

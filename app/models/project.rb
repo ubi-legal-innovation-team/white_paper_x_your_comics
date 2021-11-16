@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
-	strip_attributes
+	strip_attributes except: [ :imagery ]
 
-	validates :title, :actor, :company, :contact, presence:true
-	
-	has_many :versions, inverse_of: :project, dependent: :destroy
+	validates :title, :actor, :company, :contact, :stakes, :media, :countries, presence:true
+		
+	has_one_attached :imagery
 end
