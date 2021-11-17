@@ -2,6 +2,7 @@
 //= require jquery.turbolinks
 //= require rails-ujs
 //= require turbolinks
+//= require selectize
 //= require_tree ./app
 
 const main = () => {
@@ -63,6 +64,8 @@ const main = () => {
   // prevent_default.js
   preventDefault();
 
+  // selectize.js
+  selectize($('select.selectize'));
 };
 
 Turbolinks.setProgressBarDelay(10);

@@ -12,7 +12,7 @@ wb.styles do |style|
 	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Contacted"], style: bold
 
 	  @requesters.each do |requester|
-	    sheet.add_row [requester.created_at, requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.contacted ], style: size
+	    sheet.add_row [requester.created_at.strftime("%d") + " - " + requester.created_at.strftime("%b") + " - " + requester.created_at.strftime("%Y"), requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.contacted ], style: size
 	  end
 	end
 

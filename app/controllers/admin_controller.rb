@@ -41,7 +41,7 @@ class AdminController < ApplicationController
       flash[:alert] = "Nothing to update."
     end
 
-    redirect_to admin_dashboard_path
+    redirect_to admin_requesters_path
   end
 
   def requesters_excel

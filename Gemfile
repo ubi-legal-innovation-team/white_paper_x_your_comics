@@ -24,6 +24,8 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
+gem "strip_attributes"
+
 gem 'rubyzip', '>= 1.2.1'
 gem 'caxlsx'
 gem 'caxlsx_rails'
@@ -40,8 +42,8 @@ gem 'autoprefixer-rails'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
-gem "strip_attributes"
 gem 'pagy'
+gem "selectize-rails"
 # Use Redis adapter to run Action Cable in production
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'

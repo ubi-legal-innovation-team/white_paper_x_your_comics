@@ -231,6 +231,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    selectize-rails (0.12.6)
     selenium-webdriver (4.0.3)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -318,6 +319,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rubyzip (>= 1.2.1)
   sass-rails (>= 6)
+  selectize-rails
   selenium-webdriver
   sidekiq
   sidekiq-cron

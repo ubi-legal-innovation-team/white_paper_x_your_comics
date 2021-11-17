@@ -1,0 +1,13 @@
+<%= f.fields_for :bodies, @project.bodies.build do |ff| %>	
+
+	<div class="flex-col-start mt-30">
+	 	<%= ff.label :short_description, "_short_description *", class:"strong p-tall-rp-p mb-05" %>
+	   	<%= ff.text_field :short_description, class:"w-max radius-05", placeholder:". . ." %>
+	</div>	
+
+	<div class="flex-col-start mt-30">
+	 	<%= ff.label :short_description, "_short_description *", class:"strong p-tall-rp-p mb-05" %>
+	   	<%= ff.text_field :short_description, class:"w-max radius-05", placeholder:". . ." %>
+	</div>
+	
+<% end -%>
