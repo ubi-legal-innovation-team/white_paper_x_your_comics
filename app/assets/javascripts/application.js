@@ -3,6 +3,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require selectize
+//= require activestorage
 //= require_tree ./app
 
 const main = () => {
@@ -66,6 +67,7 @@ const main = () => {
 
   // selectize.js
   selectize($('select.selectize'));
+  
 };
 
 Turbolinks.setProgressBarDelay(10);

@@ -10,11 +10,11 @@ class ProjectsController < ApplicationController
 
     if @project.update(strong_params)
       flash[:notice] = "The project was successfully updated."
-      redirect_to admin_project_show(@project)
+      redirect_to admin_project_show_path(@project)
     else
       flash[:errors] = @project.errors.messages
       flash[:alert]  = "An error occured, please try again."
-      redirect_to admin_project_show(@project)
+      redirect_to admin_project_show_path(@project)
     end
   end
 

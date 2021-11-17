@@ -40,7 +40,7 @@
 	<div class="relative w-max">
 		<%= f.select :countries, Country.pluck(:name).sort,
 			{ :prompt => "Please select"},
-			{ :multiple => true, data_multiple: true, class:"selectize grey" } %>
+			{ :multiple => true, "data-multiple" => "true", class:"selectize grey" } %>
 
 		<i class="fas fa-chevron-down absolute absolute top-right"></i>
 
@@ -49,12 +49,12 @@
 </div>
 
 <div class="flex-col-start mt-30">
-	<%= f.label :stakes, "_Countries *", class:"strong p-tall-rp-p mb-05" %>
+	<%= f.label :stakes, "_Stakes *", class:"strong p-tall-rp-p mb-05" %>
 	
 	<div class="relative w-max">
-		<%= f.select :stakes, Stakes.pluck(:name).sort,
+		<%= f.select :stakes, Stake.pluck(:name).sort,
 			{ :prompt => "Please select"},
-			{ :multiple => true, data_multiple: true, class:"selectize grey" } %>
+			{ :multiple => true, "data-multiple" => "true", class:"selectize grey" } %>
 
 		<i class="fas fa-chevron-down absolute absolute top-right"></i>
 
@@ -72,22 +72,10 @@
 </div>
 
 <div class="flex-col-start mt-30">
-  <h2 class="m-0">_Stakes</h2>
-    <%= f.check_box :stakes,{ multiple:true, id:"1", checked: @project.stakes.include?("Informational design") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Informational design" %>
-    <%= f.label "Informational design", for:"1", class:"black" %>
-    <%= f.check_box :stakes,{ multiple:true, id:"2", checked: @project.stakes.include?("Access to justice") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Access to justice" %>
-    <%= f.label "Access to justice", for:"2", class:"black" %>
-    <%= f.check_box :stakes,{ multiple:true, id:"3", checked: @project.stakes.include?("Innovate sustainably") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Innovate sustainably" %>
-    <%= f.label "Innovate sustainably", for:"3", class:"black" %>
-    <%= f.check_box :stakes,{ multiple:true, id:"4", checked: @project.stakes.include?("Implement legal design") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Implement legal design" %>
-    <%= f.label "Implement legal designn", for:"4", class:"black" %>
-    <%= f.check_box :stakes,{ multiple:true, id:"5", checked: @project.stakes.include?("Perception of law professionals") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Perception of law professionals" %>
-    <%= f.label "Perception of law professionals", for:"5", class:"black" %>
-    <%= f.check_box :stakes,{ multiple:true, id:"6", checked: @project.stakes.include?("Deal with multiplicity of outcomes") ? true : false, include_hidden: false, class:"square-ux-checkbox" }, "Deal with multiplicity of outcomes" %>
-    <%= f.label "Deal with multiplicity of outcomes", for:"6", class:"black" %>
-</div>
-
-<div class="flex-col-start mt-30">
     <%= f.label :imagery, "_Imagery", class:"strong p-tall-rp-p mb-05" %>
-    <%= f.file_field :imagery %>
+    <%= f.file_field :imagery, direct_upload: true %>
+
+    <% if @project.imagery.attached? %>
+        <span class="pad-orange mt-05"><%= url_for(@project.imagery).split('/').last %></span>
+    <% end %>
 </div>

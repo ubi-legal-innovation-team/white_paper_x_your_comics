@@ -13,11 +13,14 @@
 		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%= @project.media %></span></p>
 	</div>
 
-
 	<%= form_for @project, url: admin_update_project_path(@project), method: :patch, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"edit_project" } do |f| %>
 
 		<%= render "admin/partials/forms/project_inputs", f:f %>
 	    <%= render "admin/partials/forms/bodies_rich_text_form", f:f %>
+
+	    <div class="flex-end mt-30">
+	    	<%= f.submit "Update", class:"main-btn p-auto" %>
+	    </div>
 
 	<% end -%>
 

@@ -6,6 +6,7 @@ function selectize(selects){
 
       if($(selects[i]).data('multiple')){
 
+
         var $select = $(`#${selects[i].id}`).selectize({
           persist: false,
           maxItems: null
