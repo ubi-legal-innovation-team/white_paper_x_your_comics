@@ -1,12 +1,14 @@
 // External libraries
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "trix/dist/trix";
 
 // Config
 @import "config/colors";
 @import "config/fonts";
 
 // Components
+@import "components/actiontext";
 @import "components/buttons";
 @import "components/cards";
 @import "components/carousel";

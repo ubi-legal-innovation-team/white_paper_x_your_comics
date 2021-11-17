@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
 
   def strong_params
   	params.require(:project).permit(:title,:company,:actor,:contact,:media,:imagery,stakes:[],countries:[],
-      bodies_attributes: [ :version, :short_description, :content ])
+      bodies_attributes: [ :id, :version, :short_description, :content ])
   end
 end
 

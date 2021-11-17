@@ -4,6 +4,7 @@
 //= require turbolinks
 //= require selectize
 //= require activestorage
+//= require trix/dist/trix
 //= require_tree ./app
 
 const main = () => {

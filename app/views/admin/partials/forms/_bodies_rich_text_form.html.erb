@@ -1,5 +1,5 @@
 <% if @project.bodies.empty? %>
-	
+
 	<!-- English version -->
 
 	<%= f.fields_for :bodies, @project.bodies.build do |ff| %>
@@ -15,7 +15,10 @@
 
 		<div class="flex-col-start mt-30">
 		 	<%= ff.label :content, "_content *", class:"strong p-tall-rp-p mb-05" %>
-		   	<%= ff.text_field :content, class:"w-max radius-05", placeholder:". . ." %>
+
+		   	<div class="p-10 w-max background-white">
+		   		<%= ff.rich_text_area :content, class:"w-max radius-05", placeholder:". . ." %>
+		   	</div>
 		</div>	
 		
 	<% end -%>
@@ -35,14 +38,17 @@
 
 		<div class="flex-col-start mt-30">
 		 	<%= ff.label :content, "_contenu *", class:"strong p-tall-rp-p mb-05" %>
-		   	<%= ff.text_field :content, class:"w-max radius-05", placeholder:". . ." %>
+
+		   	<div class="p-10 w-max background-white">
+		   		<%= ff.rich_text_area :content, class:"w-max radius-05", placeholder:". . ." %>
+		   	</div>
 		</div>	
 
 	<% end -%>
 
 <% else %>
 
-	<%= f.fields_for :bodies, @project.bodies do |ff| %>
+	<%= f.fields_for :bodies do |ff| %>
 
 		<% if ff.object.version == "EN" %>
 
@@ -55,7 +61,10 @@
 
 			<div class="flex-col-start mt-30">
 			 	<%= ff.label :content, "_content *", class:"strong p-tall-rp-p mb-05" %>
-			   	<%= ff.text_field :content, class:"w-max radius-05", placeholder:". . ." %>
+
+			   	<div class="p-10 w-max background-white">
+			   		<%= ff.rich_text_area :content, class:"w-max radius-05", placeholder:". . ." %>
+			   	</div>
 			</div>
 
 		<% else %>
@@ -69,7 +78,10 @@
 
 			<div class="flex-col-start mt-30">
 			 	<%= ff.label :content, "_contenu *", class:"strong p-tall-rp-p mb-05" %>
-			   	<%= ff.text_field :content, class:"w-max radius-05", placeholder:". . ." %>
+
+			   	<div class="p-10 w-max background-white">
+			   		<%= ff.rich_text_area :content, class:"w-max radius-05", placeholder:". . ." %>
+			   	</div>
 			</div>
 
 		<% end -%>
