@@ -40,9 +40,25 @@
 	<div class="relative w-max">
 		<%= f.select :countries, Country.pluck(:name).sort,
 			{ :prompt => "Please select"},
-			{ :multiple => true, "data-multiple" => "true", class:"selectize grey" } %>
+			{ :multiple => true, data_multiple: true, class:"selectize grey" } %>
 
 		<i class="fas fa-chevron-down absolute absolute top-right"></i>
+
+		<div class="project_countries" data-value="<%= @project.countries %>"></div>
+	</div>
+</div>
+
+<div class="flex-col-start mt-30">
+	<%= f.label :stakes, "_Countries *", class:"strong p-tall-rp-p mb-05" %>
+	
+	<div class="relative w-max">
+		<%= f.select :stakes, Stakes.pluck(:name).sort,
+			{ :prompt => "Please select"},
+			{ :multiple => true, data_multiple: true, class:"selectize grey" } %>
+
+		<i class="fas fa-chevron-down absolute absolute top-right"></i>
+
+		<div class="project_stakes" data-value="<%= @project.stakes %>"></div>
 	</div>
 </div>
 
