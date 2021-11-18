@@ -114,7 +114,8 @@ form#new_user {
 }
 
 form#new_requester,
-form#edit_project {
+form#edit_project,
+form#new_project {
   input[type="text"], textarea {
     border: $border-white;
     padding:4px 16px;

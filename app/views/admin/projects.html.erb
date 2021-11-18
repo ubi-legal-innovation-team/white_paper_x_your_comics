@@ -4,6 +4,10 @@
 
 	<h1><%= "Project".pluralize(@projects_count) %> (<%= @projects_count %>)</h1>
 
+	<div class="flex-end mb-20">
+		<%= link_to "new project", admin_new_project_path, class:"main-btn" %>
+	</div>
+
 	<div class="scrollable-x" >
 	  <table class="text-cent">
 	    <thead class="background-strong-grey">

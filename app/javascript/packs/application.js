@@ -5,12 +5,12 @@
 
 // import Rails from "@rails/ujs"
 // import Turbolinks from "turbolinks"
-// import * as ActiveStorage from "@rails/activestorage"
+import * as ActiveStorage from "@rails/activestorage"
 // import "channels"
 
 // Rails.start()
 // Turbolinks.start()
-// ActiveStorage.start()
+ActiveStorage.start()
 // // ----------------------------------------------------
 // // Note(Legal lab): ABOVE IS RAILS DEFAULT CONFIGURATION
 // // WRITE YOUR OWN JS STARTING FROM HERE 👇

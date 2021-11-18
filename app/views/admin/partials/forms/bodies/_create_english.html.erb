@@ -1,0 +1,114 @@
+<%= f.fields_for :bodies, @project.bodies.build do |ff| %>
+
+	<%= ff.hidden_field :version, value: "EN" %>
+
+	<div class="flex-cent background-strong-grey p-06 radius-03 mt-30">
+		<h3 class="text-white">_English version</h3>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :short_description, "_short description *", class:"strong p-tall-rp-p mb-05" %>
+		<%= ff.text_field :short_description, class:"w-max radius-05", placeholder:". . ." %>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.short_description"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.short_description"].join(', ')  %></span>
+	    <% end -%>
+	</div>	
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :long_description, "_long description *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :long_description, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.long_description"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.long_description"].join(', ')  %></span>
+	    <% end -%>
+	</div>	
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_one, "_What problem did your project address and who was the target ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_one, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_one"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_one"].join(', ')  %></span>
+	    <% end -%>
+	</div>	
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_two, "_What solutions have been put in place? (Project description + visuals) ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_two, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_two"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_two"].join(', ')  %></span>
+	    <% end -%>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_three, "_What was the methodology to put this in place? And who were the stakeholders ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_three, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_three"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_three"].join(', ')  %></span>
+	    <% end -%>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_four, "_What was the impact, the results of the project? Can you share a user verbatim ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_four, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_four"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_four"].join(', ')  %></span>
+	    <% end -%>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_five, "_What were the main challenges? And how did you overcome them ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_five, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_five"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_five"].join(', ')  %></span>
+	    <% end -%>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_six, "_What is your feedback on the project, what advice would you give for similar projects ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_six, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_six"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.question_six"].join(', ')  %></span>
+	    <% end -%>
+	</div>
+
+	<div class="flex-col-start mt-30">
+		<%= ff.label :question_seven, "_How has this project changed your approach to law ? to Legal design ? *", class:"strong p-tall-rp-p mb-05" %>
+
+		<div class="p-10 w-max background-white">
+		   	<%= ff.rich_text_area :question_seven, class:"w-max radius-05", placeholder:". . ." %>
+		</div>
+
+	    <% if flash["errors"] && flash["errors"]["bodies.question_seven"] %>
+	    	<span class="text-red p-small"><%= flash["errors"]["bodies.short_description"].join(', ')  %></span>
+	    <% end -%>
+	</div>	
+		
+<% end -%>

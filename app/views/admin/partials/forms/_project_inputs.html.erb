@@ -43,8 +43,6 @@
 			{ :multiple => true, "data-multiple" => "true", class:"selectize grey" } %>
 
 		<i class="fas fa-chevron-down absolute absolute top-right"></i>
-
-		<div class="project_countries" data-value="<%= @project.countries %>"></div>
 	</div>
 </div>
 
@@ -57,8 +55,6 @@
 			{ :multiple => true, "data-multiple" => "true", class:"selectize grey" } %>
 
 		<i class="fas fa-chevron-down absolute absolute top-right"></i>
-
-		<div class="project_stakes" data-value="<%= @project.stakes %>"></div>
 	</div>
 </div>
 
@@ -73,9 +69,5 @@
 
 <div class="flex-col-start mt-30">
     <%= f.label :imagery, "_Imagery", class:"strong p-tall-rp-p mb-05" %>
-    <%= f.file_field :imagery, direct_upload: true %>
-
-    <% if @project.imagery.attached? %>
-        <span class="pad-orange mt-05"><%= url_for(@project.imagery).split('/').last %></span>
-    <% end %>
+    <%= f.file_field :imagery %>
 </div>

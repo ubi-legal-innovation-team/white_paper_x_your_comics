@@ -25,6 +25,12 @@ class AdminController < ApplicationController
     render :projects
   end
 
+  def project_new
+    @project = Project.new
+
+    render :project_new
+  end
+
   def project_show
     @project = Project.find(params[:id])
     
