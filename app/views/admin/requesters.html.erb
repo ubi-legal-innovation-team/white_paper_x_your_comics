@@ -25,12 +25,12 @@
 		        <td>
 		        	<%= requester.created_at.strftime("%d") %> - <%= requester.created_at.strftime("%b") %> - <%= requester.created_at.strftime("%Y") %>
 						</td>
-						<td><%= requester.first_name %> <%= requester.last_name %></td>
-						<td><%= requester.email %></td>
-						<td><%= requester.country %></td>
-						<td><%= requester.job_title %></td>
-						<td><%= requester.reason %></td>
-		        <td class="max-w-300"><%= requester.message %></td>
+						<td><%=raw requester.first_name %> <%=raw requester.last_name %></td>
+						<td><%=raw requester.email %></td>
+						<td><%=raw requester.country %></td>
+						<td><%=raw requester.job_title %></td>
+						<td><%=raw requester.reason %></td>
+		        <td class="max-w-300"><%=raw requester.message %></td>
 		        <td>
 		          <%= check_box_tag "contacted[]", requester.contacted ? '' : requester.id, false, id:requester.id, class:"square-ux-checkbox", disabled:requester.contacted ? true : false, checked:requester.contacted ? true : false %>
       				<%= label_tag nil, nil, for:requester.id, class:"orange #{requester.contacted ? 'disabled' : ''}" %>

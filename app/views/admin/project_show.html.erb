@@ -1,16 +1,16 @@
 <section class="h-max">
 
 	<div class="flex-col-cent m-auto">
-		<h1><%= @project.title %></h1>
-		<p class="text-cent m-0"><%= @project.company %></p>
-		<p class="text-cent p-small m-0 text-strong-grey"><%= @project.actor %></p>
+		<h1><%=raw @project.title %></h1>
+		<p class="text-cent m-0"><%=raw @project.company %></p>
+		<p class="text-cent p-small m-0 text-strong-grey"><%=raw @project.actor %></p>
 	</div>
 
 	<div class="flex-col-start mt-50">
-		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%= @project.contact %></span></p>
-		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%= @project.stakes.join(', ') %></span></p>
-		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%= @project.countries.join(', ') %></span></p>
-		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%= @project.media %></span></p>
+		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%=raw @project.contact %></span></p>
+		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%=raw @project.stakes.join(', ') %></span></p>
+		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%=raw @project.countries.join(', ') %></span></p>
+		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%=raw @project.media %></span></p>
 	</div>
 
 	<%= form_for @project, url: admin_update_project_path(@project), method: :patch, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"edit_project" } do |f| %>

@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    @project = Project.find(params[:id])
+    @project = Project.find(params[:id].to_i)
 
     if @project.update(strong_params)
       flash[:notice] = "The project was successfully updated."
