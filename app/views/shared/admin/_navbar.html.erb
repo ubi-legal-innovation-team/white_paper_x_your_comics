@@ -15,7 +15,7 @@
     <%= hidden_field_tag :location, params[:action] %>
 
     <%= button_tag :submit, class: "pad-orange p-small" do %>
-      <span>ADMIN (<%= current_user.email.split('@').first %>)</span>
+      <span>ADMIN (<%= current_user ? current_user.email.split('@').first : "hello" %>)</span>
     <% end %>
 
   <% end %>
