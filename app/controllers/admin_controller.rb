@@ -2,12 +2,14 @@ class AdminController < ApplicationController
   layout "admin"
   include Pagy::Backend
   before_action :authenticate_user!
-  
+
   def welcome
     render :welcome
   end
 
   def dashboard
+    @authorize_admins = [ 'alexandra.doornaert@ubisoft.com', 'arthur.dhuy@ubisoft.com', 'marie-lorraine.chiriacopol@ubisoft.com',
+                          'geoffrey.delcroix@ubisoft.com' ]
     render :dashboard
   end
 

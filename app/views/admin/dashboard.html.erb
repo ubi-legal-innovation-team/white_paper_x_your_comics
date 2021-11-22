@@ -11,12 +11,14 @@
 			</div>
 		</div>
 
-		<div class="p-50-rp-25">
-			<div class="background-white soft-ml-box-shadow flex-col-ard-cent p-25" style="width:250px;height:250px;">
-				<%= svg('ubisoft_rocket') %>
-				<%= link_to "projects", admin_projects_path, class:"main-btn" %>
+		<% if @authorize_admins.include?(current_user.email) %>
+			<div class="p-50-rp-25">
+				<div class="background-white soft-ml-box-shadow flex-col-ard-cent p-25" style="width:250px;height:250px;">
+					<%= svg('ubisoft_rocket') %>
+					<%= link_to "projects", admin_projects_path, class:"main-btn" %>
+				</div>
 			</div>
-		</div>
+		<% end %>
 
 	</div>
 
