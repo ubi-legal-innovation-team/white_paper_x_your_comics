@@ -17,7 +17,7 @@
 	     		<th>Actor</th>
 	     		<th>Company</th>
 	     		<th>Media</th>
-	     		<th>Show</th>
+	     		<th>Actions</th>
 	      </tr>
 	    </thead>
 
@@ -32,6 +32,9 @@
 		        <td>
 		        	<%= link_to admin_project_show_path(project) do %>
 		        		<%= svg('ubisoft_viewers_40') %>
+		        	<% end -%>
+		        	<%= link_to admin_destroy_project_path(project), method: :delete, data: { confirm: 'Are you sure ?' } do %>
+		        		<%= svg('ubisoft_garbage_red_20') %>
 		        	<% end -%>
 						</td>
 		      </tr>

@@ -9,6 +9,7 @@ class Project < ApplicationRecord
 	accepts_nested_attributes_for :bodies
 
 	before_update :set_multiple_fields
+	before_create :set_multiple_fields
 
 	private
 

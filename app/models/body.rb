@@ -3,15 +3,7 @@ class Body < ApplicationRecord
 	
 	belongs_to :project, inverse_of: :bodies
 
-	validates  :long_description,
-			   :short_description, 
-			   :question_one, 
-			   :question_two, 
-			   :question_three, 
-			   :question_four, 
-			   :question_five, 
-			   :question_six, 
-			   :question_seven, presence: true
+	validates  :long_description, :short_description, presence: true
 
 	has_rich_text :long_description
 	has_rich_text :question_one
