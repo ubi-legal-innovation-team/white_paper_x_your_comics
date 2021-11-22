@@ -11,6 +11,38 @@
 
   <p>[ --> MAP IN PROGRESS <-- ]</p>
 
-  <%= image_tag 'map/map.png', id: "map", class:"mt-100-rp-50" %>
+  <div class="mt-100-rp-50 relative">
+    <%= image_tag 'map/map.png', id: "map" %>
+
+    <div class="absolute centered border-blue w-max h-max grid">
+      <% 4.times do |i| %>
+        <div class="border-black text-black relative">
+          <div class="w-max h-max grid">
+
+            <div class="absolute centered background-yellow index-1 radius-100 s-30 flex-cent">
+              <%= i+1 %>
+            </div>
+
+            <% 4.times do |i| %>
+              <div class="border-red text-black relative">
+                <div class="absolute centered background-orange radius-100 s-30 flex-cent">
+                  <%= i+1 %>
+                </div>
+              </div>
+            <% end -%>
+
+          </div>
+        </div>
+      <% end -%>
+    </div>
+  </div>
 
 </section>
+
+<style>
+  .grid {
+   display: grid;
+   justify-content: center;
+   grid-template-columns: repeat(2,1fr);
+  }
+</style>

@@ -15,6 +15,9 @@
     bottom: -3%; left: 50%;
     transform: translate(-50%, -50%);
   }
+  &.right {
+    top: 33%; right: 0;
+  }
   &.top-right {
     top: 10px;
     right: 10px;
@@ -23,8 +26,15 @@
     bottom: 10px;
     right: 10px;
   }
+  &.left {
+    top: 33%; left: 0;
+  }
   &.top-left {
     top: 10px;
+    left: 10px;
+  }
+  &.bottom-left {
+    bottom: 10px;
     left: 10px;
   }
 }

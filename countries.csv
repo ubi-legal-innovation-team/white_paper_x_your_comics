@@ -1,47 +1,45 @@
-NAME
-Afghanistan
-Albania
-Algeria
-Andorra
-Angola
-Argentina
-Armenia
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Benin
-Bhutan
-Bolivia
-Bosnia and Herzegovina
-Botswana
-Brazil
-Brunei
-Bulgaria
-Burkina Faso
-Burundi
-Cambodia
-Cameroon
-Canada
-Cape-Verde
-Central African Republic
-Chad
-Chile
-China
-Colombia
-Comoros
-Congo
-Costa Rica
-Cote D'ivoire
-Croatia
-Cuba
-Cyprus
-Czech Republic
+NAME,SQUARE,POSITION
+Afghanistan,[2,3],centered
+Albania,[2,3],left
+Algeria,[1,4],bottom-right
+Andorra,[1,4],right
+Angola,[4,1],bottom-left
+Argentina,[3,4],left
+Armenia,[2,3],centered
+Australia,[4,4],centered
+Austria,[1,4],right
+Azerbaijan,[2,3],centered
+Bahamas,[3,2],top-left
+Bahrain,[4,1],above
+Bangladesh,[4,1],top-right
+Barbados,[3,2],top-left
+Belarus,[2,3],top-left
+Belgium,[1,4],right
+Benin,[3,2],right
+Bhutan,[4,1],top-right
+Bolivia,[3,2],bottom-left
+Bosnia and Herzegovina,[2,3],left
+Botswana,[4,3],top-left
+Brazil,[3,2],below
+Brunei,[4,2],left
+Bulgaria,[2,3],left
+Burkina Faso,[3,2],right
+Burundi,[4,1],left
+Cambodia,[4,2],top-left
+Cameroon,[3,2],right
+Canada,[1,4],top-right
+Central African Republic,[4,1],left
+Chad,[4,1],top-left
+Chile,[3,4],left
+China,[2,4],left
+Colombia,[3,2],left
+Congo,[4,1],left
+Costa Rica,[3,1],top-right
+Cote D'ivoire,[3,2],right
+Croatia,[2,3],left
+Cuba,[3,2],top-left
+Cyprus,[2,3],bottom-left
+Czech Republic,[2,3],left
 Denmark
 Djibouti
 Dominican Republic
