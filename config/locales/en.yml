@@ -143,3 +143,11 @@ en:
     image_5: "comics/Ubisoft-YC-english-06.png"
     image_6: "comics/Ubisoft-YC-english-07.png"
     image_7: "comics/Ubisoft-YC-english-08.png"
+  project:
+    question_one: "_1. What problem did your project address and who was the target ?"
+    question_two: "_2. What solutions have been put in place? (Project description + visuals) ?"
+    question_three: "_3. What was the methodology to put this in place? And who were the stakeholders ?"
+    question_four: "_4. What was the impact, the results of the project? Can you share a user verbatim ?"
+    question_five: "_5. What were the main challenges? And how did you overcome them ?"
+    question_six: "_6. What is your feedback on the project, what advice would you give for similar projects ?"
+    question_seven: "_7. How has this project changed your approach to law ? to Legal design ?"

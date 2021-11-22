@@ -130,6 +130,15 @@
     border-width:2px;
   }
 }
+.border-orange {
+  border: 1px solid $orange;
+  &.w-2 {
+    border-width:2px;
+  }
+  &.w-5 {
+    border-width:5px;
+  }
+}
 .radius-02 {
   border-radius: 2px;
 }

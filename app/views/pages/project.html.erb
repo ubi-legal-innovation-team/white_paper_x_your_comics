@@ -1,0 +1,77 @@
+<section class="h-max main-background">
+	
+	<div class="flex-col-cent background-white border-orange w-5 radius-50 m-auto w-600-rp-300 p-05">
+		<h1 class="m-0 text-cent rp-auto"><%=raw @project.title.upcase %></h1>
+		<strong class="p-tall-rp-p"><em>by <%=raw @project.company %></em></strong>
+	</div>
+
+	<div class="text-white rp-small mt-30 text-cent"><%=raw @version.long_description %></div>
+
+	<div class="flex-cent mt-30">
+		<%=raw cl_image_tag @project.imagery.key, class:"img-fit" %>
+	</div>
+
+</section>
+
+<section class="h-max padding-y text-white main-background">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_one') %></h1>  
+	<div class="rp-small"><%= @version.question_one %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_two') %></h1>  
+	<div class="rp-small"><%= @version.question_two %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white main-background">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_three') %></h1>  
+	<div class="rp-small"><%= @version.question_three %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_four') %></h1>  
+	<div class="rp-small"><%= @version.question_four %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white main-background">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_five') %></h1>  
+	<div class="rp-small"><%= @version.question_five %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_six') %></h1>  
+	<div class="rp-small"><%= @version.question_six %></div>
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white main-background">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    <h1 class="mt-0 rp-auto"><%= t('project.question_seven') %></h1>  
+	<div class="rp-small"><%= @version.question_seven %></div>
+  </div>
+
+</section>

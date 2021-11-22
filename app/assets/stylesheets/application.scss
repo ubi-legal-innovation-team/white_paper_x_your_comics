@@ -31,29 +31,29 @@
 // Helpers
 @import "helpers/backgrounds";
 @import "helpers/borders";
-@import "helpers/box_dimensions";
 @import "helpers/box_shadows";
-@import "helpers/dimensions";
 @import "helpers/flex_box";
 @import "helpers/global";
 @import "helpers/grid";
+@import "helpers/margins";
 @import "helpers/positions";
 @import "helpers/sections";
+@import "helpers/sizing";
 @import "helpers/text";
 
 // Pages
 @import "pages/home";
 
 // Responsive
-@import "responsive/box_dimensions";
 @import "responsive/carousel";
-@import "responsive/dimensions";
 @import "responsive/dropdowns";
 @import "responsive/flashes";
 @import "responsive/flex_box";
 @import "responsive/footer";
 @import "responsive/grid";
+@import "responsive/margins";
 @import "responsive/modals";
 @import "responsive/navbar";
 @import "responsive/sections";
+@import "responsive/sizing";
 @import "responsive/text";

@@ -23,4 +23,15 @@ class PagesController < ApplicationController
   def about
     render :about
   end
+
+  def project
+    if params[:lang] == "fr"
+      @project = Project.find(params[:id].to_i)
+      @version = @project.bodies.find_by(version:"FR")
+    else
+      @project = Project.find(params[:id].to_i)
+      @version = @project.bodies.find_by(version:"EN")
+    end
+    render :project
+  end
 end

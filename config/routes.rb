@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/resources',    to: 'pages#resources'
   get '/join',         to: 'pages#join'
   get '/about',        to: 'pages#about'
+  get '/projects/:id', to: 'pages#project'
 
   get   'admin/welcome',   to: 'admin#welcome',   as: :admin_welcome
   get   'admin/dashboard', to: 'admin#dashboard', as: :admin_dashboard

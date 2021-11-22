@@ -143,3 +143,11 @@ fr:
     image_5: "comics/Ubisoft-YC-06.png"
     image_6: "comics/Ubisoft-YC-07.png"
     image_7: "comics/Ubisoft-YC-08.png"
+  project:
+    question_one: "_1. À quelle problématique a répondu votre projet et quelle en était la cible ?"
+    question_two: "_2. Quelles ont été les solutions mises en place ? (Descriptif du projet + visuels) ?"
+    question_three: "_3. Quelle a été la méthodologie pour mettre cela en place ? Et quelles ont été les parties prenantes ?"
+    question_four: "_4. Quel a été l’impact, les résultats du projet ? Un verbatim utilisateur ?"
+    question_five: "_5. Quels ont été les principaux challenges ? Et comment les avez-vous surmontés ?"
+    question_six: "_6. Quel est votre retour d’expérience, les conseils que vous donneriez pour des projets similaires ?"
+    question_seven: "_7. Comment ce projet a changé votre approche sur le droit ? sur le Legal design ?"

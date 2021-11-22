@@ -1,12 +1,16 @@
-  img.comics {
-    width: 80%;
-    object-fit: cover;
-    overflow: hidden;
-    margin: 10px;
-  }
+img.comics {
+  width: 80%;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 10px;
+}
+img#map {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
 
-  img#map {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
+.img-fit {
+  object-fit: cover;
+  overflow: hidden;
+}
