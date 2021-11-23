@@ -83,6 +83,9 @@
 }
 .background-orange {
   background-color:$orange;
+  &.opacity-65 {
+    opacity:.65;
+  }
 }
 .no-background {
   background:none !important;
