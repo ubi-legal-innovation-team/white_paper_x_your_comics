@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   def home
+    @projects = Project.all
+    @markers  = Country.where("name IN (?)", @projects.pluck(:countries).flatten).pluck(:region,:position)
+
     render :home
   end
 

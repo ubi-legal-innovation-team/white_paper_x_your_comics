@@ -1,165 +1,165 @@
-NAME,REGION,POSITION
-Afghanistan,[2,3],centered
-Albania,[2,3],left
-Algeria,[1,4],bottom-right
-Andorra,[1,4],right
-Angola,[4,1],bottom-left
-Argentina,[3,4],left
-Armenia,[2,3],centered
-Australia,[4,4],centered
-Austria,[1,4],right
-Azerbaijan,[2,3],centered
-Bahamas,[3,2],top-left
-Bahrain,[4,1],above
-Bangladesh,[4,1],top-right
-Barbados,[3,2],top-left
-Belarus,[2,3],top-left
-Belgium,[1,4],right
-Benin,[3,2],right
-Bhutan,[4,1],top-right
-Bolivia,[3,2],bottom-left
-Bosnia and Herzegovina,[2,3],left
-Botswana,[4,3],top-left
-Brazil,[3,2],below
-Brunei,[4,2],left
-Bulgaria,[2,3],left
-Burkina Faso,[3,2],right
-Burundi,[4,1],left
-Cambodia,[4,2],top-left
-Cameroon,[3,2],right
-Canada,[1,4],top-right
-Central African Republic,[4,1],left
-Chad,[4,1],top-left
-Chile,[3,4],left
-China,[2,4],left
-Colombia,[3,2],left
-Congo,[4,1],left
-Costa Rica,[3,1],top-right
-Cote D'ivoire,[3,2],right
-Croatia,[2,3],left
-Cuba,[3,2],top-left
-Cyprus,[2,3],bottom-left
-Czech Republic,[2,3],left
-Denmark,[2,1],bottom-left
-Djibouti,[4,1],above
-Dominican Republic,[3,2],top-left
-Ecuador,[3,1],right
-Egypt,[2,3],bottom-left
-El Salvador,[3,1],top-right
-Equatorial Guinea,[3,2],right
-Eritrea,[4,1],above
-Estonia,[2,3],top-left
-Ethiopia,[4,1],top-left
-Fiji,[4,2],bottom-right
-Finland,[2,1],bottom-left
-France,[1,4],right
-Gabon,[3,2],right
-Gambia,[3,2],top-right
-Georgia,[2,3],top-left
-Germany,[1,4],right
-Ghana,[3,2],right
-Greece,[2,3],left
-Guatemala,[3,1],top-right
-Guinea,[3,2],top-right
-Honduras,[3,2],top-right
-Hong Kong,[4,2],top-left
-Hungary,[2,3],left
-Iceland,[1,2],below
-India,[4,1],top-right
-Indonesia,[4,2],left
-Iran,[2,3],below
-Iraq,[2,3],below
-Ireland,[1,4],top-right
-Israel,[2,3],bottom-left
-Italy,[2,3],left
-Jamaica,[3,2],top-left
-Japan,[2,4],centered
-Jordan,[2,3],bottom-left
-Kazakstan,[2,3],centered
-Kenya,[4,1],left
-South Korea,[2,4],centered
-North Korea,[2,4],centered
-Kosovo,[2,3],left
-Kuwait,[2,3],below
-Kyrgyzstan,[2,3],centered
-Laos,[4,2],top-left
-Latvia,[2,3],top-left
-Lebanon,[2,3],bottom-left
-Liberia,[3,2],right
-Libya,[2,3],bottom-left
-Liechtenstein,[2,3],left
-Lithuania,[2,3],top-left
-Luxembourg,[1,4],right
-Macedonia,[2,3],left
-Madagascar,[4,1],below
-Malawi,[4,3],top-left
-Malaysia,[4,2],left
-Mali,[3,2],top-right
-Malta,[3,2],bottom-left
-Mauritania,[3,2],top-right
-Mexico,[3,1],top-right
-Moldova,[2,3],left
-Monaco,[1,4],right
-Mongolia,[2,4],left
-Montenegro,[2,3],left
-Morocco,[1,4],bottom-right
-Mozambique,[4,3],top-left
-Burma,[4,1],top-right
-Namibia,[4,3],top-left
-Nepal,[2,3],bottom-right
-Netherlands,[1,4],right
-New Zealand,[4,4],right
-Nicaragua,[3,1],top-right
-Niger,[3,2],top-right
-Nigeria,[3,2],top-right
-Norway,[2,1],bottom-left
-Oman,[4,1],above
-Pakistan,[2,3],below
-Palestine,[2,3],bottom-left
-Panama,[3,1],top-right
-Paraguay,[4,3],top-left
-Peru,[3,1],right
-Philippines,[4,2],left
-Poland,[2,3],left
-Portugal,[4,1],right
-Puerto Rico,[3,2],top-left
-Qatar,[2,3],below
-Romania,[2,3],left
-Russia,[2,3],top
-Rwanda,[4,1],left
-Saudi Arabia,[2,3],below
-Senegal,[3,2],left
-Serbia,[2,3],left
-Singapore,[4,2],left
-Slovakia,[2,3],left
-Slovenia,[2,3],left
-Somalia,[4,1],left
-South Africa,[4,3],top-left
-Spain,[1,4],right
-Sri Lanka,[4,1],top-right
-Sudan,[4,1],top-left
-Suriname,[3,2],left
-Syria,[2,3],bottom-left
-Sweden,[2,1],bottom-left
-Switzerland,[1,4],right
-Taiwan (Province Of China),[4,2],top-left
-Tajikistan,[2,3],centered
-Tanzania,[4,1],left
-Thailand,[4,2],top-left
-Togo,[3,2],right
-Tunisia,[1,4],bottom-right
-Turkey,[2,3],bottom-left
-Turkmenistan,[2,3],centered
-Uganda,[4,1],left
-Ukraine,[2,3],left
-United ArabEmirates,[4,1],above
-United Kingdom,[1,4],top-right
-United States of America,[1,3],bottom-right
-Uruguay,[3,4],left
-Uzbekistan[2,3],centered
-Venezuela[3,2],left
-VietNam,[4,2],top-left
-Yemen,[4,1],above
-Zambia,[4,1],bottom-left
-Zimbabwe,[4,3],top-left
-Wales,[1,4],top-right
+NAME;REGION;POSITION
+Afghanistan;2,3;centered
+Albania;2,3;left
+Algeria;1,4;bottom-right
+Andorra;1,4;right
+Angola;4,1;bottom-left
+Argentina;3,4;left
+Armenia;2,3;centered
+Australia;4,4;centered
+Austria;1,4;right
+Azerbaijan;2,3;centered
+Bahamas;3,2;top-left
+Bahrain;4,1;above
+Bangladesh;4,1;top-right
+Barbados;3,2;top-left
+Belarus;2,3;top-left
+Belgium;1,4;right
+Benin;3,2;right
+Bhutan;4,1;top-right
+Bolivia;3,2;bottom-left
+Bosnia and Herzegovina;2,3;left
+Botswana;4,3;top-left
+Brazil;3,2;below
+Brunei;4,2;left
+Bulgaria;2,3;left
+Burkina Faso;3,2;right
+Burundi;4,1;left
+Cambodia;4,2;top-left
+Cameroon;3,2;right
+Canada;1,4;top-right
+Central African Republic;4,1;left
+Chad;4,1;top-left
+Chile;3,4;left
+China;2,4;left
+Colombia;3,2;left
+Congo;4,1;left
+Costa Rica;3,1;top-right
+Cote D'ivoire;3,2;right
+Croatia;2,3;left
+Cuba;3,2;top-left
+Cyprus;2,3;bottom-left
+Czech Republic;2,3;left
+Denmark;2,1;bottom-left
+Djibouti;4,1;above
+Dominican Republic;3,2;top-left
+Ecuador;3,1;right
+Egypt;2,3;bottom-left
+El Salvador;3,1;top-right
+Equatorial Guinea;3,2;right
+Eritrea;4,1;above
+Estonia;2,3;top-left
+Ethiopia;4,1;top-left
+Fiji;4,2;bottom-right
+Finland;2,1;bottom-left
+France;1,4;right
+Gabon;3,2;right
+Gambia;3,2;top-right
+Georgia;2,3;top-left
+Germany;1,4;right
+Ghana;3,2;right
+Greece;2,3;left
+Guatemala;3,1;top-right
+Guinea;3,2;top-right
+Honduras;3,2;top-right
+Hong Kong;4,2;top-left
+Hungary;2,3;left
+Iceland;1,2;below
+India;4,1;top-right
+Indonesia;4,2;left
+Iran;2,3;below
+Iraq;2,3;below
+Ireland;1,4;top-right
+Israel;2,3;bottom-left
+Italy;2,3;left
+Jamaica;3,2;top-left
+Japan;2,4;centered
+Jordan;2,3;bottom-left
+Kazakstan;2,3;centered
+Kenya;4,1;left
+South Korea;2,4;centered
+North Korea;2,4;centered
+Kosovo;2,3;left
+Kuwait;2,3;below
+Kyrgyzstan;2,3;centered
+Laos;4,2;top-left
+Latvia;2,3;top-left
+Lebanon;2,3;bottom-left
+Liberia;3,2;right
+Libya;2,3;bottom-left
+Liechtenstein;2,3;left
+Lithuania;2,3;top-left
+Luxembourg;1,4;right
+Macedonia;2,3;left
+Madagascar;4,1;below
+Malawi;4,3;top-left
+Malaysia;4,2;left
+Mali;3,2;top-right
+Malta;3,2;bottom-left
+Mauritania;3,2;top-right
+Mexico;3,1;top-right
+Moldova;2,3;left
+Monaco;1,4;right
+Mongolia;2,4;left
+Montenegro;2,3;left
+Morocco;1,4;bottom-right
+Mozambique;4,3;top-left
+Burma;4,1;top-right
+Namibia;4,3;top-left
+Nepal;2,3;bottom-right
+Netherlands;1,4;right
+New Zealand;4,4;right
+Nicaragua;3,1;top-right
+Niger;3,2;top-right
+Nigeria;3,2;top-right
+Norway;2,1;bottom-left
+Oman;4,1;above
+Pakistan;2,3;below
+Palestine;2,3;bottom-left
+Panama;3,1;top-right
+Paraguay;4,3;top-left
+Peru;3,1;right
+Philippines;4,2;left
+Poland;2,3;left
+Portugal;4,1;right
+Puerto Rico;3,2;top-left
+Qatar;2,3;below
+Romania;2,3;left
+Russia;2,3;top
+Rwanda;4,1;left
+Saudi Arabia;2,3;below
+Senegal;3,2;left
+Serbia;2,3;left
+Singapore;4,2;left
+Slovakia;2,3;left
+Slovenia;2,3;left
+Somalia;4,1;left
+South Africa;4,3;top-left
+Spain;1,4;right
+Sri Lanka;4,1;top-right
+Sudan;4,1;top-left
+Suriname;3,2;left
+Syria;2,3;bottom-left
+Sweden;2,1;bottom-left
+Switzerland;1,4;right
+Taiwan (Province Of China);4,2;top-left
+Tajikistan;2,3;centered
+Tanzania;4,1;left
+Thailand;4,2;top-left
+Togo;3,2;right
+Tunisia;1,4;bottom-right
+Turkey;2,3;bottom-left
+Turkmenistan;2,3;centered
+Uganda;4,1;left
+Ukraine;2,3;left
+United ArabEmirates;4,1;above
+United Kingdom;1,4;top-right
+United States of America;1,3;bottom-right
+Uruguay;3,4;left
+Uzbekistan;2,3;centered
+Venezuela3,2;left
+VietNam;4,2;top-left
+Yemen;4,1;above
+Zambia;4,1;bottom-left
+Zimbabwe;4,3;top-left
+Wales;1,4;top-right
