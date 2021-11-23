@@ -34,14 +34,14 @@ class AdminController < ApplicationController
   end
 
   def project_show
-    @project = Project.find(params[:id])
+    @project = Project.find(params[:id].to_i)
     
     render :project_show
   end
 
   def update_requesters
-    if params[:contacted]
-      @requesters = Requester.find(params[:contacted])
+    if params[:contacted_ids]      
+      @requesters = Requester.find(params[:contacted_ids].map(&:to_i))
       @requesters.each {|requester| requester.update(contacted:true)}
       
       flash[:notice] = "The selection was successfully updated."
