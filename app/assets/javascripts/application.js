@@ -22,7 +22,7 @@ const main = () => {
 
   // ajax_search.js
   if (document.getElementById('ajax_search')) {
-    search();
+    search(loader_svg);
   };
 
   // carousel.js

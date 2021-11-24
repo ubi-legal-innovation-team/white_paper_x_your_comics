@@ -1,0 +1,6 @@
+<%= form_tag map_projects_search_path, method: :get, id: "ajax_search", class: "flex-row-wrap-start w-600-rp-300" do %>
+  <div class="relative w-max">
+    <%= select_tag :search_projects, nil, :multiple => true, "data-option" => "true", placeholder:"#{t('home.form.placeholder')}", 
+      class:"selectize background-black radius-05 black" %>
+  </div>
+<% end %>

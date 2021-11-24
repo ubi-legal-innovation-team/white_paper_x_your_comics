@@ -9,46 +9,10 @@
   <%#= svg('filters') %>
   <!-- <span><%#= t('home.form.filter') %></span> -->
 
-  <%= form_tag map_projects_search_path, method: :get, id: "ajax_search", class: "flex-row-wrap-start w-600-rp-300" do %>
-    <div class="relative w-max">
-      <%= select_tag :search_projects, nil, :multiple => true, "data-option" => "true", placeholder:"#{t('home.form.placeholder')}", 
-        class:"selectize background-black radius-05 black" %>
-    </div>
-  <% end %>
+  <%= render "ajax/ajax_forms/map_projects" %>
 
-  <div class="mt-100-rp-50 relative">
-    <%= image_tag 'map/map.png', id: "map" %>
-
-    <div class="absolute centered w-max h-max map-grid">
-      <% 4.times do |index| %>
-        <div class="relative">
-          <div class="w-max h-max map-grid">
-      
-            <% 4.times do |i| %>
-              <div class="relative">
-
-                <% @markers.each do |coordinates,projects| %>                  
-                  <% if index+1 == coordinates[0][0] && i+1 == coordinates[0][1] %>
-
-                    <%= form_tag map_projects_call_path, method: :get, id: "map_projects_call", class: "modal-call absolute #{coordinates[1]}" do %>
-                      <%= hidden_field_tag :projects_ids, projects %>
-
-                      <%= button_tag class:"no-background p-0" do %>
-                        <div class="radius-100 s-60-rp-30 flex-cent background-orange opacity-65">
-                        </div>
-                      <% end %>
-                    <% end %>
-
-                  <% end -%>
-                <% end -%>
-                
-              </div>
-            <% end -%>
-
-          </div>
-        </div>
-      <% end -%>
-    </div>
+  <div class="mt-100-rp-50 relative" id="ajaxified_partial">
+    <%= render "ajax/ajax_results/map_projects" %>
   </div>
 
 </section>
