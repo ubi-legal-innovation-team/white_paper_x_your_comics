@@ -24,6 +24,7 @@ function call_modal() {
         $(modal).addClass('active');
         setTimeout(function(){$(modal_container).addClass('active');}, 50);
         closeModal(modal,modal_container);
+        
         // inputs.js
         formattingNumericInput();
 

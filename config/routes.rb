@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, path: 'users', controllers: { sessions: "users/sessions" }
 
-  get '/example-modal/call',   to: 'application#example_modal_call',   as: 'example_modal_call'
-  get '/menu-responsive/call', to: 'application#menu_responsive_call', as: 'menu_responsive_call'
-  get '/admin-nav/call',       to: 'application#admin_nav_call',       as: 'admin_nav_call'
+  get '/map-projects/call',    to: 'application#map_projects_call',    as: :map_projects_call
+  get '/menu-responsive/call', to: 'application#menu_responsive_call', as: :menu_responsive_call
+  get '/admin-nav/call',       to: 'application#admin_nav_call',       as: :admin_nav_call
   
   root                 to: 'pages#home'
   get '/definition',   to: 'pages#definition'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/resources',    to: 'pages#resources'
   get '/join',         to: 'pages#join'
   get '/about',        to: 'pages#about'
-  get '/projects/:id', to: 'pages#project'
+  get '/projects/:id', to: 'pages#project', as: :project
 
   get   'admin/welcome',   to: 'admin#welcome',   as: :admin_welcome
   get   'admin/dashboard', to: 'admin#dashboard', as: :admin_dashboard

@@ -10,7 +10,7 @@ ul.slides::-webkit-scrollbar {
 .scrollable-x::-webkit-scrollbar-thumb,
 .scrollable::-webkit-scrollbar-thumb,
 ul.slides::-webkit-scrollbar-thumb {
-  background-color: $grey;
-  outline: 1px solid $light-grey;
+  background-color: $black;
+  outline: 1px solid $black;
   border-radius: 25px;
 }

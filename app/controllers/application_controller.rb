@@ -13,10 +13,9 @@ class ApplicationController < ActionController::Base
     request.env.fetch('HTTP_ACCEPT_LANGUAGE','').scan(/[a-z]{2}/).first
   end
 
-  def example_modal_call
-    params.extract!("utf8", "authenticity_token", "controller", "action")
-    unsafe_params = params.to_unsafe_hash
-    render partial: "/ajax/ajax_calls/modals/example"
+  def map_projects_call
+    @projects = Project.find(params[:projects_ids].split().map(&:to_i))
+    render partial: "/ajax/ajax_calls/modals/map_projects"
   end
 
   def menu_responsive_call
