@@ -1,7 +1,21 @@
 class PagesController < ApplicationController
   def home
     @projects = Project.all
-    @markers  = Country.where("name IN (?)", @projects.pluck(:countries).flatten).pluck(:region,:position)
+    @markers  = {}
+
+    @projects.each { |project|
+
+      region      = Country.find_by_name(project.countries.first).region
+      position    = Country.find_by_name(project.countries.first).position
+      coordinates = [region,position]
+
+      if @markers[coordinates].nil?
+        @markers[coordinates] = [].push(project.id)
+      else
+        @markers[coordinates].push(project.id)
+      end
+
+    }
 
     render :home
   end
