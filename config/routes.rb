@@ -5,13 +5,14 @@ Rails.application.routes.draw do
   get '/menu-responsive/call', to: 'application#menu_responsive_call', as: :menu_responsive_call
   get '/admin-nav/call',       to: 'application#admin_nav_call',       as: :admin_nav_call
   
-  root                 to: 'pages#home'
-  get '/definition',   to: 'pages#definition'
-  get '/perspectives', to: 'pages#perspectives'
-  get '/resources',    to: 'pages#resources'
-  get '/join',         to: 'pages#join'
-  get '/about',        to: 'pages#about'
-  get '/projects/:id', to: 'pages#project', as: :project
+  root                        to: 'pages#home'
+  get '/definition',          to: 'pages#definition'
+  get '/perspectives',        to: 'pages#perspectives'
+  get '/resources',           to: 'pages#resources'
+  get '/join',                to: 'pages#join'
+  get '/about',               to: 'pages#about'
+  get '/projects/:id',        to: 'pages#project',             as: :project
+  get '/map-projects/search', to: 'pages#map_projects_search', as: :map_projects_search
 
   get   'admin/welcome',   to: 'admin#welcome',   as: :admin_welcome
   get   'admin/dashboard', to: 'admin#dashboard', as: :admin_dashboard

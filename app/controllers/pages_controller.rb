@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  include AjaxSearch
+
   def home
     @projects = Project.all
     @markers  = {}
@@ -18,6 +20,11 @@ class PagesController < ApplicationController
     }
 
     render :home
+  end
+
+  def map_projects_search
+    ajax_map_projects_search
+    render partial: "/ajax/ajax_results/map_projects"
   end
 
   def definition

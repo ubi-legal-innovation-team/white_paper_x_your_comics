@@ -6,10 +6,15 @@
 
   <h1 class="mt-50"><%= t('home.project_header') %></h1>
 
-  <%= svg('filters') %>
-  <span><%= t('home.filter') %></span>
+  <%#= svg('filters') %>
+  <!-- <span><%#= t('home.form.filter') %></span> -->
 
-  <p>[ --> MAP IN PROGRESS <-- ]</p>
+  <%= form_tag map_projects_search_path, method: :get, id: "ajax_search", class: "flex-row-wrap-start w-600-rp-300" do %>
+    <div class="relative w-max">
+      <%= select_tag :search_projects, nil, :multiple => true, "data-option" => "true", placeholder:"#{t('home.form.placeholder')}", 
+        class:"selectize background-black radius-05 black" %>
+    </div>
+  <% end %>
 
   <div class="mt-100-rp-50 relative">
     <%= image_tag 'map/map.png', id: "map" %>

@@ -86,6 +86,7 @@
 // black pattern
 .selectize-control.single.black .selectize-input,
 .selectize-control.single.black .selectize-input.input-active {
+  display: flex;
   background-color: transparent;
   border: 1px solid $strong-grey;
   border-radius: 3px;
@@ -101,6 +102,7 @@
 // grey pattern
 .selectize-control.single.grey .selectize-input,
 .selectize-control.single.grey .selectize-input.input-active  {
+  display: flex;
   background-color: #fff;
   border: 1px solid $grey;
   border-radius: 3px;

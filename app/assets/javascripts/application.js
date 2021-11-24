@@ -20,6 +20,11 @@ const main = () => {
   // ajax_calls_popups.js
   call_popup();
 
+  // ajax_search.js
+  if (document.getElementById('ajax_search')) {
+    search();
+  };
+
   // carousel.js
   var labels = document.querySelectorAll('.carousel label'),
       right  = document.querySelector('.carousel .carousel-right'),

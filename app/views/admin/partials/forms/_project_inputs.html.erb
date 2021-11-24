@@ -46,6 +46,10 @@
 
         <div class="project_countries" data-value="<%= @project.countries %>"></div>
 	</div>
+
+    <% if flash["errors"] && flash["errors"]["countries"] %>
+      <span class="text-red p-small"><%= flash["errors"]["countries"].join(', ')  %></span>
+    <% end -%>
 </div>
 
 <div class="flex-col-start mt-30">
@@ -60,12 +64,25 @@
 
         <div class="project_stakes" data-value="<%= @project.stakes %>"></div>
 	</div>
+
+    <% if flash["errors"] && flash["errors"]["stakes"] %>
+      <span class="text-red p-small"><%= flash["errors"]["stakes"].join(', ')  %></span>
+    <% end -%>
 </div>
 
 <div class="flex-col-start mt-30">
     <%= f.label :media, "_Media *", class:"strong p-tall-rp-p mb-05" %>
-    <%= f.text_field :media, class:"w-max radius-05", placeholder:". . ." %>
-     
+    
+    <div class="relative w-max">
+        <%= f.select :media, Media.pluck(:name).sort,
+            { :prompt => "Please select"},
+            { class:"selectize grey" } %>
+
+        <i class="fas fa-chevron-down absolute absolute top-right"></i>
+
+        <div class="project_media" data-value="<%= @project.media %>"></div>
+    </div>
+
     <% if flash["errors"] && flash["errors"]["media"] %>
       <span class="text-red p-small"><%= flash["errors"]["media"].join(', ')  %></span>
     <% end -%>
