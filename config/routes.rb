@@ -14,21 +14,23 @@ Rails.application.routes.draw do
   get '/projects/:id',        to: 'pages#project',             as: :project
   get '/map-projects/search', to: 'pages#map_projects_search', as: :map_projects_search
 
-  get   'admin/welcome',   to: 'admin#welcome',   as: :admin_welcome
-  get   'admin/dashboard', to: 'admin#dashboard', as: :admin_dashboard
-  
-  get   'admin/dashboard/requesters/index',  to: 'admin#requesters',        as: :admin_requesters
-  get   'admin/dashboard/requesters/excel',  to: 'admin#requesters_excel',  as: :admin_requesters_excel
-  patch 'admin/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
-  
-  get   'admin/dashboard/projects/new',   to: 'admin#project_new',  as: :admin_new_project
-  get   'admin/dashboard/projects/index', to: 'admin#projects',     as: :admin_projects
-  get   'admin/dashboard/projects/:id',   to: 'admin#project_show', as: :admin_project_show
-
-  post  'admin/dashboard/projects/create',      to: 'projects#create',  as: :admin_create_project
-  patch 'admin/dashboard/projects/:id/update',  to: 'projects#update',  as: :admin_update_project
-  delete 'admin/dashboard/projects/:id/delete', to: 'projects#destroy', as: :admin_destroy_project
-
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
+
+  constraints subdomain: /admin/ do
+    get   ':slug/welcome',   to: 'admin#welcome',   as: :admin_welcome
+    get   ':slug/dashboard', to: 'admin#dashboard', as: :admin_dashboard
+    
+    get   ':slug/dashboard/requesters/index',  to: 'admin#requesters',        as: :admin_requesters
+    get   ':slug/dashboard/requesters/excel',  to: 'admin#requesters_excel',  as: :admin_requesters_excel
+    patch ':slug/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
+    
+    get   ':slug/dashboard/projects/new',   to: 'admin#project_new',  as: :admin_new_project
+    get   ':slug/dashboard/projects/index', to: 'admin#projects',     as: :admin_projects
+    get   ':slug/dashboard/projects/:id',   to: 'admin#project_show', as: :admin_project_show
+
+    post  ':slug/dashboard/projects/create',      to: 'projects#create',  as: :admin_create_project
+    patch ':slug/dashboard/projects/:id/update',  to: 'projects#update',  as: :admin_update_project
+    delete ':slug/dashboard/projects/:id/delete', to: 'projects#destroy', as: :admin_destroy_project
+  end
 end
 

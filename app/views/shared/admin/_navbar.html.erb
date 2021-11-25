@@ -13,6 +13,7 @@
   <%= form_tag admin_nav_call_path, method: :get, id: "admin_nav_call", class: "dropdown-call" do %>
     <%= hidden_field_tag :lang, params[:lang] || I18n.default_locale %>
     <%= hidden_field_tag :location, params[:action] %>
+    <%= hidden_field_tag :slug, @slug %>
 
     <%= button_tag :submit, class: "pad-orange p-small" do %>
       <span>ADMIN (<%= current_user ? current_user.email.split('@').first : "hello" %>)</span>

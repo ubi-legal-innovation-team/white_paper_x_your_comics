@@ -2,9 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_locale
-  before_action :authorize_user!,  only: :admin_nav_call
-  before_action :authorize_admin!, only: [ :projects, :project_new, :project_show, :update_requesters, :requesters_excel, :create, :update, :destroy ]
-
+  before_action :authorize_user!,   only: :admin_nav_call
+  before_action :authorize_admin!,  only: [ :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
+  before_action :match_slug_params, only: [ :welcome, :dashboard, :requesters, :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
+  
   def set_locale
     I18n.locale = params[:lang] == "en" || params[:lang] == "fr" ? params[:lang] || locale_from_header : I18n.default_locale
   end
@@ -28,6 +29,17 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def match_slug_params
+    if current_user
+      if params[:slug] != current_user.email.split('@').first.gsub('.','')
+        flash[:alert] = "Acces denied, verified you are the authorized host."
+        redirect_to root_path
+      else
+        @slug = current_user.email.split('@').first.gsub('.','')
+      end
+    end
+  end
 
   def authorize_user!
     if current_user

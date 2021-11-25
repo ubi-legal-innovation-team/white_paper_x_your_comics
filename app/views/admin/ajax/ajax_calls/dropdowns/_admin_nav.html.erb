@@ -1,6 +1,6 @@
 <ul class="no-padding unstyle-list" id="admin_nav">
   <li>
-    <%= link_to "Dashboard", admin_dashboard_path, class: "text-black" %>
+    <%= link_to "Dashboard", admin_dashboard_path(slug:params[:slug]), class: "text-black" %>
   </li>
 
   <li>
@@ -10,10 +10,10 @@
   <li class="border-bottom light-grey w-max"></li>
 
   <li>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-strong-grey" %>
+    <%= link_to "Log out", destroy_user_session_path(slug:params[:slug]), method: :delete, class: "text-strong-grey" %>
   </li>
 
   <li>
-    <%= link_to "Welcome on rails", admin_welcome_path, class: "text-strong-grey" %>
+    <%= link_to "Welcome on rails", admin_welcome_path(slug:params[:slug]), class: "text-strong-grey" %>
   </li>
 </ul>

@@ -7,7 +7,7 @@
 		<div class="p-50-rp-25">
 			<div class="background-white soft-ml-box-shadow flex-col-ard-cent p-25" style="width:250px;height:250px;">
 				<%= svg('ubisoft_group') %>
-				<%= link_to "requesters", admin_requesters_path, class:"main-btn" %>
+				<%= link_to "requesters", admin_requesters_path(slug:@slug), class:"main-btn" %>
 			</div>
 		</div>
 
@@ -15,7 +15,7 @@
 			<div class="p-50-rp-25">
 				<div class="background-white soft-ml-box-shadow flex-col-ard-cent p-25" style="width:250px;height:250px;">
 					<%= svg('ubisoft_rocket') %>
-					<%= link_to "projects", admin_projects_path, class:"main-btn" %>
+					<%= link_to "projects", admin_projects_path(slug:@slug), class:"main-btn" %>
 				</div>
 			</div>
 		<% end %>

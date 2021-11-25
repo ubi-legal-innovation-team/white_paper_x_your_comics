@@ -2,7 +2,7 @@
 
 	<h1 class="text-cent">New project</h1>
 
-	<%= form_for @project, url: admin_create_project_path, method: :post, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"new_project" } do |f| %>
+	<%= form_for @project, url: admin_create_project_path(slug:@slug), method: :post, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"new_project" } do |f| %>
 
 		<%= render "admin/partials/forms/project_inputs", f:f %>
 		<%= render "admin/partials/forms/bodies/create_english", f:f %>

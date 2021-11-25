@@ -4,7 +4,7 @@
 
 	<h1><%= "Requester".pluralize(@requesters_count) %> (<%= @requesters_count %>)</h1>
 
-	<%= form_tag admin_update_requesters_path, method: :patch, class:"scrollable-x" do %>
+	<%= form_tag admin_update_requesters_path(slug:@slug), method: :patch, class:"scrollable-x" do %>
 	  <table class="text-cent">
 	    <thead class="background-strong-grey">
 	     	<tr class="text-white">
@@ -60,7 +60,7 @@
       </nav>
 
       <div class="flex-end mt-05 p-small">
-      	<%= link_to 'Download as Excel', admin_requesters_excel_path(format: :xlsx), class: "radius-05 excel-btn mr-05" %>
+      	<%= link_to 'Download as Excel', admin_requesters_excel_path(format: :xlsx, slug:@slug), class: "radius-05 excel-btn mr-05" %>
       	<%= button_tag "update selection", class:"main-btn radius-05 pt-14" %>
       </div>
     <% end %>
