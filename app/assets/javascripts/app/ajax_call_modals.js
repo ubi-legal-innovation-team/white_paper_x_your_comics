@@ -1,6 +1,6 @@
-function call_modal() {
+function call_modal(modal_button) {
 // ----- Add modal content to DOM -----
-  $(".modal-call").submit(function(event) {
+  $(modal_button).submit(function(event) {
     // Prevent redirection
     event.preventDefault();
 

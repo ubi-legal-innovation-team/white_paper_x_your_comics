@@ -6,6 +6,13 @@
   border: 0 none !important;
   background: none !important;
   box-shadow: none !important;
+  width:min-content !important;
+  cursor:pointer;
+}
+// background-black pattern
+.selectize-control.background-black .selectize-input > input::placeholder {
+  padding: 0 8px;
+  color:#fff;
 }
 .selectize-input > input::-ms-clear {
   display: none;
@@ -37,10 +44,10 @@
 .selectize-dropdown [data-selectable] {
   cursor: pointer;
   text-align: left;
+  padding: 0 8px;
 }
-.selectize-dropdown [data-selectable],
 .selectize-dropdown .optgroup-header {
-  padding: 5px 8px;
+  padding: 0 8px;
   text-align: left;
 }
 .selectize-dropdown-content {
@@ -125,6 +132,21 @@
 }
 
 ////////// SELECTIZE MULTI //////////
+// background-black pattern
+.selectize-control.multi.background-black .selectize-input,
+.selectize-control.multi.background-black .selectize-input.input-active {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  background-color: transparent;
+  padding: 10px;
+  position: relative;
+  .item, .flex-col-start {
+    color: #fff;
+    background-color: #000;
+  }
+}
 // black pattern
 .selectize-control.multi.black .selectize-input,
 .selectize-control.multi.black .selectize-input.input-active {

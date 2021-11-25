@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def map_projects_call
-    binding.pry
     @projects = Project.find(params[:projects_ids].split().map(&:to_i))
     render partial: "/ajax/ajax_calls/modals/map_projects"
   end

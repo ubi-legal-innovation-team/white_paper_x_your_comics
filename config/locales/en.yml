@@ -14,7 +14,8 @@ en:
     project_header: "_Projects"
     form:
       filter: "Filters"
-      placeholder: "Search projects"
+      stakes: "Stakes"
+      media: "Media"
   definition:
     definition_header: "_Definition"
     definition_para:

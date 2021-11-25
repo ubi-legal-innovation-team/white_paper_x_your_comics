@@ -14,7 +14,8 @@ fr:
     project_header: "_Projets"
     form:
       filter: "Filtres"
-      placeholder: "Chercher des projects"
+      stakes: "Enjeux"
+      media: "Media"
   definition:
     definition_header: "_Définition"
     definition_para:

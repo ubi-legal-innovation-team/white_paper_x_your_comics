@@ -21,8 +21,8 @@ function search(loader_svg){
         // remove loader
         setTimeout(function(){ $('.loader-box').remove(); }, 1000);
 	  	// ajax_calls_modals.js
-	  	console.log($(".modal-call"))
-	  	call_modal();
+	  	setTimeout(function(){ call_modal($('.modal-call')); }, 1000);
+	  	
       },
       completed: function(){
         // remove loader

@@ -1,6 +1,19 @@
-<%= form_tag map_projects_search_path, method: :get, id: "ajax_search", class: "flex-row-wrap-start w-600-rp-300" do %>
-  <div class="relative w-max">
-    <%= select_tag :search_projects, nil, :multiple => true, "data-option" => "true", placeholder:"#{t('home.form.placeholder')}", 
-      class:"selectize background-black radius-05 black" %>
+<%= form_tag map_projects_search_path, method: :get, id: "ajax_search", class: "flex" do %>
+  <div class="relative w-210 mr-10">
+    <%= select_tag :search_projects, options_for_select(Stake.pluck(:name).sort), :multiple => true, "data-multiple" => "true", 
+      placeholder:"#{t('home.form.stakes')}", class:"selectize background-black radius-05 white", id:"stakes" %>
+
+    <i class="fas fa-chevron-down absolute absolute top-right"></i>
   </div>
+
+  <div class="relative w-210 mr-10">
+    <%= select_tag :search_projects, options_for_select(Media.pluck(:name).sort), :multiple => true, "data-multiple" => "true", 
+      placeholder:"#{t('home.form.media')}", class:"selectize background-black radius-05 white", id:"media" %>
+
+    <i class="fas fa-chevron-down absolute absolute top-right"></i>
+  </div>
+
+  <%= button_tag class:"background-black p-10 radius-05 h-fit" do %>
+    <i class="fas fa-search text-white"></i>
+  <% end %>
 <% end %>
