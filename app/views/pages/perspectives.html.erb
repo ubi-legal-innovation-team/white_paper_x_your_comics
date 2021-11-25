@@ -8,7 +8,7 @@
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
 
 		<div class="flex-1 background-orange p-25 radius-25 relative rp-mb-30">
-			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
+			<span style="top: 0; left: 25%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.first') %>
 			</span>
 			<p class="p-rp-small"><%= t('perspectives.timeline.first') %></p>
@@ -19,7 +19,7 @@
 		<div class="h-max border-white w-2 absolute centered rp-hidden"></div>
 
 		<div class="flex-1 background-orange p-25 radius-25 relative rp-mb-30">
-			<span style="top: 0; right: 0%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
+			<span style="top: 0; right: -5%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.second') %>
 			</span>
 			<p class="p-rp-small"><%= t('perspectives.timeline.second') %></p>
@@ -179,14 +179,10 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_1') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_2') %></p>
-
     <h1><%= t('perspectives.jp_article.first_block.header') %></h1>
 
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_3') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_4') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.para_5') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_1') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.para_2') %></p>
 
   </div>
 
@@ -201,7 +197,7 @@
     <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_1') %></p>
     <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_2') %></p>
     <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_3').html_safe %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_4') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_4').html_safe %></p>
     <p class="mb-0 rp-small"><%= t('perspectives.jp_article.second_block.para_5') %></p>
 
   </div>
@@ -214,15 +210,9 @@
     
     <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.third_block.header') %></h1>
 
-    <ul>
-    	<li><%= t('perspectives.jp_article.third_block.list_1') %></li>
-    	<li><%= t('perspectives.jp_article.third_block.list_2') %></li>
-    	<li><%= t('perspectives.jp_article.third_block.list_3') %></li>
-    	<li><%= t('perspectives.jp_article.third_block.list_4') %></li>
-    </ul>
-
-    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_1').html_safe %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.third_block.para_2') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_1') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.third_block.para_3') %></p>
 
   </div>
 
@@ -234,10 +224,9 @@
     
     <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fourth_block.header') %></h1>
     
-    <ul class="mb-0 rp-small">
-    	<li><%= t('perspectives.jp_article.fourth_block.list_1') %></li>
-    	<li><%= t('perspectives.jp_article.fourth_block.list_2') %></li>
-    </ul>
+    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_1') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fourth_block.para_3') %></p>
 
   </div>
 
@@ -249,11 +238,9 @@
     
     <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fifth_block.header') %></h1>
 
-    <ul class="mb-0 rp-small">
-    	<li><%= t('perspectives.jp_article.fifth_block.list_1') %></li>
-    	<li><%= t('perspectives.jp_article.fifth_block.list_2') %></li>
-    	<li><%= t('perspectives.jp_article.fifth_block.list_3') %></li>
-    </ul>
+    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_1').html_safe %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fifth_block.para_3') %></p>
 
   </div>
 
@@ -264,10 +251,15 @@
   <div class="pt-50-rp-15 pb-50-rp-15">
     
     <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.sixth_block.header') %></h1>
+
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_1').html_safe %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_2') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_3') %></p>
     
     <div class="flex-col">
     	<span><%= t('perspectives.jp_article.sixth_block.name') %></span>
     	<span><%= t('perspectives.jp_article.sixth_block.occupation') %></span>
+    	<span><%= t('perspectives.jp_article.sixth_block.company') %></span>
     </div>
 
   </div>

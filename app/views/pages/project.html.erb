@@ -5,7 +5,7 @@
 		<strong class="p-tall-rp-p"><em>by <%=raw @project.company %></em></strong>
 	</div>
 
-	<div class="text-white rp-small mt-30 text-cent"><%=raw @version.long_description %></div>
+	<div class="text-white rp-small mt-30 text-cent"><%=raw @version.long_description if @version %></div>
 
 	<div class="flex-cent mt-30">
 		<%=raw cl_image_tag @project.imagery.key, class:"img-fit" %>
@@ -17,7 +17,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_one') %></h1>  
-	<div class="rp-small"><%= @version.question_one %></div>
+	<div class="rp-small"><%= @version.question_one if @version %></div>
   </div>
 
 </section>
@@ -26,7 +26,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_two') %></h1>  
-	<div class="rp-small"><%= @version.question_two %></div>
+	<div class="rp-small"><%= @version.question_two if @version %></div>
   </div>
 
 </section>
@@ -35,7 +35,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_three') %></h1>  
-	<div class="rp-small"><%= @version.question_three %></div>
+	<div class="rp-small"><%= @version.question_three if @version %></div>
   </div>
 
 </section>
@@ -44,7 +44,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_four') %></h1>  
-	<div class="rp-small"><%= @version.question_four %></div>
+	<div class="rp-small"><%= @version.question_four if @version %></div>
   </div>
 
 </section>
@@ -53,7 +53,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_five') %></h1>  
-	<div class="rp-small"><%= @version.question_five %></div>
+	<div class="rp-small"><%= @version.question_five if @version %></div>
   </div>
 
 </section>
@@ -62,7 +62,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_six') %></h1>  
-	<div class="rp-small"><%= @version.question_six %></div>
+	<div class="rp-small"><%= @version.question_six if @version %></div>
   </div>
 
 </section>
@@ -71,7 +71,7 @@
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_seven') %></h1>  
-	<div class="rp-small"><%= @version.question_seven %></div>
+	<div class="rp-small"><%= @version.question_seven if @version %></div>
   </div>
 
 </section>
