@@ -73,6 +73,13 @@ const main = () => {
 
   // selectize.js
   selectize($('select.selectize'));
+
+  // trigger_pdf.js
+  var link = document.getElementById('printable');
+
+  if(link){
+    triggerPrintable(link);
+  };
   
 };
 

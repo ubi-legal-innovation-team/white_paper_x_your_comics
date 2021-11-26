@@ -5,7 +5,9 @@
 Rails.application.config.content_security_policy do |policy|
   policy.default_src :self, :https
   policy.font_src    :self, :https, :data
-  policy.img_src     :self, :https, :data, "https://res.cloudinary.com/", "http://localhost:3000/rails/active_storage/blobs/redirect/"
+  policy.img_src     :self, :https, :data, "http://res.cloudinary.com/", "https://res.cloudinary.com/", 
+                                           "http://admin.localhost:3000/rails/active_storage/blobs/redirect/", 
+                                           "http://localhost:3000/rails/active_storage/blobs/redirect/"
   policy.object_src  :none
   policy.script_src  :self, :https, :unsafe_inline
   policy.style_src   :self, :https, :unsafe_inline
@@ -26,4 +28,4 @@ end
 # Report CSP violations to a specified URI
 # For further information see the following documentation:
 	
-Rails.application.config.content_security_policy_report_only = false
+Rails.application.config.content_security_policy_report_only = true

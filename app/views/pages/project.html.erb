@@ -5,6 +5,10 @@
 		<strong class="p-tall-rp-p"><em>by <%=raw @project.company %></em></strong>
 	</div>
 
+  <div class="flex-cent mt-10">
+    <%= link_to t('project.printable'), project_path(@project, format:"pdf"), id:"printable", class:"main-btn", "data-project" => @project.id %>
+  </div>
+
 	<div class="text-white rp-small mt-30 text-cent"><%=raw @version.long_description if @version %></div>
 
 	<div class="flex-cent mt-30">
@@ -13,65 +17,65 @@
 
 </section>
 
-<section class="h-max padding-y text-white main-background">
+<section id="question_one" class="h-max padding-y text-white main-background">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_one') %></h1>  
-	<div class="rp-small"><%= @version.question_one if @version %></div>
+	  <div class="rp-small"><%= @version.question_one if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white background-black">
+<section id="question_two" class="h-max padding-y text-white background-black">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_two') %></h1>  
-	<div class="rp-small"><%= @version.question_two if @version %></div>
+	  <div class="rp-small"><%= @version.question_two if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white main-background">
+<section id="question_three" class="h-max padding-y text-white main-background">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_three') %></h1>  
-	<div class="rp-small"><%= @version.question_three if @version %></div>
+	  <div class="rp-small"><%= @version.question_three if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white background-black">
+<section id="question_four" class="h-max padding-y text-white background-black">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_four') %></h1>  
-	<div class="rp-small"><%= @version.question_four if @version %></div>
+	  <div class="rp-small"><%= @version.question_four if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white main-background">
+<section id="question_five" class="h-max padding-y text-white main-background">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_five') %></h1>  
-	<div class="rp-small"><%= @version.question_five if @version %></div>
+	  <div class="rp-small"><%= @version.question_five if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white background-black">
+<section id="question_six" class="h-max padding-y text-white background-black">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_six') %></h1>  
-	<div class="rp-small"><%= @version.question_six if @version %></div>
+	  <div class="rp-small"><%= @version.question_six if @version %></div>
   </div>
 
 </section>
 
-<section class="h-max padding-y text-white main-background">
+<section id="question_seven" class="h-max padding-y text-white main-background">
 
   <div class="pt-50-rp-15 pb-50-rp-15">
     <h1 class="mt-0 rp-auto"><%= t('project.question_seven') %></h1>  
-	<div class="rp-small"><%= @version.question_seven if @version %></div>
+	  <div class="rp-small"><%= @version.question_seven if @version %></div>
   </div>
 
 </section>

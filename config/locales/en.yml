@@ -146,6 +146,7 @@ en:
     image_6: "comics/Ubisoft-YC-english-07.png"
     image_7: "comics/Ubisoft-YC-english-08.png"
   project:
+    printable: "View pdf"
     question_one: "_1. What problem did your project address and who was the target ?"
     question_two: "_2. What solutions have been put in place? (Project description + visuals) ?"
     question_three: "_3. What was the methodology to put this in place? And who were the stakeholders ?"

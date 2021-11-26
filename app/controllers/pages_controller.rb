@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class PagesController < ApplicationController
   include AjaxSearch
 
@@ -56,6 +58,18 @@ class PagesController < ApplicationController
       @project = Project.find(params[:id].to_i)
       @version = @project.bodies.find_by(version:"EN")
     end
-    render :project
+
+    respond_to do |format|
+      format.html { render :project }
+
+      format.pdf do
+        pdf = Prawn::Document.new
+        ProjectPdf.new(pdf,@project,@version,params)
+        send_data pdf.render,
+          filename: "#{@project.title}.pdf",
+          type: 'application/pdf',
+          disposition: 'inline'      
+      end
+    end
   end
 end
