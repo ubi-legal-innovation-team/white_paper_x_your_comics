@@ -29,6 +29,7 @@ gem "strip_attributes"
 gem 'rubyzip', '>= 1.2.1'
 gem 'caxlsx'
 gem 'caxlsx_rails'
+gem 'prawn', '~> 2.4'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
