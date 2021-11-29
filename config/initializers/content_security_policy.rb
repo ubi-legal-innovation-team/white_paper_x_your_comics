@@ -8,8 +8,11 @@ Rails.application.config.content_security_policy do |policy|
   policy.img_src     :self, :https, :data, "http://res.cloudinary.com/", "https://res.cloudinary.com/", 
                                            "http://admin.localhost:3000/rails/active_storage/blobs/redirect/", 
                                            "http://localhost:3000/rails/active_storage/blobs/redirect/"
+                                           # "http://admin.[DOMAIN_NAME]/rails/active_storage/blobs/redirect/", 
+                                           # "http://[DOMAIN_NAME]/rails/active_storage/blobs/redirect/"
+
   policy.object_src  :none
-  policy.script_src  :self, :https, :unsafe_inline
+  policy.script_src  :self, :https
   policy.style_src   :self, :https, :unsafe_inline
 
   #If you are using webpack-dev-server then specify webpack-dev-server host

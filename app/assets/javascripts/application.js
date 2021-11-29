@@ -61,6 +61,13 @@ const main = () => {
   // grid_animations.js
   handleGridAnimation();
 
+  // loader.js
+  var form = document.querySelector('form#edit_project') || document.querySelector('form#new_project');
+
+  if(form){
+    loader(loader_svg,form);
+  }
+
   // pagy_items.js
   var select = document.getElementById('items_requesters') || document.getElementById('items_projects');
 
