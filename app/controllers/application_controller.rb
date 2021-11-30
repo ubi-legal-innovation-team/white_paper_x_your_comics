@@ -6,11 +6,11 @@ require 'socket'
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :parse_user_agent
+  before_action :parse_user_agent, except: [ :welcome, :dashboard, :requesters, :projects, :project_new, :project_show, :update_requesters, :requesters_excel, :create, :update, :destroy, :analytics ]
   before_action :set_locale
   before_action :authorize_user!,   only: :admin_nav_call
-  before_action :authorize_admin!,  only: [ :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
-  before_action :match_slug_params, only: [ :welcome, :dashboard, :requesters, :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
+  before_action :authorize_admin!,  only: [ :projects, :project_new, :project_show, :update_requesters, :requesters_excel, :analytics ]
+  before_action :match_slug_params, only: [ :welcome, :dashboard, :requesters, :projects, :project_new, :project_show, :update_requesters, :requesters_excel, :analytics ]
     
   def set_locale
     I18n.locale = params[:lang] == "en" || params[:lang] == "fr" ? params[:lang] || locale_from_header : I18n.default_locale

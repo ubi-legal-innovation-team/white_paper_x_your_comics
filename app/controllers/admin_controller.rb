@@ -64,4 +64,16 @@ class AdminController < ApplicationController
       format.html { render :requesters_excel }
     end
   end
+
+  def analytics
+    @agents     = UserAgent.all
+    @printables = PrintablePdf.all
+
+    @top_location  = @agents.pluck(:countries).flatten.max_by {|i| @agents.pluck(:countries).flatten.count(i)}
+    @top_city      = @agents.pluck(:cities).flatten.max_by {|i| @agents.pluck(:cities).flatten.count(i)}
+    @top_printable = @printables.pluck(:project_id).flatten.max_by {|i| @printables.pluck(:project_id).flatten.count(i)}
+    @top_printable = Project.find(@top_printable).title
+
+    render :analytics
+  end
 end

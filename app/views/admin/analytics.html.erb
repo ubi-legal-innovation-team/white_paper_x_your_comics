@@ -1,0 +1,55 @@
+<section class="h-vh">
+
+	<h1 class="flex-cent m-auto mb-50">Admin Dashboard | Analytics</h1>
+
+	<div class="flex-row-wrap-cent">
+		
+		<div class="p-50-rp-25">
+			<div class="background-white soft-ml-box-shadow flex-col p-25" style="width:250px;height:250px;">
+				<p class="m-0"><span class="mr-05"><%= svg('ubisoft_user_black_25') %></span> Visitors</p>
+				<span class="text-cent text-blue h-max flex-cent" style="font-size:4rem"><%= @agents.count %></span>
+			</div>
+		</div>
+
+		<div class="p-50-rp-25">
+			<div class="background-white soft-ml-box-shadow flex-col p-25" style="width:250px;height:250px;">
+				<p class="m-0"><span class="mr-05"><%= svg('ubisoft_localization_25') %></span> Top location</p>
+				<span class="text-cent text-blue h-max flex-cent" style="font-size:2rem"><%= @top_location %></span>
+			</div>
+		</div>
+
+		<div class="p-50-rp-25">
+			<div class="background-white soft-ml-box-shadow flex-col p-25" style="width:250px;height:250px;">
+				<p class="m-0"><span class="mr-05"><%= svg('ubisoft_localization_25') %></span> Top city</p>
+				<span class="text-cent text-blue h-max flex-cent" style="font-size:2rem"><%= @top_city %></span>
+			</div>
+		</div>
+
+		<div class="p-50-rp-25">
+			<div class="background-white soft-ml-box-shadow flex-col p-25" style="width:250px;height:250px;">
+				<p class="m-0"><span class="mr-05"><%= svg('ubisoft_print_25') %></span> Top printable project</p>
+				<span class="text-cent text-blue h-max flex-cent" style="font-size:2rem"><%= @top_printable %></span>
+			</div>
+		</div>
+
+	</div>
+
+	<h1>Locations</h1>
+
+	<% @agents.pluck(:countries).flatten.sort.group_by{ |countries_arr| countries_arr }.values.each do |country| %>
+		<p class="p-tall-rp-small"><%= country.first %> : <%= country.count %></p>
+	<% end -%>
+
+	<h1>Cities</h1>
+
+	<% @agents.pluck(:cities).flatten.sort.group_by{ |cities_arr| cities_arr }.values.each do |city| %>
+		<p class="p-tall-rp-small"><%= city.first %> : <%= city.count %></p>
+	<% end -%>
+
+	<h1>Printables</h1>
+
+	<% @printables.pluck(:project_id).flatten.group_by{ |projects_ids_arr| projects_ids_arr }.values.each do |project_id| %>
+		<p class="p-tall-rp-small"><%= Project.find(project_id.first).title %> : <%= project_id.count %></p>
+	<% end -%>
+
+</section>

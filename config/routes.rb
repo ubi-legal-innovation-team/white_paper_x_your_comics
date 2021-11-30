@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   constraints subdomain: /admin/ do
     get   ':slug/welcome',   to: 'admin#welcome',   as: :admin_welcome
     get   ':slug/dashboard', to: 'admin#dashboard', as: :admin_dashboard
+
+    get   ':slug/dashboard/analytics', to: 'admin#analytics', as: :admin_analytics
     
     get   ':slug/dashboard/requesters/index',  to: 'admin#requesters',        as: :admin_requesters
     get   ':slug/dashboard/requesters/excel',  to: 'admin#requesters_excel',  as: :admin_requesters_excel
