@@ -1,8 +1,8 @@
 <section class="h-max main-background">
 	
 	<div class="flex-col-cent background-white border-orange w-5 radius-50 m-auto w-600-rp-300 p-05">
-		<h1 class="m-0 text-cent rp-auto"><%= sanitize @project.title.upcase %></h1>
-		<strong class="p-tall-rp-p"><em>by <%= sanitize @project.company %></em></strong>
+		<h1 class="m-0 text-cent rp-auto"><%=sanitize @project.title.upcase %></h1>
+		<strong class="p-tall-rp-p"><em>by <%=sanitize @project.company %></em></strong>
 	</div>
 
   <div class="flex-cent mt-10">
@@ -12,7 +12,7 @@
 	<div class="text-white rp-small mt-30 text-cent"><%= @version.long_description if @version %></div>
 
 	<div class="flex-cent mt-30">
-		<%= sanitize cl_image_tag @project.imagery.key, class:"img-fit" %>
+		<%=sanitize cl_image_tag @project.imagery.key, class:"img-fit" %>
 	</div>
 
 </section>

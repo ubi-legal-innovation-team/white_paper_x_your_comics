@@ -1,16 +1,16 @@
 <section class="h-max">
 
 	<div class="flex-col-cent m-auto">
-		<h1><%= sanitize @project.title %></h1>
-		<p class="text-cent m-0"><%= sanitize @project.company %></p>
-		<p class="text-cent p-small m-0 text-strong-grey"><%= sanitize @project.actor %></p>
+		<h1><%=sanitize @project.title %></h1>
+		<p class="text-cent m-0"><%=sanitize @project.company %></p>
+		<p class="text-cent p-small m-0 text-strong-grey"><%=sanitize @project.actor %></p>
 	</div>
 
 	<div class="flex-col-start mt-50">
-		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%= sanitize @project.contact %></span></p>
-		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%= sanitize @project.stakes.join(', ') %></span></p>
-		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%= sanitize @project.countries.join(', ') %></span></p>
-		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%= sanitize @project.media %></span></p>
+		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%=sanitize @project.contact %></span></p>
+		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%=sanitize @project.stakes.join(', ') %></span></p>
+		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%=sanitize @project.countries.join(', ') %></span></p>
+		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%=sanitize @project.media %></span></p>
 	</div>
 
 	<%= form_for @project, url: admin_update_project_path(id:@project,slug:@slug), method: :patch, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"edit_project" } do |f| %>
