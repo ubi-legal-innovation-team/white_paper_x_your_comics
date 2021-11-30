@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_153500) do
+ActiveRecord::Schema.define(version: 2021_11_30_115751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(version: 2021_11_24_153500) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "printable_pdfs", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_agent_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "company"
@@ -112,6 +119,23 @@ ActiveRecord::Schema.define(version: 2021_11_24_153500) do
 
   create_table "stakes", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_agents", force: :cascade do |t|
+    t.string "host_name"
+    t.string "operating_system"
+    t.string "privates_socket_ip", default: [], array: true
+    t.string "publics_socket_ip", default: [], array: true
+    t.string "publics_ip", default: [], array: true
+    t.string "countries", default: [], array: true
+    t.string "regions", default: [], array: true
+    t.string "cities", default: [], array: true
+    t.string "zips", default: [], array: true
+    t.string "isps", default: [], array: true
+    t.string "orgs", default: [], array: true
+    t.boolean "mobile", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

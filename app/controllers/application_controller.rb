@@ -1,11 +1,17 @@
+require 'open-uri'
+require 'net/http'
+require 'json'
+require 'socket'
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action :parse_user_agent
   before_action :set_locale
   before_action :authorize_user!,   only: :admin_nav_call
   before_action :authorize_admin!,  only: [ :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
   before_action :match_slug_params, only: [ :welcome, :dashboard, :requesters, :projects, :project_new, :project_show, :update_requesters, :requesters_excel ]
-  
+    
   def set_locale
     I18n.locale = params[:lang] == "en" || params[:lang] == "fr" ? params[:lang] || locale_from_header : I18n.default_locale
   end
@@ -29,6 +35,43 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def parse_user_agent
+    host_name         = Socket.gethostname
+
+    ip                = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
+    private_socket_ip = ip.ip_address if ip
+    ip                = Socket.ip_address_list.detect{|intf| !intf.ipv4_private?}
+    public_socket_ip  = ip.ip_address if ip
+
+    public_ip = open('http://whatismyip.akamai.com').read
+
+    url       = "http://ip-api.com/json/#{public_ip}?fields=66846719" 
+    uri       = URI(url)
+    response  = Net::HTTP.get(uri)
+    result    = JSON.parse(response)
+
+    find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,result)
+  end
+
+  def find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,result)
+    agent = UserAgent.find_or_create_by(host_name:host_name,operating_system:request.user_agent)
+    
+    agent = agent.update(
+      privates_socket_ip:agent.privates_socket_ip.push(private_socket_ip).uniq,
+      publics_socket_ip:agent.publics_socket_ip.push(public_socket_ip).uniq,
+      publics_ip:agent.publics_ip.push(public_ip).uniq,
+      countries:agent.countries.push(result["country"]).uniq,
+      regions:agent.regions.push(result["region"]).uniq,
+      cities:agent.cities.push(result["city"]).uniq,
+      zips:agent.zips.push(result["zip"]).uniq,
+      isps:agent.isps.push(result["isp"]).uniq,
+      orgs:agent.orgs.push(result["org"]).uniq,
+      mobile:agent.mobile.push(result["mobile"]).uniq
+    )
+
+    @agent = UserAgent.find_by(host_name:host_name,operating_system:request.user_agent)
+  end
 
   def match_slug_params
     if current_user

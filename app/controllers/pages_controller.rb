@@ -1,5 +1,3 @@
-require 'open-uri'
-
 class PagesController < ApplicationController
   include AjaxSearch
 
@@ -63,8 +61,11 @@ class PagesController < ApplicationController
       format.html { render :project }
 
       format.pdf do
+        PrintablePdf.create(project_id:@project.id,user_agent_id:@agent.id)
+
         pdf = Prawn::Document.new
         ProjectPdf.new(pdf,@project,@version,params)
+
         send_data pdf.render,
           filename: "#{@project.title}.pdf",
           type: 'application/pdf',

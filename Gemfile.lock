@@ -118,6 +118,7 @@ GEM
     fugit (1.5.2)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
+    geocoder (1.7.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
     htmlentities (4.3.4)
@@ -316,6 +317,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  geocoder
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails
