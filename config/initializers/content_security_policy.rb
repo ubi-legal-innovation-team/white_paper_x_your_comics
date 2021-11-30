@@ -7,9 +7,9 @@ Rails.application.config.content_security_policy do |policy|
   policy.font_src    :self, :https, :data
   policy.img_src     :self, :https, :data, "http://res.cloudinary.com/", "https://res.cloudinary.com/", 
                                            "http://admin.localhost:3000/rails/active_storage/blobs/redirect/", 
-                                           "http://localhost:3000/rails/active_storage/blobs/redirect/"
-                                           # "http://admin.[DOMAIN_NAME]/rails/active_storage/blobs/redirect/", 
-                                           # "http://[DOMAIN_NAME]/rails/active_storage/blobs/redirect/"
+                                           "http://localhost:3000/rails/active_storage/blobs/redirect/"#,
+                                           # "http://admin.[DOMAIN_AME]/rails/active_storage/blobs/redirect/", 
+                                           # "http://[DOMAIN_AME]/rails/active_storage/blobs/redirect/"
 
   policy.object_src  :none
   policy.script_src  :self, :https
