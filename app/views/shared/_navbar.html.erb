@@ -1,11 +1,11 @@
 <nav id="legallab-navbar" class="flex-bet-cent relative text-white">
 
   <%= link_to root_path(lang:params[:lang]) do %>
-    <div id="legallab-logo">
+    <h1 class="m-0" id="legallab-logo">
       <%= svg('logo_i') %>
       <span class="mr-15"></span>
       <%= svg(t('navbar.logo')) %>
-    </div>
+    </h1>
   <% end %>
 
   <%= render "shared/navbar_components/menu" %>

@@ -35,5 +35,7 @@ module WhitePaperXYourComics
       "X-Permitted-Cross-Domain-Policies" => "none",
       "Referrer-Policy" => "strict-origin-when-cross-origin"    
     }
+
+    config.middleware.use Rack::Deflater
   end
 end

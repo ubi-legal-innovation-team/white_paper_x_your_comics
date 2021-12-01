@@ -25,6 +25,7 @@ gem 'redis', '~> 4.0'
 gem 'devise'
 
 gem 'friendly_id', '~> 5.4.0'
+gem "breadcrumbs_on_rails"
 
 gem "strip_attributes"
 

@@ -19,7 +19,7 @@ class PagesController < ApplicationController
 
     }
 
-    render :home
+    add_breadcrumb "home", :root_path
   end
 
   def map_projects_search
@@ -28,24 +28,24 @@ class PagesController < ApplicationController
   end
 
   def definition
-    render :definition
+    add_breadcrumb "definition", :definition_path
   end
 
   def perspectives
-    render :perspectives
+    add_breadcrumb "perspectives", :perspectives_path
   end
 
   def resources
-    render :resources
+    add_breadcrumb "resources", :resources_path
   end
 
   def join
     @requester = Requester.new
-    render :join
+    add_breadcrumb "join", :join_path
   end
 
   def about
-    render :about
+    add_breadcrumb "about", :about_path
   end
 
   def project
@@ -58,7 +58,7 @@ class PagesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { render :project }
+      format.html { add_breadcrumb "#{@project.title}", :project }
 
       format.pdf do
         PrintablePdf.create(project_id:@project.id,user_agent_id:@agent.id)
@@ -72,5 +72,10 @@ class PagesController < ApplicationController
           disposition: 'inline'      
       end
     end
+  end
+
+  def robots
+    # Don't forget to delete /public/robots.txt
+    respond_to :text
   end
 end

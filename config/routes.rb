@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/about',               to: 'pages#about'
   get '/projects/:id',        to: 'pages#project',             as: :project
   get '/map-projects/search', to: 'pages#map_projects_search', as: :map_projects_search
+  get "/robots.:format", to: "pages#robots"
 
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 
@@ -35,6 +36,12 @@ Rails.application.routes.draw do
     post  ':slug/dashboard/projects/create',      to: 'projects#create',  as: :admin_create_project
     patch ':slug/dashboard/projects/:id/update',  to: 'projects#update',  as: :admin_update_project
     delete ':slug/dashboard/projects/:id/delete', to: 'projects#destroy', as: :admin_destroy_project
+  end
+
+  constraints(host: /^(?!www\.)/i) do
+    get '(*any)' => redirect { |params, request|
+      URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+    }
   end
 end
 

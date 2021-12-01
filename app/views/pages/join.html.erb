@@ -1,3 +1,5 @@
+<%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - Join Us" %>
+
 <section class="h-max text-white main-background">
   
   <%= form_for @requester, url: new_requester_path, method: :post, html: { class:"flex-col-cent wmax-800-rp-300 m-auto" } do |f| %>
