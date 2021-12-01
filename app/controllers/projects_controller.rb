@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find(params[:id].to_i)
+    @project = Project.friendly.find(params[:id])
   end
 
   def strong_params

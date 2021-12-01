@@ -47,7 +47,7 @@ class AdminController < ApplicationController
   end
 
   def project_show
-    @project = Project.find(params[:id].to_i)
+    @project = Project.friendly.find(params[:id])
     
     render :project_show
   end

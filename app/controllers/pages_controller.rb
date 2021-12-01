@@ -50,10 +50,10 @@ class PagesController < ApplicationController
 
   def project
     if params[:lang] == "fr"
-      @project = Project.find(params[:id].to_i)
+      @project = Project.friendly.find(params[:id])
       @version = @project.bodies.find_by(version:"FR")
     else
-      @project = Project.find(params[:id].to_i)
+      @project = Project.friendly.find(params[:id])
       @version = @project.bodies.find_by(version:"EN")
     end
 

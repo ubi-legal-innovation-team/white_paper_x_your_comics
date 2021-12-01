@@ -24,6 +24,8 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
+gem 'friendly_id', '~> 5.4.0'
+
 gem "strip_attributes"
 
 gem 'rubyzip', '>= 1.2.1'

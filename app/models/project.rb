@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
+	extend FriendlyId
+	friendly_id :title, use: :slugged
+
 	strip_attributes except: [ :imagery ]
 
 	validates :title, :actor, :company, :contact, :stakes, :media, :countries, presence:true
