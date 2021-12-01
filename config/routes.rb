@@ -20,11 +20,13 @@ Rails.application.routes.draw do
     get   ':slug/welcome',   to: 'admin#welcome',   as: :admin_welcome
     get   ':slug/dashboard', to: 'admin#dashboard', as: :admin_dashboard
 
-    get   ':slug/dashboard/analytics', to: 'admin#analytics', as: :admin_analytics
+    get   ':slug/dashboard/analytics',       to: 'admin#analytics',       as: :admin_analytics
+    get   ':slug/dashboard/analytics/excel', to: 'admin#analytics_excel', as: :admin_analytics_excel
     
-    get   ':slug/dashboard/requesters/index',  to: 'admin#requesters',        as: :admin_requesters
-    get   ':slug/dashboard/requesters/excel',  to: 'admin#requesters_excel',  as: :admin_requesters_excel
-    patch ':slug/dashboard/update/requesters', to: 'admin#update_requesters', as: :admin_update_requesters
+    get   ':slug/dashboard/requesters/index',     to: 'admin#requesters',        as: :admin_requesters
+    get   ':slug/dashboard/requesters/excel',     to: 'admin#requesters_excel',  as: :admin_requesters_excel
+    get   ':slug/dashboard/requesters/:id/excel', to: 'admin#requester_excel',   as: :admin_requester_excel
+    patch ':slug/dashboard/update/requesters',    to: 'admin#update_requesters', as: :admin_update_requesters
     
     get   ':slug/dashboard/projects/new',   to: 'admin#project_new',  as: :admin_new_project
     get   ':slug/dashboard/projects/index', to: 'admin#projects',     as: :admin_projects

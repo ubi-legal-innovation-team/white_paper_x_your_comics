@@ -20,6 +20,19 @@ class AdminController < ApplicationController
     render :requesters
   end
 
+  def requester_excel
+    @requester = Requester.find(params[:id])
+
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=LDC_requester_#{@requester.last_name}.xlsx"
+      }
+      format.html { render :requester_excel }
+    end
+  end
+
   def projects
     @pagy_projects, @projects = pagy(Project.all.order(:title), page_param: :page_projects, items_param: :items_projects)
     @projects_count           = Project.count
@@ -75,5 +88,40 @@ class AdminController < ApplicationController
     @top_printable = Project.find(@top_printable).title
 
     render :analytics
+  end
+
+  def analytics_excel
+    @agents     = UserAgent.all
+    @printables = PrintablePdf.all
+
+    @top_location  = @agents.pluck(:countries).flatten.max_by {|i| @agents.pluck(:countries).flatten.count(i)}
+    @top_city      = @agents.pluck(:cities).flatten.max_by {|i| @agents.pluck(:cities).flatten.count(i)}
+    @top_printable = @printables.pluck(:project_id).flatten.max_by {|i| @printables.pluck(:project_id).flatten.count(i)}
+    @top_printable = Project.find(@top_printable).title
+
+    array1 = @agents.pluck(:countries)
+    array2 = @agents.pluck(:cities)
+    array3 = @printables.pluck(:project_id).map{|id| Project.find(id).title}
+    array4 = array1 + array2 + Array.new(1) { array3 }
+
+    @hash1 = {}
+    array4.each_with_index { |array,index|
+      array.each_with_index { |el,ind| 
+        if @hash1[ind].nil?
+          @hash1[ind] = []
+        end  
+
+        @hash1[ind][index] = el
+      } 
+    }
+    
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=LDC_analytics.xlsx"
+      }
+      format.html { render :analytics_excel }
+    end
   end
 end

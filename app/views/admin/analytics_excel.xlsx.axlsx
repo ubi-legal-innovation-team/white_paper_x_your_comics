@@ -1,0 +1,26 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  heading = style.add_style(b: true, sz: 16)
+  bold    = style.add_style(b: true, sz: 12)
+  size    = style.add_style(sz: 12)
+
+	wb.add_worksheet(name: "LDC - Analytics") do |sheet|
+	  sheet.add_row ["Analytics"], style: heading
+	  sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")], style: size
+
+	  sheet.add_row []
+
+	  sheet.add_row ["Visitors", "Top location", "Top city", "Top printable project"], style: bold
+	  sheet.add_row [@agents.count, @top_location, @top_city, @top_printable], style: size
+
+	  sheet.add_row []
+
+	  sheet.add_row ["Locations", "Cities", "Printables"], style: bold
+	  @hash1.each do |k,v|
+	  	sheet.add_row v, style: size
+	  end
+
+	end
+
+ end

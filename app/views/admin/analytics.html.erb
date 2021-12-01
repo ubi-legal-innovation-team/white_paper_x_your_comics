@@ -1,4 +1,4 @@
-<section class="h-vh">
+<section class="h-max">
 
 	<h1 class="flex-cent m-auto mb-50">Admin Dashboard | Analytics</h1>
 
@@ -51,5 +51,9 @@
 	<% @printables.pluck(:project_id).flatten.group_by{ |projects_ids_arr| projects_ids_arr }.values.each do |project_id| %>
 		<p class="p-tall-rp-small"><%= Project.find(project_id.first).title %> : <%= project_id.count %></p>
 	<% end -%>
+
+	<div class="flex-end">
+		<%= link_to 'Download as Excel', admin_analytics_excel_path(format: :xlsx, slug:@slug), class: "radius-05 excel-btn p-small" %>
+	</div>
 
 </section>
