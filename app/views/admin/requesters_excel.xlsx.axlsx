@@ -9,10 +9,10 @@ wb.styles do |style|
 	  sheet.add_row ["Requesters"], style: heading
 	  sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")], style: size
 	  sheet.add_row []
-	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Contacted"], style: bold
+	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Contacted", "Data retention period"], style: bold
 
 	  @requesters.each do |requester|
-	    sheet.add_row [requester.created_at.strftime("%d") + " - " + requester.created_at.strftime("%b") + " - " + requester.created_at.strftime("%Y"), requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.contacted ], style: size
+	    sheet.add_row [requester.created_at.strftime("%d") + " - " + requester.created_at.strftime("%b") + " - " + requester.created_at.strftime("%Y"), requester.first_name, requester.last_name, requester.email, requester.country, requester.job_title, requester.reason, requester.message, requester.contacted, requester.data_retention_period], style: size
 	  end
 	end
 

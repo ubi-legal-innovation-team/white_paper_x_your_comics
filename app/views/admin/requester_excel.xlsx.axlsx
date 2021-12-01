@@ -9,9 +9,9 @@ wb.styles do |style|
 	  sheet.add_row ["Requester - " + @requester.first_name + " " + @requester.last_name], style: heading
 	  sheet.add_row ["Downloaded at", Time.now.strftime("%b %-d, %Y")], style: size
 	  sheet.add_row []
-	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message"], style: bold
+	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Data retention period"], style: bold
 
-	  sheet.add_row [@requester.created_at.strftime("%d") + " - " + @requester.created_at.strftime("%b") + " - " + @requester.created_at.strftime("%Y"), @requester.first_name, @requester.last_name, @requester.email, @requester.country, @requester.job_title, @requester.reason, @requester.message ], style: size
+	  sheet.add_row [@requester.created_at.strftime("%d") + " - " + @requester.created_at.strftime("%b") + " - " + @requester.created_at.strftime("%Y"), @requester.first_name, @requester.last_name, @requester.email, @requester.country, @requester.job_title, @requester.reason, @requester.message, @requester.data_retention_period], style: size
 	end
 
  end
