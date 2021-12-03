@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/about',               to: 'pages#about'
   get '/projects/:id',        to: 'pages#project',             as: :project
   get '/map-projects/search', to: 'pages#map_projects_search', as: :map_projects_search
-  get "/robots.:format", to: "pages#robots"
+  get "/robots.:format",      to: "pages#robots"
+  get "/legal-notices",       to: "pages#legal_notices"
 
   post '/join/requesters/create', to: 'requesters#create', as: :new_requester
 
