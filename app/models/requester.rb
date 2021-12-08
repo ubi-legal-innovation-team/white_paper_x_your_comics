@@ -10,6 +10,6 @@ class Requester < ApplicationRecord
 	private
 
 	def set_data_retention_period
-		self.update(data_retention_period:self.created_at + 5.year)
+		self.update(data_retention_period:self.created_at + 3.year)
 	end
 end
