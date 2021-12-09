@@ -11,8 +11,9 @@ class Project < ApplicationRecord
 
 	accepts_nested_attributes_for :bodies
 
-	before_update :set_multiple_fields
-	before_create :set_multiple_fields
+	before_update  :set_multiple_fields
+	before_create  :set_multiple_fields
+	before_destroy :destroy_printable
 
 	private
 
@@ -21,5 +22,12 @@ class Project < ApplicationRecord
 	  self.stakes.delete("")
 	  self.countries.compact!
 	  self.stakes.compact!
+  end
+
+  def destroy_printable
+  	id = self.id
+
+  	printable = PrintablePdf.find_by(project_id:id)
+  	printable.destroy
   end
 end

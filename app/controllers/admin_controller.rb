@@ -9,7 +9,7 @@ class AdminController < ApplicationController
 
   def dashboard
     @authorize_admins = [ 'alexandra.doornaert@ubisoft.com', 'arthur.dhuy@ubisoft.com', 'marie-lorraine.chiriacopol@ubisoft.com',
-                          'geoffrey.delcroix@ubisoft.com' ]
+                          'geoffrey.delcroix@ubisoft.com', 'jean-philippe.doho@ubisoft.com' ]
     render :dashboard
   end
 
@@ -85,7 +85,7 @@ class AdminController < ApplicationController
     @top_location  = @agents.pluck(:countries).flatten.max_by {|i| @agents.pluck(:countries).flatten.count(i)}
     @top_city      = @agents.pluck(:cities).flatten.max_by {|i| @agents.pluck(:cities).flatten.count(i)}
     @top_printable = @printables.pluck(:project_id).flatten.max_by {|i| @printables.pluck(:project_id).flatten.count(i)}
-    @top_printable = Project.find(@top_printable).title
+    @top_printable = @top_printable.nil? ? "n/a" : Project.friendly.find(@top_printable).title
 
     render :analytics
   end
@@ -97,7 +97,7 @@ class AdminController < ApplicationController
     @top_location  = @agents.pluck(:countries).flatten.max_by {|i| @agents.pluck(:countries).flatten.count(i)}
     @top_city      = @agents.pluck(:cities).flatten.max_by {|i| @agents.pluck(:cities).flatten.count(i)}
     @top_printable = @printables.pluck(:project_id).flatten.max_by {|i| @printables.pluck(:project_id).flatten.count(i)}
-    @top_printable = Project.find(@top_printable).title
+    @top_printable = @top_printable.nil? ? "n/a" : Project.friendly.find(@top_printable).title
 
     array1 = @agents.pluck(:countries)
     array2 = @agents.pluck(:cities)
