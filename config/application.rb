@@ -13,6 +13,8 @@ module WhitePaperXYourComics
       generate.helper false
       generate.test_framework :test_unit, fixture: false
     end
+    config.assets.initialize_on_precompile = false
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
