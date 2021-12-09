@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= favicon_link_tag '/favicon.ico' %>
-
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
     <meta property="og:title" content="<%= meta_title %>">
@@ -26,6 +24,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link rel="icon" type="image/png" href="assets/favicon.ico/favicon.ico" />
   </head>
 
   <body>
