@@ -53,9 +53,17 @@ class AdminController < ApplicationController
   end
 
   def update_requesters
-    if params[:contacted_ids]      
-      @requesters = Requester.find(params[:contacted_ids].map(&:to_i))
-      @requesters.each {|requester| requester.update(contacted:true)}
+    if params[:contacted_ids] || params[:unsubscribe_ids]
+
+      if params[:contacted_ids]
+        @requesters = Requester.find(params[:contacted_ids].map(&:to_i))
+        @requesters.each {|requester| requester.update(contacted:true)}
+      end
+
+      if params[:unsubscribe_ids]
+        @requesters = Requester.find(params[:unsubscribe_ids].map(&:to_i))
+        @requesters.each {|requester| requester.update(unsubscribe:true)}
+      end
       
       flash[:notice] = "The selection was successfully updated."
     else

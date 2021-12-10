@@ -1,9 +1,9 @@
 class RequestersController < ApplicationController
   def create
-  	@requester = Requester.new(strong_params)
+  	@requester            = Requester.new(strong_params)
 
   	if @requester.save
-  		flash[:notice]   = t('join.valid_message')
+  		flash[:notice] = t('join.valid_message')
   		redirect_to join_path(lang:params[:lang])
   	else
   		flash[:alert]  = t('join.error_message.flash')

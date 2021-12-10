@@ -17,6 +17,7 @@
 	        <th>Message</th>
 	        <th>Data retention period</th>
 	        <th>Contacted</th>
+	        <th>Unsubscribe</th>
 	      </tr>
 	    </thead>
 
@@ -38,8 +39,12 @@
       				<span><%= link_to 'Extract', admin_requester_excel_path(format: :xlsx, slug:@slug, id:requester), class: "radius-05 excel-btn mr-05" %></span>
       			</td>
 		        <td>
-		          <%= check_box_tag "contacted_ids[]", requester.contacted ? '' : requester.id, false, id:requester.id, class:"square-ux-checkbox", disabled:requester.contacted ? true : false, checked:requester.contacted ? true : false %>
-      				<%= label_tag nil, nil, for:requester.id, class:"orange #{requester.contacted ? 'disabled' : ''}" %>
+		          <%= check_box_tag "contacted_ids[]", requester.contacted ? '' : requester.id, false, id:"contact_#{requester.id}", class:"square-ux-checkbox", disabled:requester.contacted ? true : false, checked:requester.contacted ? true : false %>
+      				<%= label_tag nil, nil, for:"contact_#{requester.id}", class:"orange #{requester.contacted ? 'disabled' : ''}" %>
+      			</td>
+ 		        <td>
+		          <%= check_box_tag "unsubscribe_ids[]", requester.unsubscribe ? '' : requester.id, false, id:"unsubscribe_#{requester.id}", class:"square-ux-checkbox", disabled:requester.unsubscribe ? true : false, checked:requester.unsubscribe ? true : false %>
+      				<%= label_tag nil, nil, for:"unsubscribe_#{requester.id}", class:"orange #{requester.unsubscribe ? 'disabled' : ''}" %>
       			</td>
 		      </tr>
 	      <% end %>

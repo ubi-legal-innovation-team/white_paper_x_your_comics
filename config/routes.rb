@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "/robots.:format",      to: "pages#robots"
   get "/legal-notices",       to: "pages#legal_notices"
 
-  post '/join/requesters/create', to: 'requesters#create', as: :new_requester
+  post '/join/requesters/create',        to: 'requesters#create', as: :new_requester
 
   # constraints subdomain: /admin/ do
     get   ':slug/welcome',   to: 'admin#welcome',   as: :admin_welcome
