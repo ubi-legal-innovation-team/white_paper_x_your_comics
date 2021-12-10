@@ -9,6 +9,7 @@ local:
 cloudinary:
   service: Cloudinary
   folder: <%= Rails.env %>
+  enhance_image_tag: true
   # cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME_prod'] %>
   # api_key: '<%= ENV['CLOUDINARY_API_KEY_prod'] %>'
   # api_secret: <%= ENV['CLOUDINARY_API_SECRET_prod'] %>
