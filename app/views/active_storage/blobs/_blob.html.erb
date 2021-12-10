@@ -2,7 +2,6 @@
   <% if blob.representable? %>
     <% if Rails.env.production? %>
       <%=sanitize cl_image_tag blob.key, class:"img-fit" %>
-      <%=sanitize image_tag blob, class:"img-fit" %>
     <% else %>
       <%= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]) %>
     <% end %>
