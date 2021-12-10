@@ -27,7 +27,9 @@ class Project < ApplicationRecord
   def destroy_printable
   	id = self.id
 
-  	printable = PrintablePdf.find_by(project_id:id)
-  	printable.destroy
+  	if PrintablePdf.find_by(project_id:id)
+	  	printable = PrintablePdf.find_by(project_id:id)
+	  	printable.destroy
+  	end
   end
 end
