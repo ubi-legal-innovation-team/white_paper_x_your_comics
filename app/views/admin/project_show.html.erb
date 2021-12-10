@@ -6,8 +6,6 @@
 		<p class="text-cent p-small m-0 text-strong-grey"><%=sanitize @project.actor %></p>
 	</div>
 
-	<%=sanitize cl_image_tag @project.imagery.key, width:250, height:150, crop: :thumb, secure: :true %>
-
 	<div class="flex-col-start mt-50">
 		<p class="rp-small m-0">Contact : <span class="text-strong-grey"><%=sanitize @project.contact %></span></p>
 		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%=sanitize @project.stakes.join(', ') %></span></p>
