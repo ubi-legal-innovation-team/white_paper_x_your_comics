@@ -9,7 +9,9 @@
     <%= link_to "Log out", destroy_user_session_path(slug:params[:slug]), method: :delete, class: "text-strong-grey" %>
   </li>
 
-  <li>
-    <%= link_to "Welcome on rails", admin_welcome_path(slug:params[:slug]), class: "text-strong-grey" %>
-  </li>
+  <% if current_user.email == "arthur.dhuy@ubisoft.com" %>  
+    <li>
+      <%= link_to "Welcome on rails", admin_welcome_path(slug:params[:slug]), class: "text-strong-grey" %>
+    </li>
+  <% end %>
 </ul>
