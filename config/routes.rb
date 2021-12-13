@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   post '/join/requesters/create',        to: 'requesters#create', as: :new_requester
 
-  constraints subdomain: /admin/ do
+  # constraints subdomain: /admin/ do
     get   ':slug/welcome',   to: 'admin#welcome',   as: :admin_welcome
     get   ':slug/dashboard', to: 'admin#dashboard', as: :admin_dashboard
 
@@ -39,7 +39,7 @@ Rails.application.routes.draw do
     delete ':slug/dashboard/projects/:id/delete', to: 'projects#destroy', as: :admin_destroy_project
 
     get ':slug/dashboard/sandbox', to: 'admin#sandbox', as: :admin_sandbox
-  end
+  # end
 
   constraints(host: /^(?!www\.)/i) do
     get '(*any)' => redirect { |params, request|
