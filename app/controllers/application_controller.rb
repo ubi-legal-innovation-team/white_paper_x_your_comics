@@ -51,22 +51,28 @@ class ApplicationController < ActionController::Base
     public_socket_ip  = ip.ip_address if ip
 
     public_ip = open('http://whatismyip.akamai.com').read
+    remote_ip = request.remote_ip
 
-    url       = "http://ip-api.com/json/#{public_ip}?fields=66846719" 
+    if Rails.env.production?
+      url     = "http://ip-api.com/json/#{remote_ip}?fields=66846719" 
+    else
+      url     = "http://ip-api.com/json/#{public_ip}?fields=66846719"
+    end
     uri       = URI(url)
     response  = Net::HTTP.get(uri)
     result    = JSON.parse(response)
 
-    find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,result)
+    find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,remote_ip,result)
   end
 
-  def find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,result)
+  def find_or_create_ua(host_name,private_socket_ip,public_socket_ip,public_ip,remote_ip,result)
     agent = UserAgent.find_or_create_by(host_name:host_name,operating_system:request.user_agent)
     
     agent = agent.update(
       privates_socket_ip:agent.privates_socket_ip.push(private_socket_ip).uniq,
       publics_socket_ip:agent.publics_socket_ip.push(public_socket_ip).uniq,
       publics_ip:agent.publics_ip.push(public_ip).uniq,
+      remotes_ip:agent.remotes_ip.push(remote_ip).uniq,
       countries:agent.countries.push(result["country"]).uniq,
       regions:agent.regions.push(result["region"]).uniq,
       cities:agent.cities.push(result["city"]).uniq,
