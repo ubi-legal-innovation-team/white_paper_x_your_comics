@@ -132,4 +132,12 @@ class AdminController < ApplicationController
       format.html { render :analytics_excel }
     end
   end
+
+  def sandbox
+    if current_user.email == "arthur.dhuy@ubisoft.com"
+      render :sandbox
+    else
+      render :welcome
+    end
+  end
 end

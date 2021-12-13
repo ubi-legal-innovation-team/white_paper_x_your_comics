@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     post  ':slug/dashboard/projects/create',      to: 'projects#create',  as: :admin_create_project
     patch ':slug/dashboard/projects/:id/update',  to: 'projects#update',  as: :admin_update_project
     delete ':slug/dashboard/projects/:id/delete', to: 'projects#destroy', as: :admin_destroy_project
+
+    get ':slug/dashboard/sandbox', to: 'admin#sandbox', as: :admin_sandbox
   # end
 
   constraints(host: /^(?!www\.)/i) do
