@@ -107,7 +107,7 @@ class ApplicationController < ActionController::Base
 
   def authorize_admin!
     authorize_admins = [ 'alexandra.doornaert@ubisoft.com', 'arthur.dhuy@ubisoft.com', 'marie-lorraine.chiriacopol@ubisoft.com',
-                         'geoffrey.delcroix@ubisoft.com' ]
+                         'geoffrey.delcroix@ubisoft.com', 'jean-philippe.doho@ubisoft.com', 'victor.fevre@ubisoft.com' ]
 
     if current_user
       if !authorize_admins.include?(current_user.email)
