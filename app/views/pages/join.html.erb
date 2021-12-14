@@ -79,7 +79,7 @@
       <%= f.check_box :consent, class:"square-ux-checkbox" %>
       <%= f.label :consent, t('join.consent'), class:"p-rp-small white" %>
 
-      <p class="p-small"><%= t('join.privacy_notice.short') %> <%= link_to "here", privacy_notice_path(lang:params[:lang] || I18n.default_locale), class: "text-blue" %>.</p>
+      <p class="p-small"><%= t('join.privacy_notice.short') %> <%= link_to "here", privacy_notice_path(lang:params[:lang] || I18n.default_locale), class: "text-black" %>.</p>
 
       <% if flash["errors"] && flash["errors"]["consent"] %>
         <span class="text-red p-small"><%= params[:lang] == "fr" ? "Ce option est manquante" : "This option is missing." %></span>
