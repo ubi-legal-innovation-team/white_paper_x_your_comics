@@ -19,25 +19,11 @@ function call_modal(modal_button) {
         $("body").append(data);
 
         var modal           = $(`#${$(form).attr('id').replace('_call','')}`),
-            modal_container = $(modal).find('.modal-container-ajaxified ');
+            modal_container = $(modal).find('.modal-container-ajaxified');
 
         $(modal).addClass('active');
         setTimeout(function(){$(modal_container).addClass('active');}, 50);
         closeModal(modal,modal_container);
-        
-        // inputs.js
-        formattingNumericInput();
-
-        var form_v = document.querySelectorAll('.DOM_validation-form');
-
-        if(form_v){
-          form_v.forEach(f => {
-            var button = f.querySelector('input[type="submit"]') || f.querySelector('button[type="submit"]');
-            var required_inputs = f.querySelectorAll('.required-input').length > 0 ? f.querySelectorAll('.required-input') : null;
-
-            button.addEventListener('click', function(){formValidations(event,required_inputs,button)}, false);
-          });
-        };
       },
       completed: function() {
         // remove loader

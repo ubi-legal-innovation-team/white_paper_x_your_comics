@@ -17,16 +17,16 @@ function search(loader_svg){
       },
       success: function(data){
         $(form).find('input:submit').removeAttr('disabled');
-        setTimeout(function(){ $("#ajaxified_partial").html(data); }, 1000);
+        $("#ajaxified_partial").html(data);
         // remove loader
-        setTimeout(function(){ $('.loader-box').remove(); }, 1000);
+        $('.loader-box').remove();
 	  	// ajax_calls_modals.js
-	  	setTimeout(function(){ call_modal($('.modal-call')); }, 1000);
+	  	call_modal($('.modal-call'))
 	  	
       },
       completed: function(){
         // remove loader
-        setTimeout(function(){ $('.loader-box').remove(); }, 1000);
+        $('.loader-box').remove();
       },
       error: function(data){
         alert("Fatal Error");
