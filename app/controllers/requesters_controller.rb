@@ -1,6 +1,6 @@
 class RequestersController < ApplicationController
   def create
-  	@requester            = Requester.new(strong_params)
+  	@requester = Requester.new(strong_params)
 
   	if @requester.save
   		flash[:notice] = t('join.valid_message')
@@ -23,6 +23,6 @@ class RequestersController < ApplicationController
   private
 
   def strong_params
-  	params.require(:requester).permit(:first_name,:last_name,:email,:country,:job_title,:reason,:message)
+  	params.require(:requester).permit(:first_name,:last_name,:email,:country,:job_title,:reason,:message,:consent)
   end
 end

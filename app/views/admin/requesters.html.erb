@@ -15,6 +15,7 @@
 	        <th>Job title</th>
 	        <th>Reason</th>
 	        <th>Message</th>
+	        <th>Consent</th>
 	        <th>Data retention period</th>
 	        <th>Contacted</th>
 	        <th>Unsubscribe</th>
@@ -33,6 +34,7 @@
 						<td><%=sanitize requester.job_title %></td>
 						<td><%=sanitize requester.reason %></td>
 		        <td class="max-w-300"><%=sanitize requester.message.truncate(140) %></td>
+		        <td><%= requester.consent %></td>
       			<td class="flex-col">
       				<span><%= requester.data_retention_period %></span>
 

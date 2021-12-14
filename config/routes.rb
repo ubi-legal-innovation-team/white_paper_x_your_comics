@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/map-projects/search', to: 'pages#map_projects_search', as: :map_projects_search
   get "/robots.:format",      to: "pages#robots"
   get "/legal-notices",       to: "pages#legal_notices"
+  get "/privacy-notice",      to: "pages#privacy_notice"
 
   post '/join/requesters/create',        to: 'requesters#create', as: :new_requester
 

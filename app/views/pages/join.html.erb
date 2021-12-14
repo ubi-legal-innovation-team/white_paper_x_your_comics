@@ -11,7 +11,7 @@
         <%= f.text_field :last_name, class:"w-max radius-05", placeholder:"Jane", value:params[:last_name] %>
         
         <% if flash["errors"] && flash["errors"]["last_name"] %>
-          <span class="text-red p-small"><%= flash["errors"]["last_name"].join(', ')  %></span>
+          <span class="text-red p-small"><%= params[:lang] == "fr" ? "Ce champ est obligatoire." : "It can't be blank." %></span>
         <% end -%>
       </div>
 
@@ -20,7 +20,7 @@
         <%= f.text_field :first_name, class:"w-max radius-05", placeholder:"Doe", value:params[:first_name] %>
         
         <% if flash["errors"] && flash["errors"]["first_name"] %>
-          <span class="text-red p-small"><%= flash["errors"]["first_name"].join(', ')  %></span>
+          <span class="text-red p-small"><%= params[:lang] == "fr" ? "Ce champ est obligatoire." : "It can't be blank." %></span>
         <% end -%>
       </div>
     </div>
@@ -30,7 +30,7 @@
       <%= f.text_field :email, class:"w-max radius-05", placeholder:"jane.doe@legaldesign.com", value:params[:email] %>
       
       <% if flash["errors"] && flash["errors"]["email"] %>
-        <span class="text-red p-small"><%= flash["errors"]["email"].join(', ')  %></span>
+        <span class="text-red p-small"><%= params[:lang] == "fr" ? "Votre email n'est pas au bon format." : "It seems your email is not in the right format." %></span>
       <% end -%>
     </div>
 
@@ -62,7 +62,7 @@
       <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small white" %>
 
       <% if flash["errors"] && flash["errors"]["reason"] %>
-        <span class="text-red p-small"><%= flash["errors"]["reason"].join(', ')  %></span>
+        <span class="text-red p-small"><%= params[:lang] == "fr" ? "Veuillez sélectionner une option." : "Choose an option." %></span>
       <% end -%>
     </div>
 
@@ -71,7 +71,18 @@
       <%= f.text_area :message, class:"w-max radius-05", rows:"8", placeholder:". . .", value:params[:message] %>
 
       <% if flash["errors"] && flash["errors"]["message"] %>
-        <span class="text-red p-small"><%= flash["errors"]["message"].join(', ')  %></span>
+        <span class="text-red p-small"><%= params[:lang] == "fr" ? "Ce champ est obligatoire." : "It can't be blank." %></span>
+      <% end -%>
+    </div>
+
+    <div class="flex-col-start w-max mb-30">
+      <%= f.check_box :consent, class:"square-ux-checkbox" %>
+      <%= f.label :consent, t('join.consent'), class:"p-rp-small white" %>
+
+      <p class="p-small"><%= t('join.privacy_notice.short') %> <%= link_to "here", privacy_notice_path(lang:params[:lang] || I18n.default_locale), class: "text-blue" %>.</p>
+
+      <% if flash["errors"] && flash["errors"]["consent"] %>
+        <span class="text-red p-small"><%= params[:lang] == "fr" ? "Ce option est manquante" : "This option is missing." %></span>
       <% end -%>
     </div>
 

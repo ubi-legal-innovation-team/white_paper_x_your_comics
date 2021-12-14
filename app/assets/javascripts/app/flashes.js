@@ -3,14 +3,14 @@ const displayFlashes = () => {
       alert  = document.getElementById('alert');
 
   if(notice){
-    setTimeout(function(){notice.style.right = '15px';}, 300);
-    setTimeout(function(){notice.style.right = '-400px';}, 6000);
-    setTimeout(function(){notice.remove();}, 7000);
+    notice.classList.add('visible');
+    setTimeout(function(){notice.classList.add('invisible')}, 3000)
+    setTimeout(function(){notice.remove();}, 3500);
   };
 
   if(alert){
-    setTimeout(function(){alert.style.right = '15px';}, 300);
-    setTimeout(function(){alert.style.right = '-400px';}, 6000);
-    setTimeout(function(){alert.remove();}, 7000);
+    alert.classList.add('visible');
+    setTimeout(function(){alert.classList.add('invisible')}, 3000)
+    setTimeout(function(){alert.remove();}, 3500);
   };
 };

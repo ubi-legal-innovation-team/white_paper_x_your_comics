@@ -1,18 +1,16 @@
 <% if notice %>
 
-  <div id="notice" class="break-word flex-start-cent">
+  <div id="notice" class="flex-cent">
 
-    <span><%= svg('ubisoft_check_white_40') %></span>
-    <p class="text-white ml-25"><%= notice %></p>
+    <p class="text-white border-orange background-black p-15 radius-50"><%= notice %></p>
 
   </div>
 
 <% elsif alert %>
 
-  <div id="alert" class="break-word flex-start-cent">
+  <div id="alert" class="flex-cent">
 
-    <span><%= svg('ubisoft_warning_white_40') %></span>
-    <p class="text-white ml-25"><%= alert %></p>
+    <p class="text-white border-red background-black p-15 radius-50"><%= alert %></p>
 
   </div>
 
