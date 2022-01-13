@@ -35,6 +35,11 @@
 </div>
 
 <div class="flex-col-start mt-30">
+  <%= f.label :website, "_Website", class:"strong p-tall-rp-p mb-05" %>
+  <%= f.text_field :website, class:"w-max radius-05", placeholder:". . ." %>
+</div>
+
+<div class="flex-col-start mt-30">
 	<%= f.label :countries, "_Countries *", class:"strong p-tall-rp-p mb-05" %>
 	
 	<div class="relative w-max">
@@ -95,4 +100,19 @@
     <% if @project.imagery.attached? %>
         <span class="pad-orange mt-10"><%= @project.imagery.filename %></span>
     <% end %>
+</div>
+
+<div class="flex-col-start mt-30">
+  <%= f.label :licence, "_Licence", class:"strong p-tall-rp-p mb-05" %>
+  <%= f.text_field :licence, class:"w-max radius-05", placeholder:". . ." %>
+</div>
+
+<div class="flex-col-start mt-30">
+  <%= f.label :copyright, "_Copyright", class:"strong p-tall-rp-p mb-05" %>
+  <%= f.text_field :copyright, class:"w-max radius-05", placeholder:". . ." %>
+</div>
+
+<div class="flex-col-start mt-30">
+  <%= f.label :credits, "_Credits", class:"strong p-tall-rp-p mb-05" %>
+  <%= f.text_field :credits, class:"w-max radius-05", placeholder:". . ." %>
 </div>
