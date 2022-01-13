@@ -58,7 +58,7 @@ class PagesController < ApplicationController
     end
 
     respond_to do |format|
-      # format.html { add_breadcrumb "#{@project.title}", :project }
+      format.html { add_breadcrumb "#{@project.title}", :project }
 
       format.pdf do
         PrintablePdf.create(project_id:@project.id,user_agent_id:@agent.id)

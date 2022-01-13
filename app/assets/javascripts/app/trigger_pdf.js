@@ -12,6 +12,6 @@ const triggerPrintable = (link) => {
 	    questions.push(source[i].closest('section').id)
 	  }
 
-	  window.open(`http://localhost:3000/projects/${project_id}.pdf?sources=${sources}&questions=${questions}`)
+	  window.open(`https://legaldesign-community.com//projects/${project_id}.pdf?sources=${sources}&questions=${questions}`)
 	});
 };
