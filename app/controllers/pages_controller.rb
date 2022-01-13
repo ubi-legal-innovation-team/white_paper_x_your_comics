@@ -60,6 +60,7 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html { add_breadcrumb "#{@project.title}", :project }
 
+      # cf. trigger_pdf.js 
       format.pdf do
         PrintablePdf.create(project_id:@project.id,user_agent_id:@agent.id)
 

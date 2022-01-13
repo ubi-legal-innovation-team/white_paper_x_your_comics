@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def map_projects_call
-    @projects = Project.find(params[:projects_ids].split().map(&:to_i))
+    @projects = Project.find(params[:projects_ids].split().map(&:to_i)).sort_by { |project| project.title }
     render partial: "/ajax/ajax_calls/modals/map_projects"
   end
 
