@@ -1,7 +1,7 @@
 <footer id="legallab-footer" class="flex-bet-cent">
 
-  <div class="flex-col-start flex-1 p-rp-small">
-    <%= link_to t('footer.legal_notices'), legal_notices_path(lang:params[:lang] || I18n.default_locale), class: "text-black" %>
+  <div class="flex-start-rp-col flex-1 p-rp-small">
+    <%= link_to t('footer.legal_notices'), legal_notices_path(lang:params[:lang] || I18n.default_locale), class: "text-black mr-20" %>
     <%= link_to t('footer.privacy_notice'), privacy_notice_path(lang:params[:lang] || I18n.default_locale), class: "text-black" %>
   </div>
 

@@ -8,11 +8,11 @@
         <% 4.times do |i| %>
           <div class="relative">
 
-            <% @markers.each do |coordinates,projects| %>                  
+            <% @markers.each do |coordinates,projects_ids| %>                  
               <% if index+1 == coordinates[0][0] && i+1 == coordinates[0][1] %>
 
                 <%= form_tag map_projects_call_path, method: :get, id: "map_projects_call", class: "modal-call absolute #{coordinates[1]}" do %>
-                  <%= hidden_field_tag :projects_ids, projects %>
+                  <%= hidden_field_tag :projects_ids, projects_ids %>
 
                   <%= button_tag class:"no-background p-0" do %>
                     <div class="radius-100 s-60-rp-30 flex-cent background-orange opacity-65"></div>

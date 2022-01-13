@@ -25,7 +25,7 @@
 }
 .h-vh-calc-footer-rp-max,
 .h-vh-calc-footer-midrp-max {
-  height:calc(100vh - 100px)
+  height:calc(100vh - 78px)
 }
 
 // WIDTH
@@ -40,6 +40,9 @@
 }
 .w-max {
   width: 100% !important;
+}
+.w-90r-rp-max {
+  width: 90% !important;
 }
 .w-med {
   width: 50% !important;

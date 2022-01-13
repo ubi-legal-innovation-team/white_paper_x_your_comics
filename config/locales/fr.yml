@@ -8,7 +8,7 @@ fr:
     logo: "logo_t"
   footer:
     legal_notices: "MENTIONS LÉGALES"
-    privacy_notice: "MENTION DE CONDIDENTIONALITÉ"
+    privacy_notice: "CONFIDENTIONALITÉ"
   home:
     vision_header: "_Notre vision & notre définition du legal design"
     vision_para: "Notre but avec ce Livre blanc est de contribuer à quelque chose de collectif, de mettre en avant des initiatives, et de favoriser l’émergence d’une communauté d’échange de pratiques et pas de définir « LE » legal design ou « LES » projets, pour éviter pour cet écosystème les risques de construction de pré-carré ou d’une compétition délétère."
@@ -21,7 +21,7 @@ fr:
     definition_header: "_Définition"
     read: "en savoir plus"
     definition_para:
-      first: "En 2014, Margaret Hagan introduit le terme de Legal design pour nommer et théoriser l’ensemble des pratiques de design appliquées au secteur du droit. Lorsqu’on parle aujourd'hui de legal design, on parle ainsi de tous les projets et initiatives à l'intersection des disciplines que sont le design et le droit (comme on peut parler de medical design par exemple)."
+      first: "En 2014, Margaret Hagan popularisa le terme de Legal design pour nommer et théoriser l’ensemble des pratiques de design appliquées au secteur du droit. Lorsqu’on parle aujourd'hui de legal design, on parle ainsi de tous les projets et initiatives à l'intersection des disciplines que sont le design et le droit (comme on peut parler de medical design par exemple)."
       second: "Pour rappel, le design formalise des services et des produits en questionnant les individus dans leurs rapports à leur environnement (espaces, objets, sites webs, affiches...). Le droit, quant à lui, norme les relations entre des entités et des personnes (lois, contrats, termes). La convergence entre ces deux disciplines invite alors les concepteurs de services ou produits juridiques à placer les usagers du service au centre de leur réflexion et à questionner leur expérience du droit (perception, interactions, actions, émotions, interprétations...), le but étant d'adapter et de repenser les services et produits pour ceux qui les utilisent. Le legal design donne alors lieu à de nouveaux processus, interfaces ou infographies par exemple."
       third: "Le droit souhaite définir les responsabilités, protéger, en lui-même veut limiter l'expérience du droit car si on vit l'expérience du droit, c'est qu'on entre dans un problème ? L‘expérience actuelle du droit possède certaines caractéristiques comme la perception de ce sujet comme ennuyeux ou difficile, la non-compréhension de termes techniques, l’habitude de ne pas lire (le scroll des conditions générales par exemple), la peur de ne pas bien faire, etc. et implique pour les concepteurs de répondre à des enjeux communs comme l’accessibilité, l’intelligibilité, la confiance ou la transparence par exemple. De la collaboration entre designers et professionnels du droit, mais aussi ingénieurs, développeurs, project managers et autres, naissent alors de nouveaux usages du droit pour répondre aux enjeux actuels."
       fourth: "Le Legal design se donne alors pour but de redonner au droit sa fonction stratégique et son côté performatif."
@@ -88,6 +88,8 @@ fr:
       eleventh: "2021"
     jp_article:
       first_block:
+        intro_1: "Ce livre blanc dresse un portrait du présent et du passé. Mais qu'en est-il de l'avenir ?"
+        intro_2: "À défaut de prédire exactement la façon dont le marché de la conception juridique se développera, nous pouvons explorer différents scénarios et hypothèses à l'aide des données et des tendances d'aujourd'hui."
         header: "_Le Legal et le designer"
         para_1: "Le Legal Design en tant que discipline s'est considérablement développé ces derniers mois, dans le monde de l'entreprise comme dans notre vie de tous les jours. Le principal visage de ce développement est le Legal Designer."
         para_2: "En 2021, vous n'avez pas besoin d'un examen d'État pour être Legal Designer. Les anciens avocats sont Legal Designer, les entreprises recrutent des Legal designers diplômés d'école de design. En sera-t-il de même en 2030 ? L'avenir est incertain mais la réconciliation des deux voies du Droit et du Design s'est faite par la formation, dans des travaux académiques mais aussi - comme souvent dans le design, à travers des projets dont certains sont présentés sur ce site."

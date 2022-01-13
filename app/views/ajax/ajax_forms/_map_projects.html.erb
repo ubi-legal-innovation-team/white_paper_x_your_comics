@@ -2,15 +2,11 @@
   <div class="relative w-210 mr-10 rp-mb-05">
     <%= select_tag :search_projects, options_for_select(Stake.pluck(:name).sort), :multiple => true, "data-multiple" => "true", 
       placeholder:"#{t('home.form.issues')}", class:"selectize background-black radius-05 white", id:"issues" %>
-
-    <i class="fas fa-chevron-down absolute absolute top-right"></i>
   </div>
 
   <div class="relative w-210 mr-10">
     <%= select_tag :search_projects, options_for_select(Media.pluck(:name).sort), :multiple => true, "data-multiple" => "true", 
       placeholder:"#{t('home.form.media')}", class:"selectize background-black radius-05 white", id:"media" %>
-
-    <i class="fas fa-chevron-down absolute absolute top-right"></i>
   </div>
 
   <%= button_tag class:"background-black p-10 radius-05 h-fit" do %>
