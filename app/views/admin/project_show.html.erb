@@ -11,6 +11,8 @@
 		<p class="rp-small m-0">Stakes : <span class="text-strong-grey"><%=sanitize @project.stakes.join(', ') %></span></p>
 		<p class="rp-small m-0">Countries : <span class="text-strong-grey"><%=sanitize @project.countries.join(', ') %></span></p>
 		<p class="rp-small m-0">Media : <span class="text-strong-grey"><%=sanitize @project.media %></span></p>
+		<p class="rp-small m-0">Website : <span class="text-strong-grey"><%=sanitize @project.website %></span></p>
+		<%= link_to "See project", project_path(@project), class:"pad-blue mt-10" %>
 	</div>
 
 	<%= form_for @project, url: admin_update_project_path(id:@project,slug:@slug), method: :patch, html: { class:"mt-50 background-magic-grey p-25 radius-05", id:"edit_project" } do |f| %>
