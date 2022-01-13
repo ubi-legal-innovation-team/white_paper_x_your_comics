@@ -39,7 +39,12 @@ class ProjectPdf
 		pdf.move_down(20)
 
 		# imagery
-		pdf.image open("http://res.cloudinary.com/led8/image/upload/#{project.imagery.key}"), fit: [350, 350], position: :center
+		if Rails.env.production?
+			pdf.image open("http://res.cloudinary.com/legallab-ubisoft/image/upload/v1/production/#{project.imagery.key}"), fit: [350, 350], position: :center
+		else
+			pdf.image open("http://res.cloudinary.com/legallab-ubisoft/image/upload/v1/development/#{project.imagery.key}"), fit: [350, 350], position: :center
+
+		end
 		pdf.move_down(20)
 
 		if version && version.version == "fr"
@@ -53,7 +58,7 @@ class ProjectPdf
 			if !image_one.empty?
 
 				image_one.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -68,7 +73,7 @@ class ProjectPdf
 			if !image_two.empty?
 
 				image_two.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -83,7 +88,7 @@ class ProjectPdf
 			if !image_three.empty?
 
 				image_three.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -98,7 +103,7 @@ class ProjectPdf
 			if !image_four.empty?
 
 				image_four.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -113,7 +118,7 @@ class ProjectPdf
 			if !image_five.empty?
 
 				image_five.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -128,7 +133,7 @@ class ProjectPdf
 			if !image_six.empty?
 
 				image_six.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -143,7 +148,7 @@ class ProjectPdf
 			if !image_seven.empty?
 
 				image_seven.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -160,7 +165,7 @@ class ProjectPdf
 			if !image_one.empty?
 
 				image_one.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -175,7 +180,7 @@ class ProjectPdf
 			if !image_two.empty?
 
 				image_two.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -190,7 +195,7 @@ class ProjectPdf
 			if !image_three.empty?
 
 				image_three.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -205,7 +210,7 @@ class ProjectPdf
 			if !image_four.empty?
 
 				image_four.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -220,7 +225,7 @@ class ProjectPdf
 			if !image_five.empty?
 
 				image_five.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -235,7 +240,7 @@ class ProjectPdf
 			if !image_six.empty?
 
 				image_six.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
@@ -250,7 +255,7 @@ class ProjectPdf
 			if !image_seven.empty?
 
 				image_seven.each do |url|
-					pdf.image open(url.gsub('admin.','')), fit: [350, 350], position: :center
+					pdf.image open(url), fit: [350, 350], position: :center
 	    		pdf.move_down(20)
 				end
 
