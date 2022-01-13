@@ -6,10 +6,12 @@
       <% @projects.each do |project| %>
         <div class="p-10">
           <%= link_to project_path(project) do %>
-            <div class="border-orange w-2 background-black p-06 p-small text-white flex-col-start w-min">
+            <div class="border-orange w-2 background-black p-06 p-small text-white w-min h-max flex-col-bet">
               <%=sanitize cl_image_tag project.imagery.key, width:300, height:200, crop: :thumb, secure: :true %>
-              <strong class="mt-10"><%= project.title %></strong>
-              <span><%= project.actor %></span>
+              <div class="flex-col-start mt-10">
+                <strong class="mt-10"><%= project.title %></strong>
+                <span><%= project.actor %></span>
+              </div>
             </div>
           <% end %>
         </div>
