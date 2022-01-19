@@ -33,7 +33,7 @@
 						<td><%=sanitize requester.country %></td>
 						<td><%=sanitize requester.job_title %></td>
 						<td class="max-w-300">
-							<%=sanitize requester.reason.map{|r| (requester.reason.index(r) + 1).to_s + ') ' + r.to_s}.join(' ') %>
+							<%= requester.reason.map{|r| (requester.reason.index(r) + 1).to_s + ') ' + r.to_s}.join(' ') %>
 					  </td>
 		        <td class="max-w-400"><%=sanitize requester.message.truncate(140) %></td>
 		        <td><%= requester.consent %></td>
