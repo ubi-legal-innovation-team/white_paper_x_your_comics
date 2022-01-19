@@ -1,4 +1,4 @@
-<section class="h-max">
+<section class="h-max no-padding-y">
 
 	<h1 class="flex-cent m-auto mb-50">Admin Dashboard</h1>
 
@@ -32,8 +32,10 @@
 						<td><%=sanitize requester.email %></td>
 						<td><%=sanitize requester.country %></td>
 						<td><%=sanitize requester.job_title %></td>
-						<td><%=sanitize requester.reason %></td>
-		        <td class="max-w-300"><%=sanitize requester.message.truncate(140) %></td>
+						<td class="max-w-300">
+							<%=sanitize requester.reason.map{|r| (requester.reason.index(r) + 1).to_s + ') ' + r.to_s}.join(' ') %>
+					  </td>
+		        <td class="max-w-400"><%=sanitize requester.message.truncate(140) %></td>
 		        <td><%= requester.consent %></td>
       			<td class="flex-col">
       				<span><%= requester.data_retention_period %></span>

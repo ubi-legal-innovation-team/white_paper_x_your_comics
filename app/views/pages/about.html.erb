@@ -1,6 +1,11 @@
 <%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - About" %>
 
-<section class="h-max p-0 pt-100 flex-col-cent">
+<section>
+  <p class="p-rp-small text-left w-max"><%= t('about.para_1') %></p>
+  <p class="p-rp-small text-left w-max"><%= t('about.para_2').html_safe %></p>
+</section>
+
+<section class="h-max p-0 flex-col-cent">
   <%= image_tag t('about.image_1'), class: "comics" %>
   <%= image_tag t('about.image_2'), class: "comics" %>
   <%= image_tag t('about.image_3'), class: "comics" %>

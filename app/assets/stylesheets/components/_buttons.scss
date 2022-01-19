@@ -29,6 +29,25 @@ input[type="submit"] {
   }
 }
 
+.blue-btn {
+  background-color:$blue;
+  color:#fff;
+  border-radius:5px;
+  padding:6px 12px;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+  &:hover {
+    background-color:$blue-hover;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+  }
+  &.pt-14 {
+    padding:13.5px 12px;
+  }
+}
+
 .excel-btn {
   background-color:$excel-green;
   color:#fff;

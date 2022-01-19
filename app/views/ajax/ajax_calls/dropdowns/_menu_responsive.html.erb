@@ -7,7 +7,7 @@
 
   <li>
     <%= link_to t('navbar.perspectives'), 
-    perspectives_path(lang:params[:lang] || I18n.default_locale), 
+    perspectives_timeline_path(lang:params[:lang] || I18n.default_locale), 
     class: "#{params[:location] == "perspectives" ? 'text-black background-orange' : 'text-black'}" %>
   </li>
 

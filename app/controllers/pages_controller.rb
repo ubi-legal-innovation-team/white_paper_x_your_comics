@@ -31,8 +31,12 @@ class PagesController < ApplicationController
     add_breadcrumb "definition", :definition_path
   end
 
-  def perspectives
-    add_breadcrumb "perspectives", :perspectives_path
+  def timeline
+    add_breadcrumb "timeline", :perspectives_timeline_path
+  end
+
+  def article
+    add_breadcrumb "article", :perspectives_article_path
   end
 
   def resources

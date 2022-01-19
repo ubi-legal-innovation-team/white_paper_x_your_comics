@@ -1,7 +1,7 @@
 <%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - Join Us" %>
 
 <section class="h-max text-white main-background">
-  
+
   <%= form_for @requester, url: new_requester_path, method: :post, html: { class:"flex-col-cent wmax-800-rp-300 m-auto" } do |f| %>
     <%= hidden_field_tag :lang, params[:lang] %>
 
@@ -49,17 +49,32 @@
     <div class="flex-col-start w-max mb-30">
       <h2 class="m-0 mb-15 rp-auto"><%= t('join.how_join') %></h2>
 
-      <%= f.radio_button :reason, t('join.reason_1'), id: "reason_1", class:"circle-ux-radio", 
-        checked: params[:reason] == t('join.reason_1') ? true : false %>
-      <%= f.label :reason, t('join.reason_1'), for: "reason_1", class:"p-rp-small white" %>
+      <%= f.check_box :reason,
+        { multiple:true, 
+          id:"reason_1",
+          class:"square-ux-checkbox", 
+          checked: !params[:reason].nil? && params[:reason].include?(t('join.reason_1')) ? true : false, 
+          include_hidden: false },
+          t('join.reason_1')  %>
+      <%= f.label :reason, t('join.reason_1'), for:"reason_1", class:"p-rp-small white" %>
 
-      <%= f.radio_button :reason, t('join.reason_2'), id: "reason_2", class:"circle-ux-radio", 
-        checked: params[:reason] == t('join.reason_2') ? true : false %>
-      <%= f.label :reason, t('join.reason_2'), for: "reason_2", class:"p-rp-small white" %>
+      <%= f.check_box :reason,
+        { multiple:true, 
+          id:"reason_2",
+          class:"square-ux-checkbox", 
+          checked: !params[:reason].nil? && params[:reason].include?(t('join.reason_2')) ? true : false, 
+          include_hidden: false },
+          t('join.reason_2')  %>
+      <%= f.label :reason, t('join.reason_2'), for:"reason_2", class:"p-rp-small white" %>
 
-      <%= f.radio_button :reason, t('join.reason_3'), id: "reason_3", class:"circle-ux-radio", 
-        checked: params[:reason] == t('join.reason_3') ? true : false %>
-      <%= f.label :reason, t('join.reason_3'), for: "reason_3", class:"p-rp-small white" %>
+      <%= f.check_box :reason,
+        { multiple:true, 
+          id:"reason_3",
+          class:"square-ux-checkbox", 
+          checked: !params[:reason].nil? && params[:reason].include?(t('join.reason_3')) ? true : false, 
+          include_hidden: false },
+          t('join.reason_3')  %>
+      <%= f.label :reason, t('join.reason_3'), for:"reason_3", class:"p-rp-small white" %>
 
       <% if flash["errors"] && flash["errors"]["reason"] %>
         <span class="text-red p-small"><%= params[:lang] == "fr" ? "Veuillez sélectionner une option." : "Choose an option." %></span>

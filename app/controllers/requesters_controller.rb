@@ -23,6 +23,6 @@ class RequestersController < ApplicationController
   private
 
   def strong_params
-  	params.require(:requester).permit(:first_name,:last_name,:email,:country,:job_title,:reason,:message,:consent)
+  	params.require(:requester).permit(:first_name,:last_name,:email,:country,:job_title,:message,:consent,reason:[])
   end
 end

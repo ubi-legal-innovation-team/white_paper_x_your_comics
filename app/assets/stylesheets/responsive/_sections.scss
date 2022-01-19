@@ -1,7 +1,8 @@
 @media(max-width:640px){
   section {
     padding:120px 15px 15px 15px;
-    &.padding-y {
+    &.padding-y,
+    &.no-padding-y {
       padding:0px 15px;
     }
   }
@@ -9,9 +10,12 @@
 
 @media(min-width:1460px) {
   section {
-    padding:150px 150px 50px 150px;
+    padding:150px 200px 50px 200px;
     &.padding-y {
-      padding:0px 150px;
+      padding:0px 200px;
+    }
+    &.no-padding-y {
+      padding:150px 50px 50px 50px;
     }
   }
 }

@@ -98,7 +98,8 @@
     <%= f.file_field :imagery %>
 
     <% if @project.imagery.attached? %>
-        <span class="pad-orange mt-10"><%= @project.imagery.filename %></span>
+      <%=sanitize cl_image_tag @project.imagery.key, class:"mt-10", height:200, width:200 %>
+      <span class="pad-orange mt-10"><%= @project.imagery.filename %></span>
     <% end %>
 </div>
 

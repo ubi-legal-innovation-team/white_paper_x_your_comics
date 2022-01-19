@@ -11,7 +11,7 @@ wb.styles do |style|
 	  sheet.add_row []
 	  sheet.add_row ["Date", "First Name", "Last Name", "email", "Country", "Job Title", "Reason", "Message", "Consent", "Data retention period"], style: bold
 
-	  sheet.add_row [@requester.created_at.strftime("%d") + " - " + @requester.created_at.strftime("%b") + " - " + @requester.created_at.strftime("%Y"), @requester.first_name, @requester.last_name, @requester.email, @requester.country, @requester.job_title, @requester.reason, @requester.message, @requester.consent, @requester.data_retention_period], style: size
+	  sheet.add_row [@requester.created_at.strftime("%d") + " - " + @requester.created_at.strftime("%b") + " - " + @requester.created_at.strftime("%Y"), @requester.first_name, @requester.last_name, @requester.email, @requester.country, @requester.job_title, @requester.reason.map{|r| (requester.reason.index(r) + 1).to_s + ') ' + r.to_s}.join(' '), @requester.message, @requester.consent, @requester.data_retention_period], style: size
 	end
 
  end

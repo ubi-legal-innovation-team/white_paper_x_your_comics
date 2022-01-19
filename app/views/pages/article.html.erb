@@ -1,0 +1,106 @@
+<%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - Article" %>
+
+<section class="h-max main-background relative">
+
+	<nav class="mb-50">
+		<ul class="no-padding unstyle-list flex-start-rp-col p-rp-small" id="int_nav">
+			<li><%= link_to t('perspectives.timeline.path'), perspectives_timeline_path, class:"#{params["action"] == 'timeline' ? 'active' : ''}" %></li>
+			<li><%= link_to t('perspectives.jp_article.path'), perspectives_article_path, class:"#{params["action"] == 'article' ? 'active' : ''}" %></li>
+		</ul>
+	</nav>
+
+</section>
+
+<section class="h-max padding-y text-black background-orange">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+
+    <p class="rp-small"><%= t('perspectives.jp_article.first_block.intro_1') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.intro_2') %></p>
+    
+    <h1><%= t('perspectives.jp_article.first_block.header') %></h1>
+
+    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_1') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.para_2') %></p>
+
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    
+    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.second_block.header') %></h1>
+    
+    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_1') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_2') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_3').html_safe %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_4').html_safe %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.second_block.para_5') %></p>
+
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-black background-orange">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    
+    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.third_block.header') %></h1>
+
+    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_1') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.third_block.para_3') %></p>
+
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    
+    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fourth_block.header') %></h1>
+    
+    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_1') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fourth_block.para_3') %></p>
+
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-black background-orange">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    
+    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fifth_block.header') %></h1>
+
+    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_1').html_safe %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_2') %></p>
+    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fifth_block.para_3') %></p>
+
+  </div>
+
+</section>
+
+<section class="h-max padding-y text-white background-black">
+
+  <div class="pt-50-rp-15 pb-50-rp-15">
+    
+    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.sixth_block.header') %></h1>
+
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_1').html_safe %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_2') %></p>
+    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_3') %></p>
+    
+    <div class="flex-col">
+    	<span><%= t('perspectives.jp_article.sixth_block.name') %></span>
+    	<span><%= t('perspectives.jp_article.sixth_block.occupation') %></span>
+    	<span><%= t('perspectives.jp_article.sixth_block.company') %></span>
+    </div>
+
+  </div>
+
+</section>

@@ -9,6 +9,10 @@
 
   <div class="flex-cent mt-10">
     <%= link_to t('project.printable'), project_path(@project, format:"pdf"), id:"printable", class:"main-btn", "data-project" => @project.id %>
+
+    <% if @project.website %>
+      <%= link_to t('project.website'), @project.website, class:"blue-btn ml-20" %>
+    <% end %>
   </div>
 
 	<div class="text-white rp-small mt-30 text-cent"><%= @version.long_description if @version %></div>
@@ -80,4 +84,16 @@
 	  <div class="rp-small"><%= @version.question_seven if @version %></div>
   </div>
 
+  <% if @project.copyright %>
+    <p class="m-0">Copyright : <%= @project.copyright %></p>
+  <% end %>
+
+  <% if @project.credits %>
+    <p class="m-0">Credits : <%= @project.credits %></p>
+  <% end %>
+
+  <% if @project.licence %>
+    <p class="m-0">Licence : <%= @project.licence %></p>
+  <% end %>
 </section>
+

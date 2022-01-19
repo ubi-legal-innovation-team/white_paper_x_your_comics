@@ -1,6 +1,15 @@
-<%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - Perspectives" %>
+<%= content_for :meta_title, "#{DEFAULT_META["meta_title"]} - Timeline" %>
 
 <section class="h-max main-background relative">
+
+	<nav class="mb-50">
+		<ul class="no-padding unstyle-list flex-start-rp-col p-rp-small" id="int_nav">
+			<li><%= link_to t('perspectives.timeline.path'), perspectives_timeline_path, class:"#{params["action"] == 'timeline' ? 'active' : ''}" %></li>
+			<li><%= link_to t('perspectives.jp_article.path'), perspectives_article_path, class:"#{params["action"] == 'article' ? 'active' : ''}" %></li>
+		</ul>
+	</nav>
+
+	<p class="p-rp-small text-white mb-100"><%= t('perspectives.timeline.para_intro').html_safe %></p>
 
 	<div class="w-m flex relative">
 		<div class="h-max border-white w-2 absolute centered rp-hidden"></div>
@@ -13,7 +22,15 @@
 			<span style="top: 0; left: 25%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.first') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.first') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.first_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.first_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.piggin.net/plold/arborJuris.html", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
@@ -24,8 +41,15 @@
 			<span style="top: 0; right: -5%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.second') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.second') %></p>
-			<p class="p-rp-small"><%= t('perspectives.timeline.third') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.second_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.second_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.cairn-int.info/article-E_RMA_132_0273--a-singular-way-of-displaying-laws-and-cu.html", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
@@ -44,7 +68,15 @@
 			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.third') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.fourth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.third_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.third_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.gla.ac.uk/myglasgow/library/files/special/exhibns/month/aug2001.html", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
@@ -55,7 +87,15 @@
 			<span style="top: 0; right: 0%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.fourth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.fifth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.fourth_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.fourth_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.basicknowledge101.com/pdf/km/Design%20thinking.pdf", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
@@ -74,7 +114,15 @@
 			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.fifth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.sixth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.fifth_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.fifth_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "http://candychang.com/work/street-vendor-guide/", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
@@ -85,7 +133,15 @@
 			<span style="top: 0; right: 0%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.sixth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.seventh') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.sixth_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.sixth_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.legaltechdesign.com/", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
@@ -104,7 +160,7 @@
 			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.seventh') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.eighth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.seventh_title') %></strong>
 		</div>
 	</div>
 
@@ -115,7 +171,15 @@
 			<span style="top: 0; right: 0%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.eighth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.ninth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.eighth_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.eighth_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "https://www.ideo.com/case-study/a-new-way-to-vote-for-the-people-of-los-angeles", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
 		</div>
 
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
@@ -134,8 +198,17 @@
 			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.ninth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.tenth') %></p>
-			<p class="p-rp-small"><%= t('perspectives.timeline.eleventh') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.ninth_title') %></strong>
+			<p class="p-rp-small"><%= t('perspectives.timeline.ninth_para').html_safe %></p>
+
+			<div class="w-max text-right p-small">
+				<%= link_to "http://www.legaldesignsummit.com/", target:"_blank", class:"text-black" do %>
+					<%= t('perspectives.timeline.read') %>
+					<i class="fas fa-plus-circle text-white"></i>
+				<% end %>
+			</div>
+
+			<strong class="p-rp-small"><%= t('perspectives.timeline.ninth_title_2') %></strong>
 		</div>
 	</div>
 
@@ -146,7 +219,7 @@
 			<span style="top: 0; right: 0%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.tenth') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.twelfth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.tenth_title') %></strong>
 		</div>
 
 		<div class="background-white s-30 radius-100 mr-50 ml-50 rp-hidden"></div>
@@ -165,108 +238,9 @@
 			<span style="top: 0; left: 15%; transform: translate(-50%, -50%);" class="absolute background-white radius-25 p-0-30">
 				<%= t('perspectives.date.eleventh') %>
 			</span>
-			<p class="p-rp-small"><%= t('perspectives.timeline.thirteenth') %></p>
-			<p class="p-rp-small"><%= t('perspectives.timeline.fourthteenth') %></p>
-			<p class="p-rp-small"><%= t('perspectives.timeline.fifthteenth') %></p>
+			<strong class="p-rp-small"><%= t('perspectives.timeline.eleventh_title') %></strong>
+			<ul class="p-rp-small"><%= t('perspectives.timeline.eleventh_para').html_safe %></ul>
 		</div>
 	</div>
-
-	<span class="absolute background-white radius-25 text-cent w-400-rp-300" style="bottom: -30px; left: 50%; transform: translate(-50%, -50%);">
-		<%= t('perspectives.timeline.end') %>
-	</span>
-
-</section>
-
-<section class="h-max padding-y text-black background-orange">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.intro_1') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.intro_2') %></p>
-    
-    <h1><%= t('perspectives.jp_article.first_block.header') %></h1>
-
-    <p class="rp-small"><%= t('perspectives.jp_article.first_block.para_1') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.first_block.para_2') %></p>
-
-  </div>
-
-</section>
-
-<section class="h-max padding-y text-white background-black">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-    
-    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.second_block.header') %></h1>
-    
-    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_1') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_2') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_3').html_safe %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.second_block.para_4').html_safe %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.second_block.para_5') %></p>
-
-  </div>
-
-</section>
-
-<section class="h-max padding-y text-black background-orange">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-    
-    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.third_block.header') %></h1>
-
-    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_1') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.third_block.para_2') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.third_block.para_3') %></p>
-
-  </div>
-
-</section>
-
-<section class="h-max padding-y text-white background-black">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-    
-    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fourth_block.header') %></h1>
-    
-    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_1') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.fourth_block.para_2') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fourth_block.para_3') %></p>
-
-  </div>
-
-</section>
-
-<section class="h-max padding-y text-black background-orange">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-    
-    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.fifth_block.header') %></h1>
-
-    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_1').html_safe %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.fifth_block.para_2') %></p>
-    <p class="mb-0 rp-small"><%= t('perspectives.jp_article.fifth_block.para_3') %></p>
-
-  </div>
-
-</section>
-
-<section class="h-max padding-y text-white background-black">
-
-  <div class="pt-50-rp-15 pb-50-rp-15">
-    
-    <h1 class="mt-0 rp-auto"><%= t('perspectives.jp_article.sixth_block.header') %></h1>
-
-    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_1').html_safe %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_2') %></p>
-    <p class="rp-small"><%= t('perspectives.jp_article.sixth_block.para_3') %></p>
-    
-    <div class="flex-col">
-    	<span><%= t('perspectives.jp_article.sixth_block.name') %></span>
-    	<span><%= t('perspectives.jp_article.sixth_block.occupation') %></span>
-    	<span><%= t('perspectives.jp_article.sixth_block.company') %></span>
-    </div>
-
-  </div>
 
 </section>
