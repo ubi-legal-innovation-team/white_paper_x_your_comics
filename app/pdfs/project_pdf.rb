@@ -47,7 +47,7 @@ class ProjectPdf
 		end
 		pdf.move_down(20)
 
-		if version && version.version == "fr"
+		if version && version.version == "FR"
 
 			# first question
 			pdf.text "_1. À quelle problématique a répondu votre projet et quelle en était la cible ?", style: :bold
