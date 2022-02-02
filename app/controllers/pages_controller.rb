@@ -69,7 +69,7 @@ class PagesController < ApplicationController
         PrintablePdf.create(project_id:@project.id,user_agent_id:@agent.id)
 
         pdf = Prawn::Document.new
-        ProjectPdf.new(pdf,@project,@version,params)
+        ProjectPdf.new(pdf,@project,params)
 
         send_data pdf.render,
           filename: "#{@project.title}.pdf",

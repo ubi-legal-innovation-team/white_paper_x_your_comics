@@ -1,5 +1,5 @@
 class ProjectPdf
-	def initialize(pdf,project,version,params)
+	def initialize(pdf,project,params)
 
 		image_one   = []
 		image_two   = []
@@ -27,6 +27,12 @@ class ProjectPdf
 				image_seven.push(array.first)
 			end
 
+    end
+
+    if params[:lang] == "fr"
+    	version = project.bodies.find_by(version:"FR")
+    else
+    	version = project.bodies.find_by(version:"EN")
     end
 
 		# title

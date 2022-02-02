@@ -8,7 +8,7 @@
 	</div>
 
   <div class="flex-cent mt-10">
-    <%= link_to t('project.printable'), project_path(@project, format:"pdf"), id:"printable", class:"main-btn", "data-project" => @project.id %>
+    <%= link_to t('project.printable'), project_path(@project, format:"pdf"), id:"printable", class:"main-btn", "data-project" => @project.id, "data-lang" => params[:lang] || "en" %>
 
     <% if @project.website %>
       <%= link_to t('project.website'), @project.website, class:"blue-btn ml-20" %>
