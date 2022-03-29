@@ -1,0 +1,43 @@
+<table class="text-cent">
+	<thead class="background-strong-grey">
+	  <tr class="text-white">
+	    <th>Location</th>
+	    <th>Number of visit</th>
+	  </tr>
+	</thead>
+
+	<tbody>
+	  <% @agents.pluck(:countries).flatten.sort.group_by{ |countries_arr| countries_arr }.values.each do |country| %>
+		  <tr class="p-small border-top light-grey">
+		  	<td><%= country.first %></td>
+		  	<td><%= country.count %></td>
+		  </tr>
+	  <% end %>
+	</tbody>
+</table>
+
+<% if !@agents.empty? %>
+  <nav class="custom-pagination">
+  	<%== pagy_nav(@pagy_agents) %>
+
+    <div class="relative">
+      <i class="fas fa-sort-down text-strong-grey index-1"></i>
+
+		  <select name="pagy_items" id="items_agents" class="ml-10 radius-03 relative">
+		    <option value="<%= admin_analytics_path(items_agents:10) %>" <%= params[:items_agents] == '10' ? 'selected' : ''%>>10</option>
+		    <option value="<%= admin_analytics_path(items_agents:20) %>" <%= params[:items_agents] == '20' ? 'selected' : ''%>>20</option>
+		    <option value="<%= admin_analytics_path(items_agents:30) %>" <%= params[:items_agents] == '30' ? 'selected' : ''%>>30</option>
+		    <option value="<%= admin_analytics_path(items_agents:40) %>" <%= params[:items_agents] == '40' ? 'selected' : ''%>>40</option>
+		    <option value="<%= admin_analytics_path(items_agents:50) %>" <%= params[:items_agents] == '50' ? 'selected' : ''%>>50</option>
+		  </select>
+    </div>
+
+    <span class="ml-05 text-strong-grey">items per page</span>
+  </nav>
+<% end %>
+
+<% if @agents.empty? %>
+
+  <div class="flex-cent m-auto mt-50"><p class="mt-10">nothing to display. . .</p></div>
+
+<% end %>

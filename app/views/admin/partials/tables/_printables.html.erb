@@ -1,0 +1,43 @@
+<table class="text-cent">
+	<thead class="background-strong-grey">
+	  <tr class="text-white">
+	    <th>Project name</th>
+	    <th>Number of downloads</th>
+	  </tr>
+	</thead>
+
+	<tbody>
+	  <% @printables.pluck(:project_id).flatten.group_by{ |projects_ids_arr| projects_ids_arr }.values.each do |project_id| %>
+		  <tr class="p-small border-top light-grey">
+		  	<td><%= Project.find(project_id.first).title %></td>
+		  	<td><%= project_id.count %></td>
+		  </tr>
+	  <% end %>
+	</tbody>
+</table>
+
+<% if !@printables.empty? %>
+  <nav class="custom-pagination">
+  	<%== pagy_nav(@pagy_printables) %>
+
+    <div class="relative">
+      <i class="fas fa-sort-down text-strong-grey index-1"></i>
+
+		  <select name="pagy_items" id="items_printables" class="ml-10 radius-03 relative">
+		    <option value="<%= admin_analytics_path(items_printables:10) %>" <%= params[:items_printables] == '10' ? 'selected' : ''%>>10</option>
+		    <option value="<%= admin_analytics_path(items_printables:20) %>" <%= params[:items_printables] == '20' ? 'selected' : ''%>>20</option>
+		    <option value="<%= admin_analytics_path(items_printables:30) %>" <%= params[:items_printables] == '30' ? 'selected' : ''%>>30</option>
+		    <option value="<%= admin_analytics_path(items_printables:40) %>" <%= params[:items_printables] == '40' ? 'selected' : ''%>>40</option>
+		    <option value="<%= admin_analytics_path(items_printables:50) %>" <%= params[:items_printables] == '50' ? 'selected' : ''%>>50</option>
+		  </select>
+    </div>
+
+    <span class="ml-05 text-strong-grey">items per page</span>
+  </nav>
+<% end %>
+
+<% if @printables.empty? %>
+
+  <div class="flex-cent m-auto mt-50"><p class="mt-10">nothing to display. . .</p></div>
+
+<% end %>

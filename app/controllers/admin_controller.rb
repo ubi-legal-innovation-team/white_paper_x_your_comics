@@ -90,8 +90,11 @@ class AdminController < ApplicationController
   end
 
   def analytics
-    @agents     = UserAgent.all
-    @printables = PrintablePdf.all
+    @pagy_printables, @printables = pagy(PrintablePdf.all.order(:created_at), page_param: :page_printables, items_param: :items_printables)
+    @printables_count             = PrintablePdf.count
+
+    @pagy_agents, @agents = pagy(UserAgent.all.order(:created_at), page_param: :page_agents, items_param: :items_agents)
+    @agents_count         = UserAgent.count
 
     @top_location  = @agents.pluck(:countries).flatten.max_by {|i| @agents.pluck(:countries).flatten.count(i)}
     @top_city      = @agents.pluck(:cities).flatten.max_by {|i| @agents.pluck(:cities).flatten.count(i)}

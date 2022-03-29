@@ -76,10 +76,20 @@ const main = () => {
   }
 
   // pagy_items.js
-  var select = document.getElementById('items_requesters') || document.getElementById('items_projects');
+  var select     = document.getElementById('items_requesters') || document.getElementById('items_projects');
+  var printables = document.getElementById('items_printables');
+  var agents     = document.getElementById('items_agents');
 
   if(select){
     select.addEventListener('change',selectItemsPerPage);
+  };
+
+  if(printables){
+    printables.addEventListener('change',selectItemsPerPage);
+  };
+
+  if(agents){
+    agents.addEventListener('change',selectItemsPerPage);
   };
 
   // prevent_default.js

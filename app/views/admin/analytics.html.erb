@@ -34,29 +34,20 @@
 
 	</div>
 
-	<h1>Printables</h1>
-	<div class="flex-row-wrap-start">
-		<% @printables.pluck(:project_id).flatten.group_by{ |projects_ids_arr| projects_ids_arr }.values.each do |project_id| %>
-			<p class="p-tall-rp-small mr-30"><%= Project.find(project_id.first).title %> : <%= project_id.count %></p>
-		<% end -%>
-	</div>
+	<!-- <h1>Printables</h1> -->
 
-	<h1>Locations</h1>
+	<%#= render "admin/partials/tables/printables" %>
 
-	<div class="flex-row-wrap-start">
-		<% @agents.pluck(:countries).flatten.sort.group_by{ |countries_arr| countries_arr }.values.each do |country| %>
-			<p class="p-tall-rp-small mr-30"><%= country.first %> : <%= country.count %></p>
-		<% end -%>
-	</div>
+	<!-- <div class="mt-50"></div> -->
 
-	<h1>Cities</h1>
+	<!-- <h1>Locations</h1> -->
+
+	<%#= render "admin/partials/tables/agents_countries" %>
+
+	<!-- <h1>Cities</h1> -->
+
+	<%#= render "admin/partials/tables/agents_cities" %>
 	
-	<div class="flex-row-wrap-start">
-		<% @agents.pluck(:cities).flatten.sort.group_by{ |cities_arr| cities_arr }.values.each do |city| %>
-			<p class="p-tall-rp-small mr-30"><%= city.first %> : <%= city.count %></p>
-		<% end -%>
-	</div>
-
 	<div class="flex-end">
 		<%= link_to 'Download as Excel', admin_analytics_excel_path(format: :xlsx, slug:@slug), class: "radius-05 excel-btn p-small" %>
 	</div>
