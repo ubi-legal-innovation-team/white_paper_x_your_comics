@@ -8,10 +8,8 @@ class UserAgent < ApplicationRecord
 
 	def self.remove_duplicates
 		grouped = UserAgent.all.group_by{ |user_agent| [user_agent.host_name, user_agent.publics_ip] }
-		p grouped
 		grouped.values.each do |duplicates|
 			first_one = duplicates.shift
-
 			duplicates.each{|double| double.destroy}
 		end
 	end
